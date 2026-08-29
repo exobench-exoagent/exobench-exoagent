@@ -2,10 +2,7 @@
 
 ExoBench is a local benchmark and evaluation workspace for autonomous exoplanet transit analysis. It contains ExoAgent runtimes that process FITS observations with EXOTIC, generate scientific reports, preserve run artifacts, scrape or prepare observation datasets, and publish blinded report pages for multi-expert review.
 
-The workspace is organized around two questions:
-
-1. Can an agent run an end-to-end exoplanet transit reduction from raw FITS images to a scientific report?
-2. How can those reports and artifacts be presented consistently for independent expert evaluation?
+The workspace is organized around one questions: can ExoAgent run an end-to-end exoplanet transit reduction from raw FITS images to a scientific report?
 
 ## Repository Structure
 
