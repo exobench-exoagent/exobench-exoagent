@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: Exoplanet Transit Observation of WASP-43 b</h1>
+<h2>Observation Summary</h2>
+<ul>
+<li><strong>Target</strong>: WASP-43 b</li>
+<li><strong>Telescope</strong>: LCOGT 0.4m (MicroObservatory/Cerro Tololo)</li>
+<li><strong>Instrument</strong>: CCD (sq34)</li>
+<li><strong>Observation Date</strong>: 2026-03-11</li>
+<li><strong>Filter</strong>: Sloan r' (SR)</li>
+<li><strong>Exposure Time</strong>: 60.0 seconds</li>
+<li><strong>Cadence</strong>: ~60 seconds</li>
+</ul>
+<h2>Data Reduction</h2>
+<p>The data were processed using the EXOTIC (EXOplanet Transit Interpretation Code) pipeline. The reduction included aperture photometry of the target star (WASP-43) and four comparison stars. The target star coordinates were refined using a WCS plate solution. Detrending was performed using airmass coefficients to correct for atmospheric effects. No calibration frames (darks, flats, biases) were provided in the input dataset; therefore, the reduction relied on the normalized flux derived from the comparison stars.</p>
+<h2>Transit Results</h2>
+<p>The transit fitting was performed using an MCMC-based approach to determine the best-fit planetary parameters.</p>
+<ul>
+<li><strong>Mid-transit Time</strong>: $2461111.7462 \pm 0.0029$ BJD_TDB</li>
+<li><strong>Orbital Period</strong>: $0.81347407 \pm 2     imes 10^{-8}$ days</li>
+<li><strong>Transit Depth</strong>: $3.9\% \pm 2.23\%$</li>
+<li><strong>Transit Duration</strong>: $0.0611 \pm 0.0049$ days</li>
+<li><strong>Orbital Inclination</strong>: $86.79^\circ \pm 2.75^\circ$</li>
+</ul>
+<h2>Data Quality</h2>
+<p>The data quality for this observation is poor, characterized by a very high residual scatter of <strong>38.0%</strong>. This high RMS indicates significant noise in the light curve, which is reflected in the large uncertainty of the transit depth \($\pm 2.23\%$\). Despite the noise, the transit mid-time was constrained with relatively high precision. The fit indicates a transit, but the high scatter suggests that the signal-to-noise ratio is low and the result should be interpreted with caution.</p>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve &amp; Model Fit</strong>: <a class="artifact-link" href="/30a1045b41d6/files/artifact_001.png" target="_blank" rel="noopener"><code>FinalLightCurve_WASP-43 b_03-11-2026.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Parsed Parameters</strong>: Extracted from <a class="artifact-link" href="/30a1045b41d6/files/artifact_002.json" target="_blank" rel="noopener"><code>FinalParams_WASP-43 b_03-11-2026.json</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>AAVSO Format Data</strong>: <a class="artifact-link" href="/30a1045b41d6/files/artifact_003.txt" target="_blank" rel="noopener"><code>AAVSO_WASP-43 b_03-11-2026.txt</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Plate Solution</strong>: <code>tmp/wcs.fits</code></li>
+</ul></section></main>
+</body>
+</html>

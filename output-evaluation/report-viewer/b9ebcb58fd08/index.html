@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>KELT-16 b Transit Observation Report</h1>
+<h2>Observation Summary</h2>
+<p><strong>Target:</strong> KELT-16 b (Host Star: KELT-16)<br>
+<strong>Telescope:</strong> MicroObservatory .4 Meter (0m4-01) at McDonald Observatory<br>
+<strong>Instrument:</strong> LCOGT SQ46 camera (QHY600M CCD)<br>
+<strong>Observation Date:</strong> July 8, 2026 (UT)<br>
+<strong>Filter:</strong> Johnson V (502.8–586.8 nm)<br>
+<strong>Exposure Time:</strong> 61.0 seconds<br>
+<strong>Number of Images:</strong> 255 frames (effective cadence ~2-minute intervals over ~5 hours)<br>
+<strong>Observing Location:</strong> Latitude +30.68°, Longitude -104.02°, Elevation 2042 m  </p>
+<p>The observation was conducted as part of the LCOGT Exoplanet Watch program targeting the hot Jupiter KELT-16 b for transit photometry.</p>
+<h2>Data Reduction</h2>
+<p>Exoplanet Transit Interpretation Code (EXOTIC v4.3.1) performed the complete data reduction pipeline:</p>
+<ol>
+<li>
+<p><strong>Plate Solution:</strong> Astrometric plate solving was performed on all 255 frames using astromatic catalog matching, achieving successful WCS transformations for every image.</p>
+</li>
+<li>
+<p><strong>Aperture Photometry:</strong> Optimal aperture radius of 5.3 pixels and sky annulus of 10.07 pixels were determined through iterative minimization of light curve scatter.</p>
+</li>
+<li>
+<p><strong>Detrending:</strong> Airmass-based detrending was applied using a quadratic airmass correction function (coefficients a₁ = 1.409 ± 0.013, a₂ = -0.3262 ± 0.0064).</p>
+</li>
+<li>
+<p><strong>Comparison Stars:</strong> Three comparison stars from the AAVSO chart were selected (AAVSO designations 113, 115, 117), though EXOTIC's automated comparison star selection identified no single optimal comparison star, instead combining all three in the differential photometry.</p>
+</li>
+<li>
+<p><strong>Transit Fitting:</strong> A Bayesian transit model was fit using the <code>ultranest</code> nested sampling algorithm, with 20,933 likelihood function evaluations (ESS = 2159, well above the 400 threshold). Priors were drawn from published KELT-16 system parameters.</p>
+</li>
+</ol>
+<h2>Transit Results</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time (BJD_TDB)</td>
+<td>2461229.8192</td>
+<td>±0.0013</td>
+</tr>
+<tr>
+<td>Orbital Period</td>
+<td>0.968992962 days</td>
+<td>±9.7×10⁻⁸</td>
+</tr>
+<tr>
+<td>Transit Depth</td>
+<td>2.11%</td>
+<td>±0.027%</td>
+</tr>
+<tr>
+<td>Planet-to-Star Radius Ratio (Rp/R*)</td>
+<td>0.1454</td>
+<td>±0.00092</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.1072 days</td>
+<td>±0.0026</td>
+</tr>
+<tr>
+<td>Orbital Inclination</td>
+<td>84.29°</td>
+<td>±1.82°</td>
+</tr>
+<tr>
+<td>Residual Scatter</td>
+<td>0.97%</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>The mid-transit time corresponds to <strong>2026-07-08 at approximately 19:39 UT</strong> (BJD_TDB 2461229.8192).</p>
+<h2>Data Quality</h2>
+<ul>
+<li><strong>Fit Quality:</strong> The nested sampling converged successfully with a Bayesian evidence logZ = -128.3 ± 0.14. All quality metrics were satisfied: ESS = 2159 (&gt;400), KL divergence = 0.46±0.07 nats (&lt;0.50), and evidence uncertainty = 0.14 (&lt;0.5).</li>
+<li><strong>Residual Behavior:</strong> Post-fit residual scatter was 0.97%, indicating good photometric precision.</li>
+<li><strong>Comparison Star Selection:</strong> EXOTIC's automated selection identified no single optimal comparison star (rating all three similarly), which is common for data with comparable noise levels across the comparison field.</li>
+<li><strong>No Calibration Frames:</strong> This dataset was provided without dark, bias, or flat frames; the LCOGT pipeline had already applied these corrections at the observatory level.</li>
+</ul>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve:</strong> <a class="artifact-link" href="/b9ebcb58fd08/files/artifact_001.png" target="_blank" rel="noopener"><code>FinalLightCurve_KELT-16 b_07-08-2026.png</code><span aria-hidden="true">↗</span></a> — Light curve with transit model overlay</li>
+<li><strong>Final Light Curve CSV:</strong> <a class="artifact-link" href="/b9ebcb58fd08/files/artifact_002.csv" target="_blank" rel="noopener"><code>tmp/FinalLightCurve_KELT-16 b_07-08-2026.csv</code><span aria-hidden="true">↗</span></a> — Time series with BJD_TDB, orbital phase, normalized flux, uncertainties, model, and airmass</li>
+<li><strong>Final Parameters:</strong> <a class="artifact-link" href="/b9ebcb58fd08/files/artifact_003.json" target="_blank" rel="noopener"><code>tmp/FinalParams_KELT-16 b_07-08-2026.json</code><span aria-hidden="true">↗</span></a> — Fitted planetary parameters</li>
+<li><strong>AAVSO Format:</strong> <a class="artifact-link" href="/b9ebcb58fd08/files/artifact_004.txt" target="_blank" rel="noopener"><code>AAVSO_KELT-16 b_07-08-2026.txt</code><span aria-hidden="true">↗</span></a> — AAVSO-compatible light curve with metadata</li>
+<li><strong>Plate Solution:</strong> <code>tmp/wcs.fits</code> — World Coordinate System solution</li>
+<li><strong>Inits JSON:</strong> <a class="artifact-link" href="/b9ebcb58fd08/files/artifact_005.json" target="_blank" rel="noopener"><code>inits.json</code><span aria-hidden="true">↗</span></a> — Complete EXOTIC input configuration</li>
+</ul></section></main>
+</body>
+</html>

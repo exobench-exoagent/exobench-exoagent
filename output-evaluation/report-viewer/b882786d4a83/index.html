@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: Transit Observation of WASP-69 b</h1>
+<h2>Observation Summary</h2>
+<p>The transit of exoplanet WASP-69 b was observed using the MicroObservatory 0.4-meter telescope (instrument 0m4-92) equipped with a Sony QHY600M CCD detector. The observation was conducted on September 24, 2025, using a Johnson V filter. A total of 300 FITS images were acquired with an individual exposure time of 12.0 seconds.</p>
+<h2>Data Reduction</h2>
+<p>Data reduction was performed using the EXOTIC (EXOplanet Transit Interpretation Code) pipeline. The images were pre-processed with bias, dark, and flat-field calibrations as specified in the FITS headers. Aperture photometry was conducted, identifying the target star at pixel coordinates [1203, 1220] and a set of comparison stars at [427, 1308], [2388, 1691], and [1555, 809]. The best-performing comparison star was identified at [427, 1308]. The optimal aperture size was determined to be 4.27 pixels with an optimal annulus of 10.23 pixels. Detrending was applied to the light curve using airmass coefficients (a1 = 1.008 +/- 0.004, a2 = -0.007 +/- 0.024) to account for atmospheric extinction.</p>
+<h2>Transit Results</h2>
+<p>The light curve was fitted using a Markov Chain Monte Carlo (MCMC) approach via UltraNest. The resulting planetary parameters are as follows:</p>
+<ul>
+<li><strong>Mid-Transit Time</strong>: 2460939.8849 +/- 0.0063 BJD_TDB</li>
+<li><strong>Radius Ratio (Rp/Rs)</strong>: 0.111 +/- 0.048</li>
+<li><strong>Transit Depth</strong>: 1.24 +/- 1.07 %</li>
+<li><strong>Orbital Inclination</strong>: 84.52 +/- 2.32 degrees</li>
+<li><strong>Transit Duration</strong>: 0.0 +/- 0.0 days</li>
+</ul>
+<h2>Data Quality and Discussion</h2>
+<p>The photometric precision of the dataset was high, with a residual scatter of 0.4% in the light curve fit. However, the transit duration was not constrained (0.0 +/- 0.0 days), and the uncertainty in the transit depth (1.07%) is nearly as large as the depth itself (1.24%). These results suggest that while the photometric noise was low, a clear transit signal was not strongly detected or well-captured within this specific observation window, leading to poor constraints on the duration and depth.</p>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve</strong>: <a class="artifact-link" href="/b882786d4a83/files/artifact_001.png" target="_blank" rel="noopener"><code>output/EXOTIC_output/FinalLightCurve_WASP-69 b_09-24-2025.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Final Parameters</strong>: <a class="artifact-link" href="/b882786d4a83/files/artifact_002.json" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalParams_WASP-69 b_09-24-2025.json</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Light Curve Data</strong>: <a class="artifact-link" href="/b882786d4a83/files/artifact_003.csv" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalLightCurve_WASP-69 b_09-24-2025.csv</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>

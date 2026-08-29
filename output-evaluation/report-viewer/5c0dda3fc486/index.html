@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: Exoplanet Transit Observation of HD 189733 b</h1>
+<h2>Observation Summary</h2>
+<p>The transit of exoplanet HD 189733 b was observed on 2026-08-05 using the MicroObservatory telescope (LCOGT node at McDonald Observatory). The data were captured using the sq41 instrument with a V-band filter. The images have a pixel scale of 0.74 arcsec/pixel. Individual exposures were 1.5 seconds, resulting in a high-cadence dataset of 300 FITS images.</p>
+<h2>Data Reduction</h2>
+<p>Data reduction was performed using the EXOTIC pipeline. Calibration frames (Flats, Darks, Biases) were not provided in the dataset, and the pipeline proceeded without them. Target and comparison stars were identified visually and then refined via plate solving, which corrected the target star coordinates to [1213, 1190]. Aperture photometry was conducted using an optimal aperture of 3.32 and an optimal annulus of 26.78. Detrending was applied using airmass coefficients (a1 = 1.42 +/- 0.27, a2 = -0.4 +/- 1.38) to remove atmospheric effects.</p>
+<h2>Transit Results</h2>
+<p>The transit was modeled using the UltraNest sampler. The resulting fitted parameters are:</p>
+<ul>
+<li><strong>Mid-Transit Time</strong>: 2461256.8537 +/- 0.0021 BJD_TDB</li>
+<li><strong>Radius Ratio (Rp/Rs)</strong>: 0.052 +/- 0.054</li>
+<li><strong>Transit Depth</strong>: 0.27 +/- 0.57 %</li>
+<li><strong>Orbital Inclination</strong>: 85.78 +/- 2.69 degrees</li>
+<li><strong>Transit Duration</strong>: 0.006 +/- 0.013 days</li>
+</ul>
+<h2>Data Quality and Analysis</h2>
+<p>The quality of the resulting light curve is poor, as evidenced by a high residual scatter of 17.74%. EXOTIC was unable to determine a "Best Comparison Star" from the selected set, suggesting significant noise or instability in the comparison stars or the target. The recovered radius ratio and transit depth are consistent with zero within their large uncertainties, indicating that a significant transit signal was not clearly recovered from this specific dataset.</p>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve</strong>: <a class="artifact-link" href="/5c0dda3fc486/files/artifact_001.png" target="_blank" rel="noopener"><code>output/EXOTIC_output/FinalLightCurve_HD 189733 b_08-05-2026.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Final Parameters</strong>: <a class="artifact-link" href="/5c0dda3fc486/files/artifact_002.json" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalParams_HD 189733 b_08-05-2026.json</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>AAVSO Report</strong>: <a class="artifact-link" href="/5c0dda3fc486/files/artifact_003.txt" target="_blank" rel="noopener"><code>output/EXOTIC_output/AAVSO_HD 189733 b_08-05-2026.txt</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>

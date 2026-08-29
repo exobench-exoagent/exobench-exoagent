@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><p><strong>Observation Summary</strong><br>
+The exoplanet transit of TrES-2 b was observed on 2023-08-17 using the MicroObservatory 0.4m telescope. The data were captured with a Sony QHY600m CCD camera using an Astrodon ExoPlanet-BB (CBB) filter. The exposure time was 6.524 seconds, providing a high-cadence time series for the target.</p>
+<p><strong>Data Reduction</strong><br>
+The dataset consisted of 300 FITS images. Reduction was performed using the EXOTIC pipeline. No calibration frames (flats, darks, or biases) were available, so the reduction proceeded without them. Aperture photometry was performed using an optimal aperture of 3.95 pixels and an optimal annulus of 17.14 pixels. Initial target star coordinates were refined using EXOTIC's internal plate solving to ensure precise centering at [1151, 1200]. A set of comparison stars was used to generate the differential light curve.</p>
+<p><strong>Transit Results</strong><br>
+The transit fit was successfully performed using a Bayesian approach. The resulting mid-transit time is 2460173.69745 +/- 0.00095 BJD_TDB. The planet-to-star radius ratio (Rp/Rs) was determined to be 0.148 +/- 0.044, corresponding to a transit depth of 2.19 +/- 1.29%. The orbital inclination was found to be 86.47 +/- 2.83 degrees, with a transit duration of 0.0298 +/- 0.0088 days.</p>
+<p><strong>Data Quality</strong><br>
+The final light curve exhibits a residual scatter of 26.02%, suggesting significant noise or instability in the baseline, which is reflected in the relatively high uncertainty of the radius ratio and transit depth. Despite the noise, the mid-transit time was recovered with high precision. No single "Best Comparison Star" was isolated by the tool, indicating that a composite ensemble was likely utilized for the normalization.</p>
+<p><strong>Output Files</strong></p>
+<ul>
+<li>Final Light Curve: <a class="artifact-link" href="/d265bed6d06f/files/artifact_001.png" target="_blank" rel="noopener"><code>output/EXOTIC_output/FinalLightCurve_TrES-2 b_2023-08-17.png</code><span aria-hidden="true">↗</span></a></li>
+<li>Fitted Parameters: <a class="artifact-link" href="/d265bed6d06f/files/artifact_002.json" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalParams_TrES-2 b_2023-08-17.json</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>

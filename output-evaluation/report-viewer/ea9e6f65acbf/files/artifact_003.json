@@ -1,0 +1,84 @@
+{
+  "planetary_parameters": {
+    "Target Star RA": "294.6614217",
+    "Target Star Dec": "+31.2191972",
+    "Planet Name": "KELT-20 b",
+    "Host Star Name": "KELT-20",
+    "Orbital Period (days)": 2.4502486,
+    "Orbital Period Uncertainty": 1e-05,
+    "Published Mid-Transit Time (BJD-UTC)": 2457356.32432,
+    "Mid-Transit Time Uncertainty": 0.0005,
+    "Ratio of Planet to Stellar Radius (Rp/Rs)": 0.124,
+    "Ratio of Planet to Stellar Radius (Rp/Rs) Uncertainty": 0.005,
+    "Ratio of Distance to Stellar Radius (a/Rs)": 9.48,
+    "Ratio of Distance to Stellar Radius (a/Rs) Uncertainty": 0.5,
+    "Orbital Inclination (deg)": 89.6,
+    "Orbital Inclination (deg) Uncertainty": 0.5,
+    "Argument of Periastron (deg)": 90.0,
+    "Orbital Eccentricity (0 if null)": 0.0,
+    "Star Effective Temperature (K)": 7250,
+    "Star Effective Temperature (+) Uncertainty": 100,
+    "Star Effective Temperature (-) Uncertainty": 100,
+    "Star Metallicity ([FE/H])": 0.13,
+    "Star Metallicity (+) Uncertainty": 0.05,
+    "Star Metallicity (-) Uncertainty": 0.05,
+    "Star Surface Gravity (log(g))": 4.15,
+    "Star Surface Gravity (+) Uncertainty": 0.1,
+    "Star Surface Gravity (-) Uncertainty": 0.1,
+    "Star Distance (pc)": 442,
+    "Star Proper Motion RA (mas/yr)": 3.6846,
+    "Star Proper Motion DEC (mas/yr)": -6.265
+  },
+  "user_info": {
+    "Directory with FITS files": "observation/KELT-20 b",
+    "Directory to Save Plots": "runs/KELT-20_b_[REDACTED]/output/EXOTIC_output",
+    "Directory of Flats": null,
+    "Directory of Darks": null,
+    "Directory of Biases": null,
+    "AAVSO Observer Code (N/A if none)": "N/A",
+    "Secondary Observer Codes (N/A if none)": "N/A",
+    "Observation date": null,
+    "Obs. Latitude": null,
+    "Obs. Longitude": null,
+    "Obs. Elevation (meters)": null,
+    "Camera Type (CCD or DSLR)": "CCD",
+    "Pixel Binning": "1x1",
+    "Filter Name (aavso.org/filters)": "Open",
+    "Observing Notes": "Generated from EXOTIC Standard notebook flow; telescope=MicroObservatory; camera type=CCD; first image=elp0m414-sq31-20230817-0615-e91.fits; VLM supplied target and comparison-star coordinates.",
+    "Plate Solution? (y/n)": "y",
+    "Add Comparison Stars from AAVSO? (y/n)": "n",
+    "Target Star X & Y Pixel": [
+      1125.0,
+      1221.0
+    ],
+    "Comparison Star(s) X & Y Pixel": [
+      [
+        927.0,
+        1079.0
+      ],
+      [
+        1264.0,
+        1054.0
+      ],
+      [
+        1095.0,
+        1031.0
+      ],
+      [
+        1151.0,
+        1161.0
+      ],
+      [
+        937.0,
+        1222.0
+      ]
+    ],
+    "Demosaic Format": null,
+    "Demosaic Output": null
+  },
+  "optional_info": {
+    "Pixel Scale (Ex: 5.21 arcsecs/pixel)": 3600.0,
+    "Filter Minimum Wavelength (nm)": null,
+    "Filter Maximum Wavelength (nm)": null
+  }
+}

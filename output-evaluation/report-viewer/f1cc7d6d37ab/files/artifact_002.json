@@ -1,0 +1,15 @@
+{
+    "FINAL PLANETARY PARAMETERS": {
+        "Mid-Transit Time (Tmid)": "2457758.16268 +/- 0.00097 BJD_TDB",
+        "Ratio of Planet to Stellar Radius (Rp/R*)": "0.001 +/- 0.034",
+        "Transit depth (Rp/Rs)^2": "6.7e-05 +/- 0.0055 [%]",
+        "Orbital Inclination (inc)": "81.82 +/- 2.93 ",
+        "Airmass coefficient 1 (a1)": "0.738 +/- 0.099",
+        "Airmass coefficient 2 (a2)": "0.3 +/- 0.64",
+        "Scatter in the residuals of the lightcurve fit is": "13.46 %",
+        "Best Comparison Star": "None",
+        "Optimal Aperture": "9.26",
+        "Optimal Annulus": "11.73",
+        "Transit Duration (day)": "0.0054 +/- 0.0077"
+    }
+}

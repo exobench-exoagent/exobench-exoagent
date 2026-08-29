@@ -1,0 +1,80 @@
+{
+  "planetary_parameters": {
+    "Target Star RA": "00:38:03.979968",
+    "Target Star Dec": "+34:42:41.049",
+    "Planet Name": "HAT-P-19 b",
+    "Host Star Name": "HAT-P-19",
+    "Orbital Period (days)": 4.00878322,
+    "Orbital Period Uncertainty": 1.9e-07,
+    "Published Mid-Transit Time (BJD-UTC)": 2456610.863945,
+    "Mid-Transit Time Uncertainty": 7.1e-05,
+    "Ratio of Planet to Stellar Radius (Rp/Rs)": 0.1465733475090202,
+    "Ratio of Planet to Stellar Radius (Rp/Rs) Uncertainty": 0.0006412308349184422,
+    "Ratio of Distance to Stellar Radius (a/Rs)": 12.84,
+    "Ratio of Distance to Stellar Radius (a/Rs) Uncertainty": 0.06,
+    "Orbital Inclination (deg)": 89.52,
+    "Orbital Inclination (deg) Uncertainty": 0.2,
+    "Orbital Eccentricity (0 if null)": 0.07,
+    "Argument of Periastron (deg)": 256.0,
+    "Star Effective Temperature (K)": 4962.0,
+    "Star Effective Temperature (+) Uncertainty": 39.0,
+    "Star Effective Temperature (-) Uncertainty": -41.0,
+    "Star Metallicity ([FE/H])": 0.166,
+    "Star Metallicity (+) Uncertainty": 0.07,
+    "Star Metallicity (-) Uncertainty": -0.068,
+    "Star Surface Gravity (log(g))": 4.5687,
+    "Star Surface Gravity (+) Uncertainty": 0.0066,
+    "Star Surface Gravity (-) Uncertainty": -0.0067,
+    "Star Distance (pc)": 202.078,
+    "Star Proper Motion RA (mas/yr)": -26.7753,
+    "Star Proper Motion DEC (mas/yr)": -32.4776
+  },
+  "user_info": {
+    "Directory with FITS files": "observation/HAT-P-19 b",
+    "Directory to Save Plots": "runs/HAT-P-19_b_[REDACTED]/output/EXOTIC_output",
+    "Directory of Flats": null,
+    "Directory of Darks": null,
+    "Directory of Biases": null,
+    "AAVSO Observer Code (N/A if none)": "N/A",
+    "Secondary Observer Codes (N/A if none)": "N/A",
+    "Observation date": "2026-07-11",
+    "Obs. Latitude": "31.68",
+    "Obs. Longitude": null,
+    "Obs. Elevation (meters)": 1268.0,
+    "Camera Type (CCD or DSLR)": "CCD",
+    "Pixel Binning": "2x2",
+    "Filter Name (aavso.org/filters)": "Clear",
+    "Observing Notes": "Generated from EXOTIC Standard notebook flow; telescope=Cecilia (Whipple Observatory; Center for Astrophysics | Harvard-Smithsonian); camera type=CCD; first image=HATP-19260711092127.FITS; VLM supplied target and comparison-star coordinates.",
+    "Plate Solution? (y/n)": "y",
+    "Add Comparison Stars from AAVSO? (y/n)": "n",
+    "Target Star X & Y Pixel": [
+      517.0,
+      117.0
+    ],
+    "Comparison Star(s) X & Y Pixel": [
+      [
+        317.0,
+        22.0
+      ],
+      [
+        348.0,
+        399.0
+      ],
+      [
+        203.0,
+        99.0
+      ],
+      [
+        406.0,
+        56.0
+      ]
+    ],
+    "Demosaic Format": null,
+    "Demosaic Output": null
+  },
+  "optional_info": {
+    "Pixel Scale (Ex: 5.21 arcsecs/pixel)": 3600.0,
+    "Filter Minimum Wavelength (nm)": null,
+    "Filter Maximum Wavelength (nm)": null
+  }
+}

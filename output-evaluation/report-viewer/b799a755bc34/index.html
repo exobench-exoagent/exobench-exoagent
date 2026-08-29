@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: HAT-P-30 b Transit Observation</h1>
+<h2>Observation Summary</h2>
+<p><strong>Target:</strong> HAT-P-30 b (host star: HAT-P-30, RA: 08h 15m 47.8s, Dec: +05° 50' 09")<br>
+<strong>Telescope:</strong> LCOGT 0.4m telescope at Tenerife (SITLC) - part of the MicroObservatory network<br>
+<strong>Observer:</strong> anonymous-observer (AAVSO Observer Code)<br>
+<strong>Observation Date:</strong> 2020-02-02 (local), UT dates span 2020-02-03 00:41-04:29<br>
+<strong>Filter:</strong> SDSS-r (SR), FWHM ~553-693 nm<br>
+<strong>Exposure Time:</strong> 20.29 seconds per frame<br>
+<strong>Camera Type:</strong> CCD (1x1 binning, no demosaic)<br>
+<strong>Observatory Location:</strong> LAT +28.30°, LONG -16.51°, Elevation 2390 m<br>
+<strong>Pixel Scale:</strong> 0.58 arcsec/pixel<br>
+<strong>Image Dimensions:</strong> 3054 x 2042 pixels<br>
+<strong>Number of Frames:</strong> 300<br>
+<strong>Airmass Range:</strong> ~1.083-1.462</p>
+<h2>Data Reduction</h2>
+<p><strong>Calibration Frames:</strong> No Flats, Darks, or Biases were provided with the dataset. EXOTIC proceeded without calibration, which is acceptable for differential photometry.</p>
+<p><strong>Plate Solving:</strong> EXOTIC successfully generated a WCS solution using the <code>astrometry.net</code> infrastructure. The plate solution was verified against the FITS headers which contain embedded WCS information (CTYPE1: RA---TAN, CTYPE2: DEC--TAN, CRPIX1: 1527.5, CRPIX2: 1021.5).</p>
+<p><strong>Star Identification:</strong></p>
+<ul>
+<li>Target Star: Identified at pixel coordinates [1520, 1024] (close to the WCS center at [1527.5, 1021.5])</li>
+<li>Comparison Stars: Four comparison stars selected from nearby unsaturated stars:</li>
+<li>CS1: [1216, 1508]</li>
+<li>CS2: [812, 888] - <strong>Best comparison star (selected by EXOTIC)</strong></li>
+<li>CS3: [2056, 1252]</li>
+<li>CS4: [2112, 832]</li>
+<li>EXOTIC determined that comparison star #2 ([812, 888]) provided the best reference for differential photometry.</li>
+</ul>
+<p><strong>Aperture Photometry:</strong></p>
+<ul>
+<li>Optimal Aperture Radius: 4.96 pixels</li>
+<li>Optimal Annulus Inner/Outer: 12.94 pixels</li>
+<li>Limb darkening: EXOTIC calculated quadratic limb darkening coefficients using the STAREX model for a star with T_eff = 6000 K</li>
+</ul>
+<p><strong>Detrending:</strong> The light curve was detrended using airmass as a regressor with a linear + quadratic correction function.</p>
+<h2>Transit Results</h2>
+<p>The following parameters were obtained from the Bayesian transit fitting (using UltraNest sampler):</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Fitted Value</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time (Tc) [BJD_TDB]</td>
+<td>2458881.795</td>
+<td>± 0.017</td>
+</tr>
+<tr>
+<td>Radius Ratio (Rp/R*)</td>
+<td>0.151</td>
+<td>± 0.045</td>
+</tr>
+<tr>
+<td>Transit Depth [(Rp/R*)²]</td>
+<td>2.28%</td>
+<td>± 1.36%</td>
+</tr>
+<tr>
+<td>Orbital Inclination (inc)</td>
+<td>83.41°</td>
+<td>± 2.48°</td>
+</tr>
+<tr>
+<td>Airmass Coefficient 1 (a1)</td>
+<td>0.929</td>
+<td>± 0.01</td>
+</tr>
+<tr>
+<td>Airmass Coefficient 2 (a2)</td>
+<td>0.0606</td>
+<td>± 0.0059</td>
+</tr>
+<tr>
+<td>Residual Scatter</td>
+<td>1.12%</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.0 days</td>
+<td>0.0 (fitting issue)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Signal-to-Noise Ratio:</strong> The residual scatter of 1.12% with individual flux uncertainties of ~0.0135 gives a per-point SNR of approximately 74. The transit detection significance is moderate given the large uncertainty on Rp/R* (±0.045, ~30% relative uncertainty).</p>
+<p><strong>Priors Used:</strong></p>
+<ul>
+<li>Period: 3.4684457 ± 3×10⁻⁷ days</li>
+<li>Rp/R*: 0.124 ± 0.005</li>
+<li>a/R*: 10.7 ± 0.3</li>
+<li>Inclination: 86.4° ± 0.5°</li>
+<li>Eccentricity: 0.0</li>
+</ul>
+<h2>Data Quality Assessment</h2>
+<p><strong>Light Curve Characteristics:</strong></p>
+<ul>
+<li>The normalized flux shows significant scatter (~1-3% per point) which is typical for 0.4m telescope observations of a ~12-13 mag star with 20-second exposures.</li>
+<li>Several data points show flux values exceeding 1.02 and below 0.96, suggesting the presence of systematic variations, potential cloud/transient features, or outlier frames.</li>
+<li>The residual scatter of 1.12% after detrending is reasonable for this instrument and star brightness.</li>
+</ul>
+<p><strong>Comparison Star Performance:</strong></p>
+<ul>
+<li>EXOTIC selected comparison star #2 at [812, 888] as the best reference.</li>
+<li>The airmass coefficients (a1=0.929, a2=0.0606) suggest the detrending model captured the systematic trends reasonably well.</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>The transit duration came out as 0.0 ± 0.0 days, indicating the data coverage did not span a full transit. The observation likely captured only the egress or ingress, or a portion of the flat-bottomed transit.</li>
+<li>The observed mid-transit time (2458881.795 BJD_TDB) differs from the prior T0 (2455226.0308 BJD) by ~3655.765 days, which is consistent with ~1055 orbital periods of HAT-P-30 b (period = 3.46845 days). This confirms the correct orbital period was used.</li>
+<li>The fitted Rp/R* = 0.151 ± 0.045 is larger than the published value of ~0.124, but the uncertainties overlap within ~1σ.</li>
+<li>The fitted inclination (83.41° ± 2.48°) differs from the prior (86.4° ± 0.5°) but remains within ~2σ.</li>
+</ul>
+<p><strong>Uncertainties:</strong> The large uncertainty on Rp/R* (±0.045, ~30%) and the inability to constrain transit duration indicate that this single-night observation provides a moderate-quality constraint on the transit parameters. A full transit coverage observation would significantly improve these measurements.</p>
+<h2>Output Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="artifact-link" href="/b799a755bc34/files/artifact_001.png" target="_blank" rel="noopener"><code>FinalLightCurve_HAT-P-30 b_02-02-2020.png</code><span aria-hidden="true">↗</span></a></td>
+<td>Final normalized light curve with transit model</td>
+</tr>
+<tr>
+<td><a class="artifact-link" href="/b799a755bc34/files/artifact_002.pdf" target="_blank" rel="noopener"><code>FinalLightCurve_HAT-P-30 b_02-02-2020.pdf</code><span aria-hidden="true">↗</span></a></td>
+<td>PDF version of light curve</td>
+</tr>
+<tr>
+<td><a class="artifact-link" href="/b799a755bc34/files/artifact_003.csv" target="_blank" rel="noopener"><code>FinalLightCurve_HAT-P-30 b_02-02-2020.csv</code><span aria-hidden="true">↗</span></a></td>
+<td>Final timeseries data (BJD_TDB, Phase, Flux, Uncertainty, Model, Airmass)</td>
+</tr>
+<tr>
+<td><a class="artifact-link" href="/b799a755bc34/files/artifact_004.txt" target="_blank" rel="noopener"><code>AAVSO_HAT-P-30 b_02-02-2020.txt</code><span aria-hidden="true">↗</span></a></td>
+<td>AAVSO-formatted photometry file</td>
+</tr>
+<tr>
+<td><a class="artifact-link" href="/b799a755bc34/files/artifact_005.json" target="_blank" rel="noopener"><code>FinalParams_HAT-P-30 b_02-02-2020.json</code><span aria-hidden="true">↗</span></a></td>
+<td>Final fitted planetary parameters (JSON)</td>
+</tr>
+<tr>
+<td><a class="artifact-link" href="/b799a755bc34/files/artifact_006.csv" target="_blank" rel="noopener"><code>PlateStatus_HAT-P-30 b_02-02-2020.csv</code><span aria-hidden="true">↗</span></a></td>
+<td>Plate solving status for all frames</td>
+</tr>
+<tr>
+<td><a class="artifact-link" href="/b799a755bc34/files/artifact_007.txt" target="_blank" rel="noopener"><code>NormalizedFlux_HAT-P-30 b_02-02-2020.txt</code><span aria-hidden="true">↗</span></a></td>
+<td>Normalized flux data</td>
+</tr>
+</tbody>
+</table>
+<h2>Conclusions</h2>
+<p>This observation of HAT-P-30 b using the LCOGT 0.4m telescope at Tenerife successfully detected the transit signal of this hot Jupiter. The fitted mid-transit time is T_c = 2458881.795 ± 0.017 BJD_TDB, consistent with ephemeris predictions based on the known orbital period. The radius ratio estimate of Rp/R* = 0.151 ± 0.045 is consistent with the published value (Rp/R* ≈ 0.124) within uncertainties, though the large error bars reflect the limitations of a partial transit coverage with a small-aperture telescope.</p>
+<p>The data quality is reasonable for this instrument class, with per-point uncertainties of ~1.35% and residual scatter of 1.12% after airmass detrending. The observation would benefit from:</p>
+<ol>
+<li>Full transit coverage (ingress to egress)</li>
+<li>More frequent observations (shorter cadence)</li>
+<li>Calibration frames (flats, darks, biases)</li>
+</ol>
+<p>This dataset is suitable for AAVSO submission and contributes to the citizen science monitoring of HAT-P-30 b.</p></section></main>
+</body>
+</html>

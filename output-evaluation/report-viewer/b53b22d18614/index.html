@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>TrES-1 b Transit Observation Report</h1>
+<h2>Observation Summary</h2>
+<p>The target was TrES-1, host star of TrES-1 b, observed on 2026-08-02 with the Cecilia telescope at Whipple Observatory through the MicroObservatory system. The instrument was a CCD camera operated with 2×2 pixel binning. The FITS headers report 60.0-second exposures and a Clear filter; EXOTIC exported the observation using its CV-filter convention. Ninety-one FITS frames were processed. The typical cadence was approximately 2.1–3.4 minutes per exposure, with the longer interval reflecting image acquisition and readout overhead.</p>
+<h2>Data Reduction</h2>
+<p>EXOTIC v4.3.1 processed the read-only FITS dataset without modifying the input directory. No dark, bias, or flat calibration frames were supplied. Aperture photometry was performed on the target and four comparison-star positions selected from the rendered field and refined with EXOTIC’s plate solution. The final reduction used an optimal aperture of 7.16 pixels and an annulus of 8.13 pixels. The light curve was detrended using an airmass correction function and fitted with the transit model using the supplied TrES-1 b ephemeris and limb-darkening information calculated by EXOTIC.</p>
+<h2>Transit Results</h2>
+<p>The fitted mid-transit time is <strong>BJD(TDB) 2461255.8882 ± 0.0034</strong>. The adopted orbital period is <strong>3.030069476 ± 0.000000072 days</strong>. EXOTIC measured a transit depth of <strong>3.37 ± 1.95%</strong>, corresponding to a radius ratio of <strong>Rp/R* = 0.184 ± 0.053</strong>. The fitted transit duration is <strong>0.1027 ± 0.0094 days</strong>, or approximately <strong>2.46 ± 0.23 hours</strong>. The approximate depth-to-uncertainty signal-to-noise ratio is <strong>1.73</strong>, indicating a low-significance detection in this dataset.</p>
+<h2>Data Quality</h2>
+<p>The reduction completed successfully and generated all expected EXOTIC products. However, the reported residual scatter is <strong>92.54%</strong>, and EXOTIC identified no single best comparison star. These values indicate substantial photometric noise or imperfect comparison-star behavior. Consequently, the fitted transit parameters—especially depth—should be treated as provisional and not as a high-confidence independent measurement. No BIC or reduced chi-squared value was reported in the EXOTIC final-parameter file. The plate-status output records the processed frames and does not indicate FITS errors, out-of-frame sources, or flagged low-flux measurements in the initial entries.</p>
+<h2>Output Files</h2>
+<p>The primary light curve is <a class="artifact-link" href="/b53b22d18614/files/artifact_001.png" target="_blank" rel="noopener"><code>FinalLightCurve_TrES-1 b_2026-08-02.png</code><span aria-hidden="true">↗</span></a>. The model-fit/posterior diagnostic is <a class="artifact-link" href="/b53b22d18614/files/artifact_002.png" target="_blank" rel="noopener"><code>tmp/Triangle_TrES-1 b_2026-08-02.png</code><span aria-hidden="true">↗</span></a>. The extracted fit parameters are in <a class="artifact-link" href="/b53b22d18614/files/artifact_003.json" target="_blank" rel="noopener"><code>tmp/FinalParams_TrES-1 b_2026-08-02.json</code><span aria-hidden="true">↗</span></a>; the numerical timeseries is <a class="artifact-link" href="/b53b22d18614/files/artifact_004.csv" target="_blank" rel="noopener"><code>tmp/FinalLightCurve_TrES-1 b_2026-08-02.csv</code><span aria-hidden="true">↗</span></a>; and the complete EXOTIC configuration is <a class="artifact-link" href="/b53b22d18614/files/artifact_005.json" target="_blank" rel="noopener"><code>inits.json</code><span aria-hidden="true">↗</span></a>. Additional field, centroid, observing-statistics, normalized-flux, plate-status, and AAVSO-export files are retained under the output directory.</p></section></main>
+</body>
+</html>

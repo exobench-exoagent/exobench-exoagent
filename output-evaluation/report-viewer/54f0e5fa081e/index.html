@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>WASP-65 b Transit Observation Report</h1>
+<h2>Observation Summary</h2>
+<p>The WASP-65 b field was observed on 2026-03-12 with the Exoplanet Watch 0.4-meter telescope using a CCD camera and a Sloan <em>r</em> filter. The dataset contains 270 FITS science images from the sq34 instrument. Each exposure was 60 seconds, with a measured cadence of approximately 63 seconds. The target was identified at pixel coordinates (1177, 1147), using the FITS plate solution, AAVSO finder chart, and visual-coordinate workflow. AAVSO comparison stars 128 and 131 were used at (724, 1033) and (1419, 719), respectively.</p>
+<h2>Data Reduction</h2>
+<p>EXOTIC v4.3.1 processed the science images without calibration frames; no flats, darks, or bias frames were present, and their directories were correctly left empty. Astrometric plate solving was successful. Photometry was performed using PSF photometry, with comparison star 128 identified as the best comparison star. The light curve was normalized and detrended against airmass using an airmass correction function. EXOTIC calculated limb-darkening parameters and uncertainties using the Sloan <em>r</em> band, followed by Bayesian transit-model fitting.</p>
+<h2>Transit Results</h2>
+<p>The fitted mid-transit time is <strong>BJD\(_\mathrm{TDB}\) 2461112.5977 ± 0.0015</strong>. The orbital period prior used in the reduction is <strong>2.3114205 ± 0.00000017 days</strong>. The measured transit depth is <strong>1.23 ± 0.15%</strong>, corresponding to a fitted radius ratio of \(R_p/R_\star = 0.1109 ± 0.0066\). The fitted transit duration is <strong>0.11504 ± 0.00088 days</strong>, or approximately 2.76 hours. The residual scatter is <strong>0.57%</strong>. EXOTIC did not provide an explicit signal-to-noise ratio, BIC, or reduced chi-squared value in the final output.</p>
+<h2>Data Quality</h2>
+<p>All 270 frames were successfully processed, with no reported alignment, FITS-read, low-flux, or out-of-frame flags in the plate-status output. The fitted model converged successfully, with EXOTIC reporting acceptable sampling quality. The residual scatter is moderate relative to the transit depth, and the fitted transit parameters are consistent with a detectable transit signal. A minor reduction warning indicated an initial filter-width matching issue before the Sloan <em>r</em> filter was supplied interactively; the final run completed successfully with the correct filter definition.</p>
+<h2>Output Files</h2>
+<p>The primary light-curve and model-fit image is <a class="artifact-link" href="/54f0e5fa081e/files/artifact_001.png" target="_blank" rel="noopener"><code>FinalLightCurve_WASP-65 b_03-12-2026.png</code><span aria-hidden="true">↗</span></a>. The corresponding PDF, normalized-flux text file, final light-curve CSV, AAVSO-format output, fitted-parameter JSON, plate-status CSV, observing-statistics plots, field-of-view images, and complete <a class="artifact-link" href="/54f0e5fa081e/files/artifact_002.json" target="_blank" rel="noopener"><code>inits.json</code><span aria-hidden="true">↗</span></a> are located under:</p>
+<p><code>output</code></p></section></main>
+</body>
+</html>

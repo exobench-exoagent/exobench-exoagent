@@ -1,0 +1,80 @@
+{
+  "planetary_parameters": {
+    "Target Star RA": "05:13:10.941888",
+    "Target Star Dec": "+33:19:04.63152",
+    "Planet Name": "KELT-7 b",
+    "Host Star Name": "KELT-7",
+    "Orbital Period (days)": 2.7347656,
+    "Orbital Period Uncertainty": 2e-07,
+    "Published Mid-Transit Time (BJD-UTC)": 2459109.138447,
+    "Mid-Transit Time Uncertainty": 5.1e-05,
+    "Ratio of Planet to Stellar Radius (Rp/Rs)": 0.09596353474106714,
+    "Ratio of Planet to Stellar Radius (Rp/Rs) Uncertainty": 9.828472893843631e-05,
+    "Ratio of Distance to Stellar Radius (a/Rs)": 5.53,
+    "Ratio of Distance to Stellar Radius (a/Rs) Uncertainty": 0.04,
+    "Orbital Inclination (deg)": 83.8,
+    "Orbital Inclination (deg) Uncertainty": 0.4,
+    "Orbital Eccentricity (0 if null)": 0.0,
+    "Argument of Periastron (deg)": 0.0,
+    "Star Effective Temperature (K)": 6789.0,
+    "Star Effective Temperature (+) Uncertainty": 50.0,
+    "Star Effective Temperature (-) Uncertainty": -49.0,
+    "Star Metallicity ([FE/H])": 0.139,
+    "Star Metallicity (+) Uncertainty": 0.075,
+    "Star Metallicity (-) Uncertainty": -0.081,
+    "Star Surface Gravity (log(g))": 4.149,
+    "Star Surface Gravity (+) Uncertainty": 0.019,
+    "Star Surface Gravity (-) Uncertainty": -0.019,
+    "Star Distance (pc)": 136.681,
+    "Star Proper Motion RA (mas/yr)": 10.6219,
+    "Star Proper Motion DEC (mas/yr)": -49.779
+  },
+  "user_info": {
+    "Directory with FITS files": "observation/KELT-7_b_20170107_ogg_0m4b_001",
+    "Directory to Save Plots": "runs/20260807-180549-031-09c69261/output",
+    "Directory of Flats": null,
+    "Directory of Darks": null,
+    "Directory of Biases": null,
+    "AAVSO Observer Code (N/A if none)": "N/A",
+    "Secondary Observer Codes (N/A if none)": "N/A",
+    "Observation date": null,
+    "Obs. Latitude": null,
+    "Obs. Longitude": null,
+    "Obs. Elevation (meters)": null,
+    "Camera Type (CCD or DSLR)": "CCD",
+    "Pixel Binning": "1x1",
+    "Filter Name (aavso.org/filters)": "Open",
+    "Observing Notes": "Generated from EXOTIC Standard notebook flow; telescope=Exoplanet Watch .4 Meter; camera type=CCD; first image=ogg0m406-kb27-20170106-0041-e91.fits; VLM supplied target and comparison-star coordinates.",
+    "Plate Solution? (y/n)": "y",
+    "Add Comparison Stars from AAVSO? (y/n)": "n",
+    "Target Star X & Y Pixel": [
+      734.0,
+      541.0
+    ],
+    "Comparison Star(s) X & Y Pixel": [
+      [
+        866.0,
+        794.0
+      ],
+      [
+        956.0,
+        433.0
+      ],
+      [
+        517.0,
+        896.0
+      ],
+      [
+        125.0,
+        754.0
+      ]
+    ],
+    "Demosaic Format": null,
+    "Demosaic Output": null
+  },
+  "optional_info": {
+    "Pixel Scale (Ex: 5.21 arcsecs/pixel)": 3600.0,
+    "Filter Minimum Wavelength (nm)": null,
+    "Filter Maximum Wavelength (nm)": null
+  }
+}

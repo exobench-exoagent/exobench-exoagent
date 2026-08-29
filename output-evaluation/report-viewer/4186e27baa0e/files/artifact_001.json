@@ -1,0 +1,76 @@
+{
+  "planetary_parameters": {
+    "Target Star RA": "20:57:04.445448",
+    "Target Star Dec": "+31:39:39.66696",
+    "Planet Name": "KELT-16 b",
+    "Host Star Name": "KELT-16",
+    "Orbital Period (days)": 0.968992962,
+    "Orbital Period Uncertainty": 9.7e-08,
+    "Published Mid-Transit Time (BJD-UTC)": 2458392.597691,
+    "Mid-Transit Time Uncertainty": 7.8e-05,
+    "Ratio of Planet to Stellar Radius (Rp/Rs)": 0.11633129845402741,
+    "Ratio of Planet to Stellar Radius (Rp/Rs) Uncertainty": 0.0003830443792184572,
+    "Ratio of Distance to Stellar Radius (a/Rs)": 3.23,
+    "Ratio of Distance to Stellar Radius (a/Rs) Uncertainty": 0.12489995996796796,
+    "Orbital Inclination (deg)": 84.4,
+    "Orbital Inclination (deg) Uncertainty": 2.6267851073127395,
+    "Orbital Eccentricity (0 if null)": 0.0,
+    "Argument of Periastron (deg)": 0.0,
+    "Star Effective Temperature (K)": 6236.0,
+    "Star Effective Temperature (+) Uncertainty": 54.0,
+    "Star Effective Temperature (-) Uncertainty": -54.0,
+    "Star Metallicity ([FE/H])": -0.002,
+    "Star Metallicity (+) Uncertainty": 0.086,
+    "Star Metallicity (-) Uncertainty": -0.085,
+    "Star Surface Gravity (log(g))": 4.253,
+    "Star Surface Gravity (+) Uncertainty": 0.031,
+    "Star Surface Gravity (-) Uncertainty": -0.036,
+    "Star Distance (pc)": 444.586,
+    "Star Proper Motion RA (mas/yr)": 5.58139,
+    "Star Proper Motion DEC (mas/yr)": 2.40857
+  },
+  "user_info": {
+    "Directory with FITS files": "observation/KELT-16 b",
+    "Directory to Save Plots": "runs/20260810-051132-072-42909056/output/EXOTIC_output",
+    "Directory of Flats": null,
+    "Directory of Darks": null,
+    "Directory of Biases": null,
+    "AAVSO Observer Code (N/A if none)": "N/A",
+    "Secondary Observer Codes (N/A if none)": "N/A",
+    "Observation date": "2026-07-08",
+    "Obs. Latitude": "30.6799670",
+    "Obs. Longitude": "-104.0150170",
+    "Obs. Elevation (meters)": "2042.080",
+    "Camera Type (CCD or DSLR)": "CCD",
+    "Pixel Binning": "1x1",
+    "Filter Name (aavso.org/filters)": "V",
+    "Observing Notes": "Generated from EXOTIC Standard notebook flow; telescope=MicroObservatory; camera type=CCD; first image=elp0m473-sq46-20260707-0120-e91.fits; VLM supplied target and comparison-star coordinates. Corrected Observation Date, Coordinates, Filter, and Pixel Scale from FITS header.",
+    "Plate Solution? (y/n)": "y",
+    "Add Comparison Stars from AAVSO? (y/n)": "n",
+    "Target Star X & Y Pixel": [
+      515.0,
+      432.0
+    ],
+    "Comparison Star(s) X & Y Pixel": [
+      [
+        380.0,
+        310.0
+      ],
+      [
+        640.0,
+        520.0
+      ],
+      [
+        420.0,
+        610.0
+      ]
+    ],
+    "Demosaic Format": null,
+    "Demosaic Output": null
+  },
+  "optional_info": {
+    "Pixel Scale (Ex: 5.21 arcsecs/pixel)": "0.74 arcsecs/pixel",
+    "Filter Minimum Wavelength (nm)": null,
+    "Filter Maximum Wavelength (nm)": null
+  }
+}

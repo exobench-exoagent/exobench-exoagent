@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: Qatar-10 b Transit Observation</h1>
+<h2>Observation Summary</h2>
+<p><strong>Target:</strong> Qatar-10 b (Super-Earth exoplanet transiting Qatar-10)<br>
+<strong>Host Star:</strong> Qatar-10 (TIC 354895612)<br>
+<strong>Telescope:</strong> LCOGT 0.4m-06 (MicroObservatory .4m network)<br>
+<strong>Site:</strong> Haleakala Observatory, Maui, Hawaii (20.707°N, 156.258°W, elevation 3037m)<br>
+<strong>Camera:</strong> QHY600M CCD<br>
+<strong>Filter:</strong> SDSS-rp (rp)<br>
+<strong>Exposure Time:</strong> 77 seconds<br>
+<strong>Observation Date:</strong> 2024-07-14<br>
+<strong>Cadence:</strong> ~4.1 minutes between sampled frames (35 images selected from 140 total)<br>
+<strong>Image Size:</strong> 2400 × 2400 pixels<br>
+<strong>Pixel Scale:</strong> 0.74 arcsec/pixel<br>
+<strong>Field of View:</strong> ~29.6 arcmin square</p>
+<h2>Data Reduction</h2>
+<h3>Image Alignment</h3>
+<p>EXOTIC's complete reduction routine performed astrometric alignment of all 35 selected FITS images using plate solving with the provided target coordinates (RA = 18:57:08.44, Dec = +69:34:35). The images were aligned to a common reference frame prior to aperture photometry.</p>
+<h3>Aperture Photometry</h3>
+<p>Aperture photometry was performed with optimal aperture radius of 3.12 pixels and optimal annulus inner radius of 7.65 pixels. Four comparison stars were selected based on proximity and brightness from the AAVSO chart (magnitudes V=12.4–13.4). However, EXOTIC reported "Best Comparison Star: None," suggesting that none of the comparison stars provided significantly better photometric stability than using the target alone.</p>
+<h3>Detrending</h3>
+<p>Exponential airmass detrending was applied with coefficients:</p>
+<ul>
+<li>Airmass coefficient 1 (a1): 11.12 ± 3.39</li>
+<li>Airmass coefficient 2 (a2): -1.52 ± 1.01</li>
+</ul>
+<h3>Transit Fitting</h3>
+<p>The transit was fitted using the <code>juliet</code> nested sampler package. The nested sampler converged with:</p>
+<ul>
+<li>logZ = -18.03 ± 0.028</li>
+<li>Effective sample size (ESS) = 1140</li>
+<li>KL divergence &lt; 0.50 nat</li>
+</ul>
+<h2>Transit Results</h2>
+<p>The fitted transit parameters from EXOTIC are:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time (BJD_TDB)</td>
+<td>2460506.93 ± 0.43</td>
+</tr>
+<tr>
+<td>Radius Ratio (Rp/R*)</td>
+<td>0.0044 ± 0.0041</td>
+</tr>
+<tr>
+<td>Transit Depth</td>
+<td>0.0019 ± 0.0036 %</td>
+</tr>
+<tr>
+<td>Orbital Inclination</td>
+<td>87.84 ± 1.89°</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.007 ± 0.02 day (≈10 min)</td>
+</tr>
+<tr>
+<td>Residual Scatter</td>
+<td>31.78 %</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Comparison with published values:</strong></p>
+<ul>
+<li>The fitted mid-transit time (BJD_TDB = 2460506.93) is in rough agreement with the predicted T0 = 2459877.5212 + N × 3.0224 for N ≈ 215.4, yielding BJD ≈ 2460527.1, though the large uncertainty (±0.43) makes direct comparison difficult.</li>
+<li>The fitted radius ratio (0.0044 ± 0.0041) is significantly smaller than the published value (Rp/R* ≈ 0.0114 from Kunimoto et al. 2023), and the uncertainty is large relative to the fitted value.</li>
+<li>The transit depth of 0.0019 ± 0.0036% is consistent with zero within 1σ.</li>
+</ul>
+<h2>Data Quality</h2>
+<p>The data quality is <strong>limited</strong>. Key issues include:</p>
+<ol>
+<li>
+<p><strong>High residual scatter (31.78%):</strong> This is significantly higher than typical ground-based transit photometry (usually &lt; 2%). The scatter may be due to:<br>
+   - Moon illumination during the observation (moon fraction = 0.63 from FITS headers)<br>
+   - Variable seeing conditions<br>
+   - Inadequate comparison star selection (no optimal comparison star identified)<br>
+   - Limited number of sampled frames (35 images from 140 total)</p>
+</li>
+<li>
+<p><strong>No optimal comparison star:</strong> EXOTIC could not identify a comparison star that improved the light curve relative to the target alone. This suggests that comparison star photometry did not provide meaningful detrending benefit, possibly due to atmospheric conditions or star selection issues.</p>
+</li>
+<li>
+<p><strong>Large uncertainties:</strong> The fitted radius ratio has an uncertainty (±0.0041) that is ~93% of the fitted value, making the result consistent with both zero and the published value.</p>
+</li>
+<li>
+<p><strong>Sampling:</strong> The observation was subsampled to 35 of 140 available frames, which reduces the temporal coverage of the transit.</p>
+</li>
+</ol>
+<h2>Output Files</h2>
+<p>Generated files in the output directory:</p>
+<ul>
+<li><a class="artifact-link" href="/722745690043/files/artifact_001.png" target="_blank" rel="noopener"><code>FinalLightCurve_Qatar-10 b_07-14-2024.png</code><span aria-hidden="true">↗</span></a> — Transit light curve plot</li>
+<li><a class="artifact-link" href="/722745690043/files/artifact_002.csv" target="_blank" rel="noopener"><code>FinalLightCurve_Qatar-10 b_07-14-2024.csv</code><span aria-hidden="true">↗</span></a> — Timeseries data (BJD_TDB, phase, flux, uncertainty)</li>
+<li><a class="artifact-link" href="/722745690043/files/artifact_003.json" target="_blank" rel="noopener"><code>FinalParams_Qatar-10 b_07-14-2024.json</code><span aria-hidden="true">↗</span></a> — Fitted parameters in JSON format</li>
+<li><a class="artifact-link" href="/722745690043/files/artifact_004.txt" target="_blank" rel="noopener"><code>NormalizedFlux_Qatar-10 b_07-14-2024.txt</code><span aria-hidden="true">↗</span></a> — Normalized flux timeseries</li>
+<li><a class="artifact-link" href="/722745690043/files/artifact_005.txt" target="_blank" rel="noopener"><code>AAVSO_Qatar-10 b_07-14-2024.txt</code><span aria-hidden="true">↗</span></a> — AAVSO submission format file</li>
+<li>Various diagnostic plots in the <code>tmp</code> subdirectory</li>
+</ul>
+<h2>Conclusions</h2>
+<p>This observation of Qatar-10 b did not yield a high-precision transit detection. The primary limitations are:</p>
+<ol>
+<li><strong>Moon-affected conditions</strong> (63% illuminated moon at observation time)</li>
+<li><strong>Inadequate comparison star photometry</strong> (no optimal comparison found)</li>
+<li><strong>Subsampled data</strong> (only 35 of 140 images processed)</li>
+</ol>
+<p>Future observations should:</p>
+<ul>
+<li>Avoid observations when the moon is more than ~30% illuminated</li>
+<li>Use the full set of available frames for better temporal coverage</li>
+<li>Carefully select comparison stars that are nearby, bright, and have similar color to the target</li>
+<li>Consider observations at airmass &lt; 1.5 for optimal conditions</li>
+</ul>
+<p>The fitted mid-transit time (2460506.93 ± 0.43 BJD_TDB) is consistent with the published ephemeris within the large uncertainty, suggesting the transit did occur as predicted, but the photometric precision was insufficient for a precise characterization.</p>
+<p><strong>Disclaimer:</strong> These results are based on a subsample (35 of 140 frames) of the original observation and were obtained under moon-illuminated conditions (63% moon fraction). The results should be considered preliminary and not suitable for publication without further observation and analysis.</p></section></main>
+</body>
+</html>

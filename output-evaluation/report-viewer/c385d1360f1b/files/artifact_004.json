@@ -1,0 +1,76 @@
+{
+  "planetary_parameters": {
+    "Target Star RA": "21:00:06.231864",
+    "Target Star Dec": "-05:05:41.4852",
+    "Planet Name": "WASP-69 b",
+    "Host Star Name": "WASP-69",
+    "Orbital Period (days)": 3.86813881,
+    "Orbital Period Uncertainty": 1.3e-07,
+    "Published Mid-Transit Time (BJD-UTC)": 2455748.83428,
+    "Mid-Transit Time Uncertainty": 0.00013,
+    "Ratio of Planet to Stellar Radius (Rp/Rs)": 0.1313772944614099,
+    "Ratio of Planet to Stellar Radius (Rp/Rs) Uncertainty": 0.00028839572435501195,
+    "Ratio of Distance to Stellar Radius (a/Rs)": 12.17,
+    "Ratio of Distance to Stellar Radius (a/Rs) Uncertainty": 0.07,
+    "Orbital Inclination (deg)": 86.79,
+    "Orbital Inclination (deg) Uncertainty": 0.04,
+    "Orbital Eccentricity (0 if null)": 0.0,
+    "Argument of Periastron (deg)": 90.0,
+    "Star Effective Temperature (K)": 4792.0,
+    "Star Effective Temperature (+) Uncertainty": 158.0,
+    "Star Effective Temperature (-) Uncertainty": -158.0,
+    "Star Metallicity ([FE/H])": 0.35,
+    "Star Metallicity (+) Uncertainty": 0.07,
+    "Star Metallicity (-) Uncertainty": -0.07,
+    "Star Surface Gravity (log(g))": 4.57,
+    "Star Surface Gravity (+) Uncertainty": 0.037,
+    "Star Surface Gravity (-) Uncertainty": -0.037,
+    "Star Distance (pc)": 49.9605,
+    "Star Proper Motion RA (mas/yr)": 33.6756,
+    "Star Proper Motion DEC (mas/yr)": -93.4364
+  },
+  "user_info": {
+    "Directory with FITS files": "observation/WASP-69 b",
+    "Directory to Save Plots": "runs/WASP-69_b_[REDACTED]/output/EXOTIC_output",
+    "Directory of Flats": null,
+    "Directory of Darks": null,
+    "Directory of Biases": null,
+    "AAVSO Observer Code (N/A if none)": "N/A",
+    "Secondary Observer Codes (N/A if none)": "N/A",
+    "Observation date": null,
+    "Obs. Latitude": null,
+    "Obs. Longitude": null,
+    "Obs. Elevation (meters)": null,
+    "Camera Type (CCD or DSLR)": "CCD",
+    "Pixel Binning": "1x1",
+    "Filter Name (aavso.org/filters)": "Open",
+    "Observing Notes": "Generated from EXOTIC Standard notebook flow; telescope=MicroObservatory; camera type=CCD; first image=lsc0m492-sq35-20250924-0402-e91.fits; VLM supplied target and comparison-star coordinates.",
+    "Plate Solution? (y/n)": "y",
+    "Add Comparison Stars from AAVSO? (y/n)": "n",
+    "Target Star X & Y Pixel": [
+      1200.0,
+      1200.0
+    ],
+    "Comparison Star(s) X & Y Pixel": [
+      [
+        426.0,
+        1309.0
+      ],
+      [
+        1348.0,
+        1043.0
+      ],
+      [
+        1722.0,
+        1195.0
+      ]
+    ],
+    "Demosaic Format": null,
+    "Demosaic Output": null
+  },
+  "optional_info": {
+    "Pixel Scale (Ex: 5.21 arcsecs/pixel)": 3600.0,
+    "Filter Minimum Wavelength (nm)": null,
+    "Filter Maximum Wavelength (nm)": null
+  }
+}

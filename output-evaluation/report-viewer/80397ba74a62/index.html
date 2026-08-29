@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: Transit Observation of Qatar-1 b</h1>
+<h2>Observation Summary</h2>
+<ul>
+<li><strong>Target:</strong> Qatar-1 b</li>
+<li><strong>Host Star:</strong> Qatar-1</li>
+<li><strong>Telescope:</strong> Cecilia (Whipple Observatory; Center for Astrophysics | Harvard-Smithsonian)</li>
+<li><strong>Instrument:</strong> CCD Camera</li>
+<li><strong>Observation Date:</strong> 2026-08-03</li>
+<li><strong>Filter:</strong> Clear</li>
+<li><strong>Dataset:</strong> 75 FITS files</li>
+<li><strong>Pixel Scale:</strong> 13.6 arcsec/pixel (Derived from FITS header <code>XPIXSZ</code>/<code>YPIXSZ</code>)</li>
+</ul>
+<h2>Data Reduction</h2>
+<p>The data were processed using the EXOTIC transit pipeline. Calibration frames (Flats, Darks, Biases) were not provided and therefore not applied. Aperture photometry was performed using an optimized aperture of 73.83 pixels and an annulus of 96.74 pixels. </p>
+<p>Due to repeated failures of the remote plate solving service (nova.astrometry.net), plate solving was disabled. Instead, a local pixel scale of 13.6 arcsec/pixel was utilized alongside manually identified star coordinates. The target star was centered at [325, 250] and three comparison stars were selected at [200, 200], [450, 200], and [325, 100] to ensure stability and avoid image edges.</p>
+<h2>Transit Results</h2>
+<p>The transit was modeled using a Bayesian approach. The final fitted parameters are as follows:</p>
+<ul>
+<li><strong>Mid-Transit Time (BJD_TDB):</strong> 2461256.7238 +/- 0.0034</li>
+<li><strong>Radius Ratio (Rp/Rs):</strong> 0.129 +/- 0.056</li>
+<li><strong>Transit Depth:</strong> 1.65 +/- 1.44 %</li>
+<li><strong>Orbital Inclination:</strong> 80.84 +/- 2.82 degrees</li>
+<li><strong>Transit Duration:</strong> 0.033 +/- 0.028 days</li>
+</ul>
+<h2>Data Quality and Diagnostics</h2>
+<p>The fit yielded a high residual scatter of 61.77%, indicating a low signal-to-noise ratio (SNR) for this observation. No single comparison star was identified as "Best," which is consistent with the high noise levels and the residual scatter. Despite the noise, the pipeline successfully converged on a transit model.</p>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve:</strong> <a class="artifact-link" href="/80397ba74a62/files/artifact_001.png" target="_blank" rel="noopener"><code>output/EXOTIC_output/FinalLightCurve_Qatar-1 b_2026-08-03.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>AAVSO Submission File:</strong> <a class="artifact-link" href="/80397ba74a62/files/artifact_002.txt" target="_blank" rel="noopener"><code>output/EXOTIC_output/AAVSO_Qatar-1 b_2026-08-03.txt</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Fitted Parameters JSON:</strong> <a class="artifact-link" href="/80397ba74a62/files/artifact_003.json" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalParams_Qatar-1 b_2026-08-03.json</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>

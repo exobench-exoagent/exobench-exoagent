@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><p>TRANSIT OBSERVATION REPORT: WASP-69 b<br>
+Observation Date: 2025-09-25 (UTC)<br>
+Target: WASP-69 (RA=21h00m06.40s, Dec=-05d05m57.4s)<br>
+Planet: WASP-69 b</p>
+<h2>OBSERVATION SUMMARY</h2>
+<p>This observation of WASP-69 b was obtained using the LCOGT 0.4m-92 telescope<br>
+at the Cerro Tololo Inter-American Observatory (CTIO), Chile, as part of the<br>
+MicroObservatory network. The observation was conducted on 2025-09-25 UTC<br>
+(01:11 - 02:24 UT, duration ~1 hour 13 minutes) using the V-band filter<br>
+(Johnson V, 502.8-586.8 nm) with a QHY600M CCD camera.</p>
+<p>Instrument Details:</p>
+<ul>
+<li>Telescope: LCOGT 0.4m-92 (MicroObservatory)</li>
+<li>Site: Cerro Tololo, Chile (Lat: -30.17 deg, Lon: -70.80 deg, Alt: 2201 m)</li>
+<li>Camera: CCD (QHY600M), 2400x2400 pixels, 1x1 binning</li>
+<li>Filter: Johnson V (502.8-586.8 nm)</li>
+<li>Exposure time: 12.0 seconds per frame</li>
+<li>Total frames: 300</li>
+<li>Pixel scale: 0.74 arcsec/pixel</li>
+</ul>
+<p>Data Processing:</p>
+<ul>
+<li>
+<p>The FITS files were pre-processed by the L1 pipeline (LCOGT standard)<br>
+    with bias subtraction, dark current correction, and flat fielding.</p>
+</li>
+<li>
+<p>No additional calibration frames (flats/darks/biases) were applied by EXOTIC.</p>
+</li>
+<li>Plate solving was performed but was not required for photometric analysis.</li>
+<li>
+<p>Aperture photometry was performed with optimal aperture 1.58 pixels and<br>
+    optimal annulus 6.5 pixels.</p>
+</li>
+<li>
+<p>Detrending was performed using airmass correction (two-parameter model).</p>
+</li>
+</ul>
+<h2>TRANSIT RESULTS</h2>
+<p>The EXOTIC transit fitting converged to a non-transit solution:</p>
+<p>Mid-Transit Time (Tc): 2460939.8725 +/- 0.0061 BJD_TDB<br>
+  Radius Ratio (Rp/R*): 0.031 +/- 0.047<br>
+  Transit Depth [(Rp/R*)^2]: 0.095 +/- 0.29 %<br>
+  Orbital Inclination: 83.58 +/- 2.39 degrees<br>
+  Transit Duration: 0.0 +/- 0.0 days</p>
+<p>Published values for comparison:</p>
+<ul>
+<li>Expected Period: 3.686 days (H ebrard et al. 2013)</li>
+<li>Expected Rp/R*: 0.126</li>
+<li>Expected Transit Depth: ~1.6%</li>
+<li>Expected Duration: ~4.8 hours</li>
+</ul>
+<h2>DATA QUALITY</h2>
+<ul>
+<li>Residual scatter in light curve fit: 16.09%</li>
+<li>No best comparison star was identified by EXOTIC</li>
+<li>The light curve shows significant scatter relative to the expected<br>
+    photon-limited precision</li>
+</ul>
+<h2>KEY FINDINGS AND INTERPRETATION</h2>
+<p>This observation did not capture the transit of WASP-69 b. The fitted<br>
+mid-transit time (BJD 2460939.87) is approximately 3.2 days BEFORE the<br>
+observation epoch (BJD 2460943.05), confirming that the data represents<br>
+only out-of-transit baseline observations.</p>
+<p>Using the published ephemeris from H ebrard et al. (2013):</p>
+<ul>
+<li>Reference T0: BJD 2455258.69121</li>
+<li>Period: 3.686063 days</li>
+<li>N = 1542 full orbits later: T = 2455258.69121 + 1542 x 3.686063 = BJD 2460942.60</li>
+</ul>
+<p>The predicted mid-transit (BJD 2460942.60) occurred approximately 10.8 hours<br>
+before the observation started (BJD 2460943.05), well outside the transit<br>
+duration (~4.8 hours). This timing offset explains why no transit signal was<br>
+detected.</p>
+<p>The high residual scatter (16.09%) and failure to identify a good comparison<br>
+star suggest additional sources of systematic noise beyond photon statistics.<br>
+Possible contributors include:</p>
+<ul>
+<li>Stellar variability (WASP-69 is a G-type star, typically stable)</li>
+<li>Incomplete calibration or detector artifacts</li>
+<li>Poor choice of comparison stars (no suitable comparison star identified)</li>
+</ul>
+<h2>CONCLUSION</h2>
+<p>This observation did not capture the transit of WASP-69 b due to an<br>
+ephemeris timing offset. The data represents clean out-of-transit baseline<br>
+observations of the host star. Future observations should use updated<br>
+ephemerides incorporating additional transit timing measurements to improve<br>
+the predicted transit time.</p>
+<h2>OUTPUT FILES</h2>
+<ul>
+<li><a class="artifact-link" href="/c385d1360f1b/files/artifact_001.png" target="_blank" rel="noopener"><code>FinalLightCurve_WASP-69 b_V.png</code><span aria-hidden="true">↗</span></a>: Final normalized light curve plot</li>
+<li><a class="artifact-link" href="/c385d1360f1b/files/artifact_002.txt" target="_blank" rel="noopener"><code>AAVSO_WASP-69 b_V.txt</code><span aria-hidden="true">↗</span></a>: AAVSO-format light curve data</li>
+<li><a class="artifact-link" href="/c385d1360f1b/files/artifact_003.json" target="_blank" rel="noopener"><code>FinalParams_WASP-69 b_V.json</code><span aria-hidden="true">↗</span></a>: Fitted planetary parameters</li>
+<li><a class="artifact-link" href="/c385d1360f1b/files/artifact_004.json" target="_blank" rel="noopener"><code>inits.json</code><span aria-hidden="true">↗</span></a>: EXOTIC input configuration</li>
+</ul></section></main>
+</body>
+</html>

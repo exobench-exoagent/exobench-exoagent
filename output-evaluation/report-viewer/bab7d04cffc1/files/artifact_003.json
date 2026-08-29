@@ -1,0 +1,80 @@
+{
+  "planetary_parameters": {
+    "Target Star RA": "18:57:46.537248",
+    "Target Star Dec": "+69:34:15.01428",
+    "Planet Name": "Qatar-10 b",
+    "Host Star Name": "Qatar-10",
+    "Orbital Period (days)": 1.64532652,
+    "Orbital Period Uncertainty": 5e-07,
+    "Published Mid-Transit Time (BJD-UTC)": 2459108.413073,
+    "Mid-Transit Time Uncertainty": 9.2e-05,
+    "Ratio of Planet to Stellar Radius (Rp/Rs)": 0.13896042602122377,
+    "Ratio of Planet to Stellar Radius (Rp/Rs) Uncertainty": 4.951049875846812e-07,
+    "Ratio of Distance to Stellar Radius (a/Rs)": 4.9,
+    "Ratio of Distance to Stellar Radius (a/Rs) Uncertainty": 0.12,
+    "Orbital Inclination (deg)": 85.87,
+    "Orbital Inclination (deg) Uncertainty": 0.96,
+    "Orbital Eccentricity (0 if null)": 0.0,
+    "Argument of Periastron (deg)": 0.0,
+    "Star Effective Temperature (K)": 6124.0,
+    "Star Effective Temperature (+) Uncertainty": 46.0,
+    "Star Effective Temperature (-) Uncertainty": -46.0,
+    "Star Metallicity ([FE/H])": 0.016,
+    "Star Metallicity (+) Uncertainty": 0.089,
+    "Star Metallicity (-) Uncertainty": -0.089,
+    "Star Surface Gravity (log(g))": 4.303,
+    "Star Surface Gravity (+) Uncertainty": 0.027,
+    "Star Surface Gravity (-) Uncertainty": -0.027,
+    "Star Distance (pc)": 559.068,
+    "Star Proper Motion RA (mas/yr)": -5.57512,
+    "Star Proper Motion DEC (mas/yr)": -3.37347
+  },
+  "user_info": {
+    "Directory with FITS files": "observation/Qatar-10_b_20240715_ogg_0m4b_001",
+    "Directory to Save Plots": "runs/20260807-115415-964-bd535625/output",
+    "Directory of Flats": null,
+    "Directory of Darks": null,
+    "Directory of Biases": null,
+    "AAVSO Observer Code (N/A if none)": "N/A",
+    "Secondary Observer Codes (N/A if none)": "N/A",
+    "Observation date": null,
+    "Obs. Latitude": null,
+    "Obs. Longitude": null,
+    "Obs. Elevation (meters)": null,
+    "Camera Type (CCD or DSLR)": "CCD",
+    "Pixel Binning": "1x1",
+    "Filter Name (aavso.org/filters)": "Open",
+    "Observing Notes": "Generated from EXOTIC Standard notebook flow; telescope=Exoplanet Watch .4 Meter; camera type=CCD; first image=ogg0m455-sq30-20240714-0124-e91.fits; VLM supplied target and comparison-star coordinates.",
+    "Plate Solution? (y/n)": "y",
+    "Add Comparison Stars from AAVSO? (y/n)": "n",
+    "Target Star X & Y Pixel": [
+      453.0,
+      321.0
+    ],
+    "Comparison Star(s) X & Y Pixel": [
+      [
+        302.0,
+        409.0
+      ],
+      [
+        357.0,
+        447.0
+      ],
+      [
+        322.0,
+        168.0
+      ],
+      [
+        727.0,
+        167.0
+      ]
+    ],
+    "Demosaic Format": null,
+    "Demosaic Output": null
+  },
+  "optional_info": {
+    "Pixel Scale (Ex: 5.21 arcsecs/pixel)": 3600.0,
+    "Filter Minimum Wavelength (nm)": null,
+    "Filter Maximum Wavelength (nm)": null
+  }
+}

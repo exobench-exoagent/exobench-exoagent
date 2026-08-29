@@ -1,0 +1,4 @@
+Model,Source Class,Attempted Tasks,Submitted Reports,Workflow Completion Rate (%),Mean Target-Star Error (px),Median Target-Star Error (px),Ephemerides Exact-Match (%),Mean Ephemerides Extraction Difference (%),Mean NASA Ephemerides Difference (%),Mean EXOTIC Generation Difference (%),Mean Time Per Submitted Report (min),Mean Report Length (words)
+gpt-5.6-luna,OpenAI-compatible,40,27,67.5,100.341,2.029,82.4,366.974,22.967,14.087,34.86,436.1
+nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,OpenRouter,40,31,77.5,221.705,4.967,84.3,648.692,27.421,20.377,41.90,286.3
+qwen/qwen3.6-35b-a3b,OpenRouter,40,28,70.0,194.891,21.463,77.1,123352.688,39.531,35.221,51.45,617.4

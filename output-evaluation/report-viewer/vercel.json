@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "functions": {
+    "app.py": {
+      "includeFiles": "{*/index.html,*/files/**,404.html}",
+      "excludeFiles": "{[metadata-dir-removed]/**,build_static_site.py,build_report_viewer_csv.py,assign_reviewers.py,README.md,review_assignments.csv}"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/app.py"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "planetary_parameters": {
+    "Target Star RA": "19:07:14.046192",
+    "Target Star Dec": "+49:18:59.11596",
+    "Planet Name": "TrES-2 b",
+    "Host Star Name": "TrES-2",
+    "Orbital Period (days)": 2.470613372,
+    "Orbital Period Uncertainty": 2.4e-08,
+    "Published Mid-Transit Time (BJD-UTC)": 2455706.8297691,
+    "Mid-Transit Time Uncertainty": 4.1e-06,
+    "Ratio of Planet to Stellar Radius (Rp/Rs)": 0.11929333594128383,
+    "Ratio of Planet to Stellar Radius (Rp/Rs) Uncertainty": 1.760366564846187e-05,
+    "Ratio of Distance to Stellar Radius (a/Rs)": 7.903,
+    "Ratio of Distance to Stellar Radius (a/Rs) Uncertainty": 0.017435595774162694,
+    "Orbital Inclination (deg)": 83.872,
+    "Orbital Inclination (deg) Uncertainty": 0.018973665961010275,
+    "Orbital Eccentricity (0 if null)": 0.0,
+    "Argument of Periastron (deg)": 24.0,
+    "Star Effective Temperature (K)": 5850.0,
+    "Star Effective Temperature (+) Uncertainty": 50.0,
+    "Star Effective Temperature (-) Uncertainty": -73.0,
+    "Star Metallicity ([FE/H])": 0.06,
+    "Star Metallicity (+) Uncertainty": 0.08,
+    "Star Metallicity (-) Uncertainty": -0.08,
+    "Star Surface Gravity (log(g))": 4.457,
+    "Star Surface Gravity (+) Uncertainty": 0.027,
+    "Star Surface Gravity (-) Uncertainty": -0.027,
+    "Star Distance (pc)": 215.32,
+    "Star Proper Motion RA (mas/yr)": 5.21852,
+    "Star Proper Motion DEC (mas/yr)": 1.61903
+  },
+  "user_info": {
+    "Directory with FITS files": "observation/TrES-2_b_20230817_elp_0m4a_001 2",
+    "Directory to Save Plots": "runs/20260807-105324-400-883dd536/output",
+    "Directory of Flats": null,
+    "Directory of Darks": null,
+    "Directory of Biases": null,
+    "AAVSO Observer Code (N/A if none)": "N/A",
+    "Secondary Observer Codes (N/A if none)": "N/A",
+    "Observation date": null,
+    "Obs. Latitude": null,
+    "Obs. Longitude": null,
+    "Obs. Elevation (meters)": null,
+    "Camera Type (CCD or DSLR)": "CCD",
+    "Pixel Binning": "1x1",
+    "Filter Name (aavso.org/filters)": "Open",
+    "Observing Notes": "Generated from EXOTIC Standard notebook flow; telescope=Exoplanet Watch .4 Meter; camera type=CCD; first image=elp0m414-sq31-20230816-0662-e91.fits; VLM supplied target and comparison-star coordinates.",
+    "Plate Solution? (y/n)": "y",
+    "Add Comparison Stars from AAVSO? (y/n)": "n",
+    "Target Star X & Y Pixel": [
+      1149.0,
+      1202.0
+    ],
+    "Comparison Star(s) X & Y Pixel": [
+      [
+        1196.0,
+        1657.0
+      ],
+      [
+        1552.0,
+        1046.0
+      ],
+      [
+        596.0,
+        1568.0
+      ],
+      [
+        1802.0,
+        1468.0
+      ]
+    ],
+    "Demosaic Format": null,
+    "Demosaic Output": null
+  },
+  "optional_info": {
+    "Pixel Scale (Ex: 5.21 arcsecs/pixel)": 3600.0,
+    "Filter Minimum Wavelength (nm)": null,
+    "Filter Maximum Wavelength (nm)": null
+  }
+}

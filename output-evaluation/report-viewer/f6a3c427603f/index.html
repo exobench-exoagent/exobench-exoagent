@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><p>EXOTIC completed successfully for the 54-frame HAT-P-19 b observation obtained on 2026-07-11. The data were acquired with the Cecilia telescope at Whipple Observatory using a CCD camera, a clear filter, 60-second exposures, and 2×2 binning. The FITS headers give an observing latitude of +31.68° and longitude −110.88°. The sequence cadence was approximately two minutes per frame.</p>
+<p>The reduction used EXOTIC differential aperture photometry with three supplied comparison stars. No flat, dark, or bias directories were provided, so the reduction did not include separate calibration-frame correction. The light curve was normalized and modeled with airmass detrending. EXOTIC’s optimized aperture was 0.87, with an annulus value of 4.75; comparison star #2, at [404, 138], was selected as optimal.</p>
+<p>The final fitted mid-transit time was 2461228.9915 ± 0.0058 BJD_TDB. EXOTIC measured Rp/Rs = 0.182 ± 0.054, corresponding to a transit depth of 3.30 ± 1.95%, and a duration of 0.033 ± 0.016 days. The fitted inclination was 87.02° ± 1.41°. EXOTIC reported residual scatter of 5.06%. A formal signal-to-noise ratio, reduced χ², and BIC were not included in the generated results; using the fitted depth and uncertainty alone gives only an approximate 1.7σ depth significance, so this should not be treated as a strong independent transit detection.</p>
+<p>The output diagnostics show several frames with alignment flags, although no FITS, low-flux, out-of-frame, or sky-background failures were reported. The relatively large residual scatter and depth uncertainty indicate low-quality or marginal transit constraints. The generated configuration also contained an automatically assigned pixel scale of 3600 arcsec/pixel and omitted the observatory longitude despite the FITS header containing −110.88°; these metadata issues should be corrected before using the result for archival or precision analysis.</p>
+<p>Primary outputs are located under the run workspace:  </p>
+<ul>
+<li>Final light curve and model: <a class="artifact-link" href="/f6a3c427603f/files/artifact_001.png" target="_blank" rel="noopener"><code>output/FinalLightCurve_HAT-P-19 b_2026-07-11.png</code><span aria-hidden="true">↗</span></a>  </li>
+<li>Final fitted parameters: <a class="artifact-link" href="/f6a3c427603f/files/artifact_002.json" target="_blank" rel="noopener"><code>output/tmp/FinalParams_HAT-P-19 b_2026-07-11.json</code><span aria-hidden="true">↗</span></a>  </li>
+<li>Light-curve CSV: <a class="artifact-link" href="/f6a3c427603f/files/artifact_003.csv" target="_blank" rel="noopener"><code>output/tmp/FinalLightCurve_HAT-P-19 b_2026-07-11.csv</code><span aria-hidden="true">↗</span></a>  </li>
+<li>EXOTIC configuration: <a class="artifact-link" href="/f6a3c427603f/files/artifact_004.json" target="_blank" rel="noopener"><code>output/inits.json</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><p>The Qatar-1 b observation was processed with EXOTIC v4.3.1 from <strong>75 CCD FITS frames</strong> obtained on <strong>2026-08-03</strong>. The FITS headers specify 60-second exposures, 2×2 binning, a Clear filter, and the Cecilia telescope at Whipple Observatory. The time sampling was approximately 1–2 minutes per usable measurement. The input directory was treated as read-only; generated configuration, logs, diagnostic products, and plots were written under the designated run workspace.</p>
+<p>The reduction used EXOTIC alignment, aperture photometry, comparison-star normalization, and airmass detrending. The target was measured at pixel position [295, 262], with four comparison stars supplied. EXOTIC selected [310, 364] as the best comparison star and found an optimal aperture of 1.11 pixels with a 6.0-pixel annulus. The non-interactive <a class="artifact-link" href="/1200c84b41b9/files/artifact_001.json" target="_blank" rel="noopener"><code>inits.json</code><span aria-hidden="true">↗</span></a> was generated before the EXOTIC run, and the run terminated normally with return code 0.</p>
+<p>The fitted transit mid-time is <strong>BJD-TDB 2461256.724 ± 0.0022</strong>, with a fitted radius ratio of <strong>0.1925 ± 0.0043</strong> and a transit depth of <strong>3.71 ± 0.17%</strong>. The fitted inclination is <strong>88.95 ± 0.75°</strong>, and the fitted duration is <strong>0.08617 ± 0.00072 days</strong>. The orbital period reported here is the catalog/prior value, <strong>1.420024443 days</strong>, because EXOTIC did not refit the period from this single observation.</p>
+<p>Data quality requires caution. EXOTIC reports residual scatter of <strong>40.74%</strong>, which is very large for precision transit photometry and indicates that the fitted depth and uncertainty should not be regarded as a high-quality precision measurement without additional validation. The plate-status table flags one alignment error, although the remaining listed diagnostic flags are false. The generated metadata also contains a suspicious 3600 arcsec/pixel scale and did not retain the FITS longitude value; these configuration issues should be corrected in any repeat reduction. No formal RMS, reduced χ², BIC, or EXOTIC S/N was reported.</p>
+<p>Primary outputs:</p>
+<ul>
+<li>Light curve: <a class="artifact-link" href="/1200c84b41b9/files/artifact_002.png" target="_blank" rel="noopener"><code>output/FinalLightCurve_Qatar-1 b_2026-08-03.png</code><span aria-hidden="true">↗</span></a></li>
+<li>Fit/posterior diagnostic: <a class="artifact-link" href="/1200c84b41b9/files/artifact_003.png" target="_blank" rel="noopener"><code>output/tmp/Triangle_Qatar-1 b_2026-08-03.png</code><span aria-hidden="true">↗</span></a></li>
+<li>Final parameter JSON: <a class="artifact-link" href="/1200c84b41b9/files/artifact_004.json" target="_blank" rel="noopener"><code>output/tmp/FinalParams_Qatar-1 b_2026-08-03.json</code><span aria-hidden="true">↗</span></a></li>
+<li>EXOTIC input: <a class="artifact-link" href="/1200c84b41b9/files/artifact_001.json" target="_blank" rel="noopener"><code>output/inits.json</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>

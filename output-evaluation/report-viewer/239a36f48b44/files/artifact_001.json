@@ -1,0 +1,80 @@
+{
+  "planetary_parameters": {
+    "Target Star RA": "20:13:31.648728",
+    "Target Star Dec": "+65:09:44.39268",
+    "Planet Name": "Qatar-1 b",
+    "Host Star Name": "Qatar-1",
+    "Orbital Period (days)": 1.420024443,
+    "Orbital Period Uncertainty": 4.9e-08,
+    "Published Mid-Transit Time (BJD-UTC)": 2457475.204489,
+    "Mid-Transit Time Uncertainty": 3.8e-05,
+    "Ratio of Planet to Stellar Radius (Rp/Rs)": 0.15404544783926594,
+    "Ratio of Planet to Stellar Radius (Rp/Rs) Uncertainty": 6.838566246366401e-06,
+    "Ratio of Distance to Stellar Radius (a/Rs)": 6.25,
+    "Ratio of Distance to Stellar Radius (a/Rs) Uncertainty": 0.07,
+    "Orbital Inclination (deg)": 84.08,
+    "Orbital Inclination (deg) Uncertainty": 0.15491933384829668,
+    "Orbital Eccentricity (0 if null)": 0.012,
+    "Argument of Periastron (deg)": 0.0,
+    "Star Effective Temperature (K)": 4861.0,
+    "Star Effective Temperature (+) Uncertainty": 125.0,
+    "Star Effective Temperature (-) Uncertainty": -100.0,
+    "Star Metallicity ([FE/H])": 0.2,
+    "Star Metallicity (+) Uncertainty": 0.1,
+    "Star Metallicity (-) Uncertainty": -0.1,
+    "Star Surface Gravity (log(g))": 4.55,
+    "Star Surface Gravity (+) Uncertainty": 0.1,
+    "Star Surface Gravity (-) Uncertainty": -0.1,
+    "Star Distance (pc)": 185.615,
+    "Star Proper Motion RA (mas/yr)": 12.6361,
+    "Star Proper Motion DEC (mas/yr)": 58.1698
+  },
+  "user_info": {
+    "Directory with FITS files": "observation/Qatar-1 b",
+    "Directory to Save Plots": "runs/20260806-141939-907-289134d2/output",
+    "Directory of Flats": null,
+    "Directory of Darks": null,
+    "Directory of Biases": null,
+    "AAVSO Observer Code (N/A if none)": "N/A",
+    "Secondary Observer Codes (N/A if none)": "N/A",
+    "Observation date": "2026-08-03",
+    "Obs. Latitude": "31.68",
+    "Obs. Longitude": null,
+    "Obs. Elevation (meters)": 1268.0,
+    "Camera Type (CCD or DSLR)": "CCD",
+    "Pixel Binning": "2x2",
+    "Filter Name (aavso.org/filters)": "Clear",
+    "Observing Notes": "Generated from EXOTIC Standard notebook flow; telescope=Cecilia (Whipple Observatory; Center for Astrophysics | Harvard-Smithsonian); camera type=CCD; first image=Qatar-1260804033734.FITS; VLM supplied target and comparison-star coordinates.",
+    "Plate Solution? (y/n)": "y",
+    "Add Comparison Stars from AAVSO? (y/n)": "n",
+    "Target Star X & Y Pixel": [
+      303.0,
+      309.0
+    ],
+    "Comparison Star(s) X & Y Pixel": [
+      [
+        315.0,
+        285.0
+      ],
+      [
+        281.0,
+        340.0
+      ],
+      [
+        330.0,
+        342.0
+      ],
+      [
+        350.0,
+        270.0
+      ]
+    ],
+    "Demosaic Format": null,
+    "Demosaic Output": null
+  },
+  "optional_info": {
+    "Pixel Scale (Ex: 5.21 arcsecs/pixel)": 3600.0,
+    "Filter Minimum Wavelength (nm)": null,
+    "Filter Maximum Wavelength (nm)": null
+  }
+}

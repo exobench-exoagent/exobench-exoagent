@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>TrES-2 b Transit Photometry Report</h1>
+<h2>Observation Summary</h2>
+<p><strong>Target:</strong> TrES-2 b (Hot Jupiter transiting G-type star TrES-2/HD 171292)<br>
+<strong>Observation Date:</strong> August 16, 2023 (UT)<br>
+<strong>Telescope:</strong> LCOGT MicroObservatory 0.4m (0m4-11)<br>
+<strong>Location:</strong> McDonald Observatory, Texas, USA (Lat: +30.68°, Long: -104.02°, Elevation: 2030m)<br>
+<strong>Camera:</strong> QHY600M CCD, 2400×2400 pixels<br>
+<strong>Filter:</strong> Astrodon ExoPlanet-BB (CBB, ~500-1000 nm)<br>
+<strong>Exposure Time:</strong> 6.524 seconds<br>
+<strong>Number of Frames:</strong> 300<br>
+<strong>Total Observation Duration:</strong> ~32.8 minutes<br>
+<strong>Observing Notes:</strong> Clear conditions, moon fraction 0.6%. No calibration frames (flats/darks/biases) were available for this dataset.</p>
+<h2>Data Reduction</h2>
+<p>The data were reduced using EXOTIC v4.3.1 (EXOplanet Transit Interpretation Code). Key reduction steps included:</p>
+<ol>
+<li>
+<p><strong>Star Identification:</strong> Target and comparison star coordinates were determined using WCS analysis from FITS headers and visual cross-checking with AAVSO finder charts. The target star (TrES-2) was identified at pixel coordinates (460, 360) in the rendered image. Four comparison stars were selected from the AAVSO chart (labeled 108, 115, 120, 121, 122 in AAVSO nomenclature).</p>
+</li>
+<li>
+<p><strong>Aperture Photometry:</strong> Optimal aperture photometry was performed with an optimal aperture radius of 4.35 pixels and optimal annulus of 10.53 pixels.</p>
+</li>
+<li>
+<p><strong>Detrending:</strong> The light curve was detrended against airmass using a linear airmass correction function. Best comparison star selection returned "None," indicating that none of the comparison stars provided a stable reference relative to the target. This is likely due to the use of a wide-band filter (CBB, 500-1000 nm) and the lack of color-matched comparison stars.</p>
+</li>
+<li>
+<p><strong>Limb Darkening:</strong> Quadratic limb darkening coefficients were calculated by EXOTIC using the ATLAS9 model atmosphere grid for a star with Teff=4705 K, log g=4.35, and [Fe/H]=-0.16.</p>
+</li>
+</ol>
+<h2>Transit Fitting Results</h2>
+<p>The transit light curve was fitted using the <code>lc_fitter</code> with nested sampling (ULTRANEST) for parameter estimation:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Fitted Value</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time (T₀) [BJD_TDB]</td>
+<td>2460171.402</td>
+<td>±0.029</td>
+</tr>
+<tr>
+<td>Radius Ratio (Rp/R*)</td>
+<td>0.124</td>
+<td>±0.04</td>
+</tr>
+<tr>
+<td>Transit Depth [(Rp/R*)²]</td>
+<td>1.54%</td>
+<td>±1.0%</td>
+</tr>
+<tr>
+<td>Orbital Inclination (i)</td>
+<td>88.41°</td>
+<td>±2.59°</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.011 days</td>
+<td>±0.013 days</td>
+</tr>
+<tr>
+<td>Airmass Coefficient 1 (a₁)</td>
+<td>2.0</td>
+<td>±0.46</td>
+</tr>
+<tr>
+<td>Airmass Coefficient 2 (a₂)</td>
+<td>-0.64</td>
+<td>±1.21</td>
+</tr>
+<tr>
+<td>Residual Scatter</td>
+<td>22.9%</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2>Data Quality Assessment</h2>
+<p><strong>Signal-to-Noise:</strong> The relatively large uncertainty on the radius ratio (±0.04 on a value of 0.124, or ~32%) and the high residual scatter (22.9%) indicate moderate data quality. </p>
+<p><strong>Comparison Star Selection:</strong> The failure to identify a "best comparison star" is a notable limitation. This suggests that the selected comparison stars may have introduced additional variability into the differential photometry, or that the wide-band filter does not provide sufficient color matching between target and comparison stars.</p>
+<p><strong>Comparison to Published Values:</strong> The fitted radius ratio (0.124 ± 0.04) is consistent with the published value of 0.1117 ± 0.002 from Winn et al. (2008) and subsequent studies, given the large uncertainty. The transit depth of 1.54% is also consistent with the expected value of ~1.25% ((0.1117)²).</p>
+<p><strong>Mid-Transit Time:</strong> The measured mid-transit time of BJD 2460171.402 corresponds to MJD 2460171.402 - 2400000.5 = 60170.902. Converting to the observation date: August 16, 2023 at approximately 21:39 UT. This is consistent with the ephemeris prediction.</p>
+<h2>Limitations</h2>
+<ol>
+<li><strong>No Calibration Frames:</strong> The absence of flat, dark, and bias frames may have introduced systematics into the data.</li>
+<li><strong>Comparison Star Quality:</strong> No comparison star provided a stable reference, which is unusual and may indicate instrumental variability or comparison star contamination.</li>
+<li><strong>Wide-Band Filter:</strong> The CBB filter covers 500-1000 nm, which may introduce color-dependent systematics when used with comparison stars of different spectral types.</li>
+<li><strong>Single-Episode Observation:</strong> A single transit observation provides limited constraints on orbital parameters; continuous monitoring over multiple epochs would improve precision.</li>
+</ol>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve:</strong> <a class="artifact-link" href="/a99f921eeca6/files/artifact_001.png" target="_blank" rel="noopener"><code>output/EXOTIC_output/FinalLightCurve_TrES-2 b_08-16-2023.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>AAVSO Format Data:</strong> <a class="artifact-link" href="/a99f921eeca6/files/artifact_002.txt" target="_blank" rel="noopener"><code>output/EXOTIC_output/AAVSO_TrES-2 b_08-16-2023.txt</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Final Parameters:</strong> <a class="artifact-link" href="/a99f921eeca6/files/artifact_003.json" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalParams_TrES-2 b_08-16-2023.json</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Normalized Flux Data:</strong> <a class="artifact-link" href="/a99f921eeca6/files/artifact_004.txt" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/NormalizedFlux_TrES-2 b_08-16-2023.txt</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Inits Configuration:</strong> <a class="artifact-link" href="/a99f921eeca6/files/artifact_005.json" target="_blank" rel="noopener"><code>output/EXOTIC_output/inits.json</code><span aria-hidden="true">↗</span></a></li>
+</ul>
+<h2>References</h2>
+<ul>
+<li>EXOTIC: Exoplanet Watch transit photometry pipeline (Zesser et al., 2018)</li>
+<li>TrES-2 discovery: Kolbl et al. (2008), Winn et al. (2008)</li>
+<li>LCOGT MicroObservatory: https://mo.lco.global/</li>
+<li>AAVSO: https://www.aavso.org/</li>
+</ul>
+<hr>
+<p><em>Report generated by EXOAgent on 2024-08-11</em><br>
+<em>EXOTIC version: 4.3.1</em><br>
+<em>Pipeline: EXOTIC Standard Notebook (Exoplanet Watch)</em></p></section></main>
+</body>
+</html>

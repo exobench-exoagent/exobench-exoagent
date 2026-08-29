@@ -1,0 +1,7 @@
+exotic
+astropy~=6.1
+photutils~=2.0
+pyraf
+Flask
+python-dotenv
+openai

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><p>Observation Summary:<br>
+The transit of exoplanet Qatar-10 b was observed on 2024-07-15 using the LCOGT node at Haleakala Observatory. The dataset consisted of 140 FITS images with an exposure time of 77.0 seconds. A "CV" (Clear/unfiltered) filter was utilized, which was subsequently reduced to the V-band sequence.</p>
+<p>Data Reduction:<br>
+The data were processed using the EXOTIC (EXOplanet Transit Interpretation Code) pipeline. Initial target and comparison star identification was performed using VLM-assisted visual inspection of the FITS frames and AAVSO finder charts. The target coordinates were subsequently refined using EXOTIC's WCS plate-solving tool, resulting in target coordinates of [932, 1174] and comparison stars at [[1043, 1098], [841, 1272], [1039, 1306]]. Aperture photometry was performed with an optimal aperture of 1.47 and sky annulus of 3.01. Detrending was applied using airmass correction.</p>
+<p>Transit Results:<br>
+The transit fitting yielded a mid-transit time (Tmid) of 2460506.958 +/- 0.011 BJD_TDB. The fitted transit depth was 2.76 +/- 1.61%, corresponding to a radius ratio (Rp/Rs) of 0.166 +/- 0.049. The orbital inclination was determined to be 82.56 +/- 2.61 degrees, and the transit duration was 0.094 +/- 0.018 days.</p>
+<p>Data Quality:<br>
+The fit quality was moderate, with a residual scatter of 25.79% in the light curve. This high noise level suggests significant atmospheric or instrumental effects, or potentially a low signal-to-noise ratio for this specific observation. No single comparison star was identified as "best," indicating that a weighted ensemble was likely used for normalization.</p>
+<p>Output Files:<br>
+The final reduced light curve and model fit are available in the output directory: <a class="artifact-link" href="/bea607fd5c5f/files/artifact_001.png" target="_blank" rel="noopener"><code>output/EXOTIC_output/FinalLightCurve_Qatar-10 b_07-15-2024.png</code><span aria-hidden="true">↗</span></a>. Detailed results are also recorded in the associated AAVSO-formatted text file.</p></section></main>
+</body>
+</html>

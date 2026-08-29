@@ -1,0 +1,80 @@
+{
+  "planetary_parameters": {
+    "Target Star RA": "19:04:09.81012",
+    "Target Star Dec": "+36:37:57.1296",
+    "Planet Name": "TrES-1 b",
+    "Host Star Name": "TrES-1",
+    "Orbital Period (days)": 3.030069476,
+    "Orbital Period Uncertainty": 7.2e-08,
+    "Published Mid-Transit Time (BJD-UTC)": 2456822.891157,
+    "Mid-Transit Time Uncertainty": 6.3e-05,
+    "Ratio of Planet to Stellar Radius (Rp/Rs)": 0.14762998916209402,
+    "Ratio of Planet to Stellar Radius (Rp/Rs) Uncertainty": 0.00027564385956378945,
+    "Ratio of Distance to Stellar Radius (a/Rs)": 10.52,
+    "Ratio of Distance to Stellar Radius (a/Rs) Uncertainty": 0.06,
+    "Orbital Inclination (deg)": 90.0,
+    "Orbital Inclination (deg) Uncertainty": 0.1,
+    "Orbital Eccentricity (0 if null)": 0.012,
+    "Argument of Periastron (deg)": 0.0,
+    "Star Effective Temperature (K)": 5230.0,
+    "Star Effective Temperature (+) Uncertainty": 50.0,
+    "Star Effective Temperature (-) Uncertainty": -50.0,
+    "Star Metallicity ([FE/H])": 0.02,
+    "Star Metallicity (+) Uncertainty": 0.05,
+    "Star Metallicity (-) Uncertainty": -0.05,
+    "Star Surface Gravity (log(g))": 4.567,
+    "Star Surface Gravity (+) Uncertainty": 0.012,
+    "Star Surface Gravity (-) Uncertainty": -0.015,
+    "Star Distance (pc)": 159.658,
+    "Star Proper Motion RA (mas/yr)": -32.2068,
+    "Star Proper Motion DEC (mas/yr)": -20.401
+  },
+  "user_info": {
+    "Directory with FITS files": "observation/TRES-1 b",
+    "Directory to Save Plots": "runs/20260806-141952-513-7669895b/output",
+    "Directory of Flats": null,
+    "Directory of Darks": null,
+    "Directory of Biases": null,
+    "AAVSO Observer Code (N/A if none)": "N/A",
+    "Secondary Observer Codes (N/A if none)": "N/A",
+    "Observation date": "2026-08-02",
+    "Obs. Latitude": "31.68",
+    "Obs. Longitude": null,
+    "Obs. Elevation (meters)": 1268.0,
+    "Camera Type (CCD or DSLR)": "CCD",
+    "Pixel Binning": "2x2",
+    "Filter Name (aavso.org/filters)": "Clear",
+    "Observing Notes": "Generated from EXOTIC Standard notebook flow; telescope=Cecilia (Whipple Observatory; Center for Astrophysics | Harvard-Smithsonian); camera type=CCD; first image=TRES-1260803065251.FITS; VLM supplied target and comparison-star coordinates.",
+    "Plate Solution? (y/n)": "y",
+    "Add Comparison Stars from AAVSO? (y/n)": "n",
+    "Target Star X & Y Pixel": [
+      227.0,
+      201.0
+    ],
+    "Comparison Star(s) X & Y Pixel": [
+      [
+        192.0,
+        150.0
+      ],
+      [
+        95.0,
+        144.0
+      ],
+      [
+        338.0,
+        352.0
+      ],
+      [
+        333.0,
+        308.0
+      ]
+    ],
+    "Demosaic Format": null,
+    "Demosaic Output": null
+  },
+  "optional_info": {
+    "Pixel Scale (Ex: 5.21 arcsecs/pixel)": 3600.0,
+    "Filter Minimum Wavelength (nm)": null,
+    "Filter Maximum Wavelength (nm)": null
+  }
+}

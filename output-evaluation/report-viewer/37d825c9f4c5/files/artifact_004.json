@@ -1,0 +1,76 @@
+{
+  "planetary_parameters": {
+    "Target Star RA": "00:15:36.785592",
+    "Target Star Dec": "-11:56:17.7522",
+    "Planet Name": "WASP-44 b",
+    "Host Star Name": "WASP-44",
+    "Orbital Period (days)": 2.42381131,
+    "Orbital Period Uncertainty": 1.3e-07,
+    "Published Mid-Transit Time (BJD-UTC)": 2461236.98116401,
+    "Mid-Transit Time Uncertainty": 0.00013,
+    "Ratio of Planet to Stellar Radius (Rp/Rs)": 0.12489995996796797,
+    "Ratio of Planet to Stellar Radius (Rp/Rs) Uncertainty": 0.0024019223070763066,
+    "Ratio of Distance to Stellar Radius (a/Rs)": 8.1,
+    "Ratio of Distance to Stellar Radius (a/Rs) Uncertainty": 0.5916079783099616,
+    "Orbital Inclination (deg)": 86.0,
+    "Orbital Inclination (deg) Uncertainty": 0.99498743710662,
+    "Orbital Eccentricity (0 if null)": 0.068,
+    "Argument of Periastron (deg)": 0.0,
+    "Star Effective Temperature (K)": 5410.0,
+    "Star Effective Temperature (+) Uncertainty": 150.0,
+    "Star Effective Temperature (-) Uncertainty": -150.0,
+    "Star Metallicity ([FE/H])": -0.003,
+    "Star Metallicity (+) Uncertainty": 0.1,
+    "Star Metallicity (-) Uncertainty": -0.1,
+    "Star Surface Gravity (log(g))": 4.494,
+    "Star Surface Gravity (+) Uncertainty": 0.044,
+    "Star Surface Gravity (-) Uncertainty": -0.044,
+    "Star Distance (pc)": 364.512,
+    "Star Proper Motion RA (mas/yr)": 15.2812,
+    "Star Proper Motion DEC (mas/yr)": -30.0474
+  },
+  "user_info": {
+    "Directory with FITS files": "observation/WASP-44 b",
+    "Directory to Save Plots": "runs/20260806-173105-889-0cee9df0/output",
+    "Directory of Flats": null,
+    "Directory of Darks": null,
+    "Directory of Biases": null,
+    "AAVSO Observer Code (N/A if none)": "N/A",
+    "Secondary Observer Codes (N/A if none)": "N/A",
+    "Observation date": "2026-07-15",
+    "Obs. Latitude": "31.68",
+    "Obs. Longitude": "-110.88",
+    "Obs. Elevation (meters)": 1268.0,
+    "Camera Type (CCD or DSLR)": "CCD",
+    "Pixel Binning": "2x2",
+    "Filter Name (aavso.org/filters)": "Clear",
+    "Observing Notes": "Generated from EXOTIC Standard notebook flow; telescope=Cecilia (Whipple Observatory; Center for Astrophysics | Harvard-Smithsonian); camera type=CCD; first image=WASP-44260715101554.FITS; VLM supplied target and comparison-star coordinates. Recovery: corrected pixel scale from erroneous 3600.0 to FITS IM_SCALE=5.0 arcsec/pixel; disabled plate solving after coordinate mismatch; updated ephemeris to cycle near the 2026-07-15 observation.",
+    "Plate Solution? (y/n)": "n",
+    "Add Comparison Stars from AAVSO? (y/n)": "n",
+    "Target Star X & Y Pixel": [
+      260,
+      265
+    ],
+    "Comparison Star(s) X & Y Pixel": [
+      [
+        191,
+        265
+      ],
+      [
+        142,
+        291
+      ],
+      [
+        392,
+        341
+      ]
+    ],
+    "Demosaic Format": null,
+    "Demosaic Output": null
+  },
+  "optional_info": {
+    "Pixel Scale (Ex: 5.21 arcsecs/pixel)": 5.0,
+    "Filter Minimum Wavelength (nm)": null,
+    "Filter Maximum Wavelength (nm)": null
+  }
+}

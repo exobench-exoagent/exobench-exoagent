@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: Exoplanet Transit Observation of KELT-7 b</h1>
+<h2>Observation Summary</h2>
+<p>The dataset consists of 130 FITS images of the target star KELT-7, observed on January 6, 2017, using the MicroObservatory telescope. The observations were conducted using a CCD camera with a "CV" (Clear/unfiltered) filter, which is typically reduced to a V-band sequence.</p>
+<h2>Data Reduction</h2>
+<p>The data were processed using the EXOTIC (EXOplanet Transit Interpretation Code) pipeline. No calibration frames (Flats, Darks, or Biases) were provided in the dataset, and the reduction proceeded without them. Aperture photometry was performed with an optimal aperture of 9.26 pixels and an optimal annulus of 11.73 pixels. Detrending was applied using airmass coefficients $a_1 = 0.738 \pm 0.099$ and $a_2 = 0.3 \pm 0.64$. The planetary parameters were fitted using a nested sampling approach via UltraNest.</p>
+<h2>Transit Results</h2>
+<p>The transit fitting yielded the following results:</p>
+<ul>
+<li><strong>Mid-Transit Time ($T_{mid}$):</strong> $2457758.16268 \pm 0.00097$ BJD_TDB</li>
+<li><strong>Radius Ratio ($R_p/R_s$):</strong> $0.001 \pm 0.034$</li>
+<li><strong>Transit Depth ($(R_p/R_s)^2$):</strong> $6.7   imes 10^{-5} \pm 0.0055\%$</li>
+<li><strong>Orbital Inclination ($inc$):</strong> $81.82^\circ \pm 2.93^\circ$</li>
+<li><strong>Transit Duration:</strong> $0.0054 \pm 0.0077$ days</li>
+</ul>
+<h2>Data Quality and Analysis</h2>
+<p>The resulting fit indicates a very low signal-to-noise ratio for this specific observation window. The radius ratio and transit depth are nearly zero, and the uncertainties are large relative to the fitted values. The residual scatter of the lightcurve fit is $13.46\%$, which is quite high for a transit detection. These results suggest that a significant transit event was not clearly detected in this dataset, or the signal was dominated by noise.</p>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve:</strong> <a class="artifact-link" href="/f1cc7d6d37ab/files/artifact_001.png" target="_blank" rel="noopener"><code>output/EXOTIC_output/FinalLightCurve_KELT-7 b_01-06-2017.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Parameters JSON:</strong> <a class="artifact-link" href="/f1cc7d6d37ab/files/artifact_002.json" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalParams_KELT-7 b_01-06-2017.json</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Log File:</strong> <a class="artifact-link" href="/f1cc7d6d37ab/files/artifact_003.txt" target="_blank" rel="noopener"><code>logs/2026-08-10_02-35-45-684.txt</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>

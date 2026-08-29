@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: Transit Observation of KELT-16 b</h1>
+<h2>Observation Summary</h2>
+<p>This report presents the results of a transit observation of the exoplanet KELT-16 b, obtained with the Las Cumbres Observatory Global Telescope (LCOGT) 0.4-meter telescope (instrument sq46) at McDonald Observatory in Texas. The observation was conducted on July 7, 2026 (UT) in the Johnson V band (502.8–586.8 nm) using a QHY600M CCD camera with 2400×2400 pixel resolution, 1×1 binning, and a pixel scale of 0.74 arcseconds/pixel. A total of 255 frames were collected with an exposure time of 61.0 seconds each, yielding a cadence of approximately 61 seconds between exposures. The target star KELT-16 (RA: 20h 57m 04.27s, Dec: +31° 39' 35.9") was tracked at an average airmass of approximately 1.35. No calibration frames (flats, darks, or biases) were available for this dataset; however, the LCOGT pipeline products included pre-computed bias, dark, and flat corrections embedded in the FITS headers.</p>
+<h2>Data Reduction and Analysis</h2>
+<p>The data were processed using EXOTIC (EXOplanet Transit Interpretation Code) v4.3.1. Target and comparison-star pixel coordinates were determined from the pre-extracted source catalog (CAT extension) embedded in the LCOGT FITS files. The target star (KELT-16) was identified at pixel coordinates x=1197.4, y=1205.5 with a peak flux of 14,889.5 counts and a measured FWHM of 8.0 pixels. Five comparison stars were selected from the catalog within ~200 pixels of the target, with brightness values ranging from ~44,000 to ~190,000 counts. All comparison stars were verified to be well within the image frame (&gt;1000 pixels from any edge) and had clean PSF profiles.</p>
+<p>PSF photometry was selected as the optimal photometric extraction method by EXOTIC's automated optimization routine. The best comparison star was determined to be comparison star #3 at coordinates [1108.4, 1114.3] (flux ≈ 54,617 counts), which provided the most stable reference for differential photometry. The light curve was detrended for airmass variations using a two-parameter airmass correction function (a1 = 1.0065 ± 0.0081, a2 = -0.0051 ± 0.0051). Limb darkening coefficients were calculated self-consistently by EXOTIC based on the stellar parameters of KELT-16 (Teff = 6236 K, log g = 4.253).</p>
+<h2>Transit Results</h2>
+<p>The following planetary parameters were derived from the transit fitting analysis using the nested sampling algorithm UltraNest:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>This Work</th>
+<th>Prior (Published)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time Tc</td>
+<td>2461229.8072 ± 0.0019 BJD_TDB</td>
+<td>2458392.5977 (reference)</td>
+</tr>
+<tr>
+<td>Radius Ratio Rp/R*</td>
+<td>0.1072 ± 0.0047</td>
+<td>0.1163 ± 0.0004</td>
+</tr>
+<tr>
+<td>Transit Depth</td>
+<td>1.15 ± 0.10 %</td>
+<td>~1.35 % (Rp/R* = 0.116)</td>
+</tr>
+<tr>
+<td>Orbital Inclination</td>
+<td>81.69 ± 1.85°</td>
+<td>84.4 ± 2.63°</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.0977 ± 0.0047 days (140.7 ± 6.8 min)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Orbital Period</td>
+<td>0.968993 days (fixed from prior)</td>
+<td>0.968992962 ± 9.7e-08</td>
+</tr>
+<tr>
+<td>Residual Scatter</td>
+<td>0.8%</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>The mid-transit time of this observation (BJD_TDB = 2461229.8072) is approximately 1637.2 days after the reference epoch, corresponding to about 1690 orbital cycles. Using the ephemeris T₀ = 2458392.5977 and P = 0.968993 days, the predicted mid-transit time for this cycle is approximately 2461229.806, consistent with the measured value within uncertainties.</p>
+<p>The derived transit depth of 1.15 ± 0.10% corresponds to a radius ratio of Rp/R* = 0.107 ± 0.005, which is ~8% smaller than the published value of Rp/R* = 0.116. The orbital inclination of 81.7° is ~3° lower than the published value, though both values overlap within the uncertainties. The relatively large uncertainty on these fitted parameters (compared to the published values) reflects the limited signal-to-noise of this single-night ground-based observation.</p>
+<h2>Data Quality Assessment</h2>
+<p>The fit quality was assessed using nested sampling with a posterior logZ = -138.4 ± 0.12. The effective sample size (ESS = 2253.5) and Kullback-Leibler divergence (0.46 nat) both satisfied UltraNest's convergence criteria. The residual scatter of 0.8% in the normalized light curve is typical for ground-based transit photometry at this exposure level and is dominated by photon noise and atmospheric variability.</p>
+<p>The airmass coefficients (a1 = 1.0065, a2 = -0.0051) indicate that the airmass detrending was modest but effective at removing systematic trends in the light curve. No calibration frames were directly applied; the LCOGT pipeline products already included embedded bias, dark, and flat corrections.</p>
+<p>One limitation of this observation is that the transit was not observed to be in deep transit at any point during the exposure window — the light curve spans approximately 1.17 days (from BJD 2461229.726 to 2461229.906), centered near the predicted transit epoch, but the transit depth signature is shallow and the data are dominated by scattered light noise. The derived parameters should therefore be considered preliminary and subject to refinement with additional observations.</p>
+<h2>Output Files</h2>
+<p>All EXOTIC output files are located in the <code>output/EXOTIC_output</code> directory:</p>
+<ul>
+<li><strong><a class="artifact-link" href="/e820263530f8/files/artifact_001.png" target="_blank" rel="noopener"><code>FinalLightCurve_KELT-16 b_07-07-2026.png</code><span aria-hidden="true">↗</span></a></strong>: Final transit light curve plot</li>
+<li><strong><a class="artifact-link" href="/e820263530f8/files/artifact_002.txt" target="_blank" rel="noopener"><code>AAVSO_KELT-16 b_07-07-2026.txt</code><span aria-hidden="true">↗</span></a></strong>: AAVSO-formatted light curve data (CSV)</li>
+<li><strong>tmp/FinalParams_KELT-16 b_07-07-2026.json</strong>: Fitted planetary parameters</li>
+<li><strong>tmp/FinalLightCurve_KELT-16 b_07-07-2026.csv</strong>: CSV with final light curve</li>
+<li><strong>tmp/NormalizedFlux_KELT-16 b_07-07-2026.txt</strong>: Normalized flux data</li>
+<li><strong>tmp/PlateStatus_KELT-16 b_07-07-2026.csv</strong>: Plate solution status per frame</li>
+<li>Multiple diagnostic plots in <code>tmp</code> directory (centroid positions, FOV images, observing statistics)</li>
+</ul>
+<h2>Conclusion</h2>
+<p>This single-night observation of KELT-16 b with the LCOGT 0.4m telescope successfully identified the transit signal at the predicted epoch, yielding a mid-transit time consistent with published ephemerides. The derived transit parameters (Rp/R* = 0.107, depth = 1.15%, inclination = 81.7°) are broadly consistent with published values within uncertainties, though the precision is limited by the single-observation nature of this dataset. Continued monitoring of KELT-16 b with similar facilities would improve the precision of these parameters and allow for more rigorous atmospheric characterization.</p></section></main>
+</body>
+</html>

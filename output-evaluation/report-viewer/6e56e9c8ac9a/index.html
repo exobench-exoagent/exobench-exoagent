@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><p>EXOTIC successfully reduced 179 CCD FITS images of the WASP-43 b transit obtained with the Exoplanet Watch 0.4-meter telescope on 2026-03-11. The dataset used 60-second exposures with approximately 1-minute cadence. The observation was made using the clear/CV bandpass, represented by EXOTIC as a clear unfiltered observation reduced to a V-like sequence, with an effective wavelength range of approximately 350–850 nm.</p>
+<p>The reduction used aperture photometry with an optimal aperture radius of 4.51 pixels and an annulus radius of 7.97 pixels. No Flats, Darks, or Bias frames were present, so the science images were processed without calibration-frame subtraction. Differential photometry used the comparison-star ensemble, with EXOTIC identifying <code>[870, 1475]</code> as the best comparison star. The light curve was detrended against airmass using a second-order correction. EXOTIC also generated a WCS plate solution and corrected the initially supplied target coordinate to <code>[1196, 1201]</code>.</p>
+<p>The final fitted mid-transit time is <strong>BJD_TDB 2461111.74044 ± 0.00057</strong>, corresponding to an uncertainty of approximately 49 seconds. The fitted planet-to-star radius ratio is <strong>0.168 ± 0.0048</strong>, yielding a transit depth of <strong>2.82 ± 0.16%</strong>. The fitted inclination is <strong>82.93 ± 0.44°</strong>, and the transit duration is <strong>0.0541 ± 0.0012 days</strong>, or approximately <strong>77.9 ± 1.7 minutes</strong>. The orbital period reported in the reduction is the published prior, <strong>0.81347407 ± 0.00000002 days</strong>, rather than an independently determined period from this single transit.</p>
+<p>The residual scatter of the fitted light curve is <strong>0.65%</strong>. Relative to the measured transit depth, this corresponds to an approximate depth-to-residual ratio of 4.3; EXOTIC did not report a separate formal signal-to-noise statistic. The observed depth is somewhat larger than the catalog prior implied by Rp/Rs = 0.1585, so the fitted depth should be interpreted in the context of the modest residual scatter and single-event coverage.</p>
+<p>Primary outputs are available in:</p>
+<ul>
+<li>Final light curve image: <a class="artifact-link" href="/6e56e9c8ac9a/files/artifact_001.png" target="_blank" rel="noopener"><code>output/FinalLightCurve_WASP-43 b_03-11-2026.png</code><span aria-hidden="true">↗</span></a></li>
+<li>Final light curve CSV: <a class="artifact-link" href="/6e56e9c8ac9a/files/artifact_002.csv" target="_blank" rel="noopener"><code>output/tmp/FinalLightCurve_WASP-43 b_03-11-2026.csv</code><span aria-hidden="true">↗</span></a></li>
+<li>Fitted parameters: <a class="artifact-link" href="/6e56e9c8ac9a/files/artifact_003.json" target="_blank" rel="noopener"><code>output/tmp/FinalParams_WASP-43 b_03-11-2026.json</code><span aria-hidden="true">↗</span></a></li>
+<li>AAVSO-format report: <a class="artifact-link" href="/6e56e9c8ac9a/files/artifact_004.txt" target="_blank" rel="noopener"><code>output/AAVSO_WASP-43 b_03-11-2026.txt</code><span aria-hidden="true">↗</span></a></li>
+<li>EXOTIC configuration: <a class="artifact-link" href="/6e56e9c8ac9a/files/artifact_005.json" target="_blank" rel="noopener"><code>output/inits.json</code><span aria-hidden="true">↗</span></a></li>
+</ul>
+<p>EXOTIC completed successfully with return code 0, and no files were written to the read-only FITS input directory.</p></section></main>
+</body>
+</html>

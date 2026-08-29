@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>WASP-44 b Transit Observation Report</h1>
+<h2>Observation Summary</h2>
+<p>The target was WASP-44, observed on 2026-07-15 with the MicroObservatory/Cecilia telescope at the Whipple Observatory. The detector was identified as a CCD operated with 2×2 pixel binning. The observation used a clear filter and 60-second exposures. Thirty-six FITS frames were processed. The time spacing between successive frames was approximately 180 seconds, corresponding to the effective cadence of the sequence. The target position was identified using the EXOTIC plate-solution workflow and matched to the catalogued coordinates of WASP-44.</p>
+<h2>Data Reduction</h2>
+<p>EXOTIC performed automated image registration, plate solving, aperture photometry, comparison-star normalization, airmass detrending, and transit-model fitting. Four comparison-star positions were supplied; EXOTIC identified Comparison 1 at pixel coordinates [250, 180] as the best comparison star. The optimized photometric aperture radius was 2.8 pixels, with an annulus parameter of 7.83 pixels. No frame-level alignment, FITS-read, low-flux, sky-background, or out-of-frame warnings were reported in the plate-status output.</p>
+<h2>Transit Results</h2>
+<p>The fitted mid-transit time is <strong>BJD_TDB 2461234.5661 ± 0.0058</strong>. The adopted orbital period is <strong>2.42381131 ± 0.00000013 days</strong>, from the planetary-parameter catalog input. EXOTIC measured a transit depth of <strong>2.33 ± 1.40%</strong>, equivalent to a radius ratio of 0.153 ± 0.046. The fitted transit duration is <strong>0.027 ± 0.011 days</strong>, or approximately <strong>38.9 ± 15.8 minutes</strong>. EXOTIC did not provide a separate SNR, BIC, or reduced chi-squared value in its final parameter summary.</p>
+<h2>Data Quality</h2>
+<p>The fit completed successfully and EXOTIC reported a valid reduction, but the residual scatter was high at <strong>38.68%</strong>. The large uncertainty on the transit depth and duration indicates a low-precision detection. The posterior analysis also reported a positive degeneracy between inclination and mid-transit time. Consequently, these results should be treated as a preliminary photometric measurement rather than a precision ephemeris refinement.</p>
+<h2>Output Files</h2>
+<p>The principal light-curve/model plot is:</p>
+<p><a class="artifact-link" href="/3a9b55dbada2/files/artifact_001.png" target="_blank" rel="noopener"><code>output/FinalLightCurve_WASP-44 b_2026-07-15.png</code><span aria-hidden="true">↗</span></a></p>
+<p>The parsed fit parameters are stored in <a class="artifact-link" href="/3a9b55dbada2/files/artifact_002.json" target="_blank" rel="noopener"><code>tmp/FinalParams_WASP-44 b_2026-07-15.json</code><span aria-hidden="true">↗</span></a>; the calibrated time series is in <a class="artifact-link" href="/3a9b55dbada2/files/artifact_003.csv" target="_blank" rel="noopener"><code>tmp/FinalLightCurve_WASP-44 b_2026-07-15.csv</code><span aria-hidden="true">↗</span></a>; the plate solution is in <code>tmp/wcs.fits</code>; and the field, comparison-star, and diagnostic plots are contained in the output <code>temp</code> directory.</p></section></main>
+</body>
+</html>

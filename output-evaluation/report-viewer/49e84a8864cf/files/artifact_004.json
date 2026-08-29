@@ -1,0 +1,80 @@
+{
+  "planetary_parameters": {
+    "Target Star RA": "12:33:03.889152",
+    "Target Star Dec": "+44:54:55.32192",
+    "Planet Name": "HAT-P-36 b",
+    "Host Star Name": "HAT-P-36",
+    "Orbital Period (days)": 1.327346813,
+    "Orbital Period Uncertainty": 9.7e-08,
+    "Published Mid-Transit Time (BJD-UTC)": 2457885.383994,
+    "Mid-Transit Time Uncertainty": 9.4e-05,
+    "Ratio of Planet to Stellar Radius (Rp/Rs)": 0.12601587201618691,
+    "Ratio of Planet to Stellar Radius (Rp/Rs) Uncertainty": 0.0011306358969562864,
+    "Ratio of Distance to Stellar Radius (a/Rs)": 4.67,
+    "Ratio of Distance to Stellar Radius (a/Rs) Uncertainty": 0.034641016151377546,
+    "Orbital Inclination (deg)": 85.2,
+    "Orbital Inclination (deg) Uncertainty": 0.648074069840786,
+    "Orbital Eccentricity (0 if null)": 0.063,
+    "Argument of Periastron (deg)": 51.0,
+    "Star Effective Temperature (K)": 5560.0,
+    "Star Effective Temperature (+) Uncertainty": 100.0,
+    "Star Effective Temperature (-) Uncertainty": -40.0,
+    "Star Metallicity ([FE/H])": 0.26,
+    "Star Metallicity (+) Uncertainty": 0.1,
+    "Star Metallicity (-) Uncertainty": -0.1,
+    "Star Surface Gravity (log(g))": 4.37,
+    "Star Surface Gravity (+) Uncertainty": 0.04,
+    "Star Surface Gravity (-) Uncertainty": -0.04,
+    "Star Distance (pc)": 294.419,
+    "Star Proper Motion RA (mas/yr)": -11.6408,
+    "Star Proper Motion DEC (mas/yr)": 8.06453
+  },
+  "user_info": {
+    "Directory with FITS files": "observation/HAT-P-36_b_20260319_elp_0m4a_001",
+    "Directory to Save Plots": "runs/20260807-180535-943-79838107/output",
+    "Directory of Flats": null,
+    "Directory of Darks": null,
+    "Directory of Biases": null,
+    "AAVSO Observer Code (N/A if none)": "N/A",
+    "Secondary Observer Codes (N/A if none)": "N/A",
+    "Observation date": null,
+    "Obs. Latitude": null,
+    "Obs. Longitude": null,
+    "Obs. Elevation (meters)": null,
+    "Camera Type (CCD or DSLR)": "CCD",
+    "Pixel Binning": "1x1",
+    "Filter Name (aavso.org/filters)": "Open",
+    "Observing Notes": "Generated from EXOTIC Standard notebook flow; telescope=Exoplanet Watch .4 Meter; camera type=CCD; first image=elp0m400-sq44-20260318-0132-e91.fits; VLM supplied target and comparison-star coordinates.",
+    "Plate Solution? (y/n)": "y",
+    "Add Comparison Stars from AAVSO? (y/n)": "n",
+    "Target Star X & Y Pixel": [
+      1175.0,
+      1181.0
+    ],
+    "Comparison Star(s) X & Y Pixel": [
+      [
+        1074.0,
+        1288.0
+      ],
+      [
+        950.0,
+        1170.0
+      ],
+      [
+        1145.0,
+        1020.0
+      ],
+      [
+        1270.0,
+        980.0
+      ]
+    ],
+    "Demosaic Format": null,
+    "Demosaic Output": null
+  },
+  "optional_info": {
+    "Pixel Scale (Ex: 5.21 arcsecs/pixel)": 3600.0,
+    "Filter Minimum Wavelength (nm)": null,
+    "Filter Maximum Wavelength (nm)": null
+  }
+}

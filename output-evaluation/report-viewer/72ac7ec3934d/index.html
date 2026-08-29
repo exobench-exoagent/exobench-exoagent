@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Exoplanet Transit Observation Report: Qatar-1 b</h1>
+<h2>Observation Summary</h2>
+<p><strong>Target:</strong> Qatar-1 (RA: 20h 13m 31.6s, Dec: +65° 09' 44")<br>
+<strong>Exoplanet:</strong> Qatar-1 b<br>
+<strong>Telescope:</strong> Cecilia (MicroObservatory Network)<br>
+<strong>Instrument:</strong> 6-inch Maksutov-Newtonian f/3.6, 560mm EFL; KAF-1402ME CCD camera<br>
+<strong>Date:</strong> 2026-08-03 to 2026-08-04<br>
+<strong>Filter:</strong> Clear (CV, 350-850 nm)<br>
+<strong>Exposure Time:</strong> 60 seconds<br>
+<strong>Binning:</strong> 2×2 (5.0 arcsec/pixel)<br>
+<strong>Observatory:</strong> Whipple Observatory, Amado, AZ (31.68°N, 110.88°W, 1268 m)<br>
+<strong>Number of Frames:</strong> 75 FITS images acquired</p>
+<h2>Data Reduction</h2>
+<p><strong>Calibration:</strong> Dark calibration frames were applied (2 dark frames from the observation session, exposure time 60s). No bias or flat frames were available.</p>
+<p><strong>Plate Solving:</strong> All 75 images were processed through the plate-solving pipeline. 44 images exhibited alignment errors during the transformation step, while 31 images passed the alignment quality check.</p>
+<p><strong>Photometry:</strong> Aperture photometry was performed using EXOTIC's optimal aperture algorithm (optimal aperture radius: 1.11 pixels, optimal annulus: 6.5 pixels). Three comparison stars were used (AAVSO chart IDs 129, 132, 135) for relative photometry. The best-performing comparison star was identified as star #3 at pixel coordinates (404, 138).</p>
+<p><strong>Detrending:</strong> Airmass corrections were applied using a two-term extinction model (coefficients: a1 = 1.220 ± 6.2×10⁻⁵, a2 = -0.15 ± 1.58).</p>
+<p><strong>Transit Fitting:</strong> A full transit model was fit using nested sampling (UltraNest), with 4477 likelihood evaluations and effective sample size of 990. Posterior uncertainties were derived from the MCMC chain.</p>
+<h2>Transit Results</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time (BJD_TDB)</td>
+<td>2461256.734</td>
+<td>±0.0034</td>
+</tr>
+<tr>
+<td>Orbital Period</td>
+<td>1.420024443 d</td>
+<td>±4.9×10⁻⁸</td>
+</tr>
+<tr>
+<td>Transit Depth</td>
+<td>0.39%</td>
+<td>±0.67%</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.0082 d (11.8 min)</td>
+<td>±0.0078 d</td>
+</tr>
+<tr>
+<td>Radius Ratio (Rp/R*)</td>
+<td>0.062</td>
+<td>±0.054</td>
+</tr>
+<tr>
+<td>Orbital Inclination</td>
+<td>82.79°</td>
+<td>±2.87°</td>
+</tr>
+<tr>
+<td>Residual Scatter</td>
+<td>0.0026%</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>The derived transit depth of 0.39% is consistent with the published Rp/R* ≈ 0.154 (expected depth ~2.4%) only within large uncertainties. The large uncertainty (±0.67%) reflects the limited data coverage and quality of the photometric measurements.</p>
+<h2>Data Quality</h2>
+<p><strong>Fit Quality:</strong> The nested sampling posterior converged successfully (ESS = 990.2 &gt; 400 required; KL divergence = 0.46 ± 0.07 &lt; 0.50 required; logZ error = 0.04 &lt; 0.50 required). However, the number of usable photometric data points is very limited (only 2 points in the final light curve output), resulting in:</p>
+<ul>
+<li>Low signal-to-noise ratio (estimated SNR ≈ 2)</li>
+<li>Large transit depth uncertainty (±172% relative uncertainty)</li>
+<li>Transit duration poorly constrained (uncertainty comparable to the value itself)</li>
+</ul>
+<p><strong>Residual Behavior:</strong> The best comparison star (#3) provided the most stable reference. Residual scatter in the light curve fit was 0.0026%, indicating good photometric precision for the data points that were obtained.</p>
+<p><strong>Warnings:</strong></p>
+<ul>
+<li>44 out of 75 images (59%) failed the plate-solver alignment check, significantly reducing the effective data set</li>
+<li>The final light curve contains only 2 data points, severely limiting constraining power</li>
+<li>The observed transit depth (0.39%) is substantially lower than the published value (~2.4%), which may indicate partial eclipse coverage, systematic errors, or that the observation did not capture the transit ingress/egress region</li>
+</ul>
+<p><strong>Note:</strong> The limited number of valid data points is attributed to alignment failures during plate solving. Future observations should ensure better tracking stability and consider additional calibration frames.</p>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve:</strong> <a class="artifact-link" href="/72ac7ec3934d/files/artifact_001.png" target="_blank" rel="noopener"><code>output/FinalLightCurve_Qatar-1 b_2026-08-03.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Light Curve PDF:</strong> <a class="artifact-link" href="/72ac7ec3934d/files/artifact_002.pdf" target="_blank" rel="noopener"><code>output/FinalLightCurve_Qatar-1 b_2026-08-03.pdf</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Light Curve CSV:</strong> <a class="artifact-link" href="/72ac7ec3934d/files/artifact_003.csv" target="_blank" rel="noopener"><code>output/tmp/FinalLightCurve_Qatar-1 b_2026-08-03.csv</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Normalized Flux:</strong> <a class="artifact-link" href="/72ac7ec3934d/files/artifact_004.txt" target="_blank" rel="noopener"><code>output/tmp/NormalizedFlux_Qatar-1 b_2026-08-03.txt</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Final Parameters:</strong> <a class="artifact-link" href="/72ac7ec3934d/files/artifact_005.json" target="_blank" rel="noopener"><code>output/tmp/FinalParams_Qatar-1 b_2026-08-03.json</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>AAVSO Submission:</strong> <a class="artifact-link" href="/72ac7ec3934d/files/artifact_006.txt" target="_blank" rel="noopener"><code>output/AAVSO_Qatar-1 b_2026-08-03.txt</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Plate Status:</strong> <a class="artifact-link" href="/72ac7ec3934d/files/artifact_007.csv" target="_blank" rel="noopener"><code>output/tmp/PlateStatus_Qatar-1 b_2026-08-03.csv</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>PSF Data:</strong> <a class="artifact-link" href="/72ac7ec3934d/files/artifact_008.txt" target="_blank" rel="noopener"><code>output/tmp/psf_data_target.txt</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>FOV Images:</strong> <a class="artifact-link" href="/72ac7ec3934d/files/artifact_009.png" target="_blank" rel="noopener"><code>output/tmp/FOV_Qatar-1 b_2026-08-03_*.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Observing Statistics (target):</strong> <a class="artifact-link" href="/72ac7ec3934d/files/artifact_010.png" target="_blank" rel="noopener"><code>output/tmp/Observing_Statistics_target_2026-08-03.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Observing Statistics (comparison stars):</strong> <a class="artifact-link" href="/72ac7ec3934d/files/artifact_011.png" target="_blank" rel="noopener"><code>output/tmp/Observing_Statistics_comp*_2026-08-03.png</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>

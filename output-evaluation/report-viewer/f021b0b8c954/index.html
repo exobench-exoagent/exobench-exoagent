@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><p>EXOTIC successfully processed 130 CCD FITS images of the KELT-7 field obtained with the Exoplanet Watch 0.4-meter telescope. The observation was taken on 2017 January 6, based on the date encoded in the FITS filenames. The data were unfiltered/open and had an exposure time of approximately 1.452 seconds, with a median cadence of roughly 25 seconds. No Flats, Darks, or Bias frames were present, so the reduction proceeded without calibration-frame correction.</p>
+<p>The target and comparison coordinates were initially selected from the FITS render and AAVSO chart workflow. EXOTIC’s WCS validation showed that the initial target coordinate was incorrect and calculated the target position as pixel [736, 543]. The reduction was therefore rerun using that corrected target coordinate and three comparison candidates. EXOTIC performed aperture photometry, detrending using airmass terms, limb-darkening estimation, and Bayesian transit fitting. Plate solving was completed successfully during the final run.</p>
+<p>The final fitted mid-transit time is <strong>BJD_TDB 2457758.16469 ± 0.00097</strong>. The fitted radius ratio is <strong>Rp/R* = 0.119 ± 0.035</strong>, corresponding to a transit depth of <strong>1.43 ± 0.83%</strong>. The fitted inclination is <strong>85.81 ± 2.87°</strong>, and the fitted duration is <strong>0.0217 ± 0.0092 days</strong>, or approximately 31 ± 13 minutes. The published orbital period of <strong>2.7347656 ± 0.0000002 days</strong> was used as a prior and was not independently determined from this single light curve.</p>
+<p>The result is not a robust transit detection. The residual scatter is extremely high at <strong>20.52%</strong>, EXOTIC reported <strong>no best comparison star</strong>, and the light-curve CSV shows substantial point-to-point flux variability. EXOTIC did not provide a signal-to-noise ratio, reduced χ², or BIC. Consequently, the fitted depth and timing should be treated as low-confidence model estimates rather than a reliable measurement of the KELT-7 b transit. Additional observations with cleaner comparison-star selection, improved calibration, and substantially lower photometric scatter are required.</p>
+<p>Primary outputs are available under:</p>
+<ul>
+<li>Final light curve: <a class="artifact-link" href="/f021b0b8c954/files/artifact_001.png" target="_blank" rel="noopener"><code>output/FinalLightCurve_KELT-7 b_01-06-2017.png</code><span aria-hidden="true">↗</span></a></li>
+<li>Final light-curve PDF: <a class="artifact-link" href="/f021b0b8c954/files/artifact_002.pdf" target="_blank" rel="noopener"><code>output/FinalLightCurve_KELT-7 b_01-06-2017.pdf</code><span aria-hidden="true">↗</span></a></li>
+<li>Final fitted parameters: <a class="artifact-link" href="/f021b0b8c954/files/artifact_003.json" target="_blank" rel="noopener"><code>output/tmp/FinalParams_KELT-7 b_01-06-2017.json</code><span aria-hidden="true">↗</span></a></li>
+<li>Final light-curve data: <a class="artifact-link" href="/f021b0b8c954/files/artifact_004.csv" target="_blank" rel="noopener"><code>output/tmp/FinalLightCurve_KELT-7 b_01-06-2017.csv</code><span aria-hidden="true">↗</span></a></li>
+<li>AAVSO-format report: <a class="artifact-link" href="/f021b0b8c954/files/artifact_005.txt" target="_blank" rel="noopener"><code>output/AAVSO_KELT-7 b_01-06-2017.txt</code><span aria-hidden="true">↗</span></a></li>
+<li>EXOTIC configuration: <a class="artifact-link" href="/f021b0b8c954/files/artifact_006.json" target="_blank" rel="noopener"><code>output/inits.json</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>

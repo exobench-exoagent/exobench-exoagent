@@ -1,0 +1,663 @@
+Checking exotethys database...
+Checking ephemerides database...
+Checking photometry database...
+Checking catalogues database...
+
+*************************************************************
+Welcome to the EXOplanet Transit Interpretation Code (EXOTIC)
+Version 4.3.1
+*************************************************************
+
+
+**************************
+Complete Reduction Routine
+**************************
+Generated random number seed 952399657
+
+**************************
+Starting Reduction Process
+**************************
+
+
+Getting the plate solution for your imaging file to translate pixel coordinates on the sky. 
+Please wait....
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+
+Thinking - ... 
+
+Thinking \ ... 
+
+Thinking | ... 
+
+Thinking / ... 
+WCS file creation successful.
+
+Thinking ... DONE!
+
+Here is the path to your plate solution: runs/20260810-030247-324-3f2cca0a/output/temp/wcs.fits
+
+Checking for variability in Comparison Star #1:
+	Pixel X: 1451.0 Pixel Y: 955.0
+
+Checking for variability in Comparison Star #2:
+	Pixel X: 1482.0 Pixel Y: 1387.0
+
+Checking for variability in Comparison Star #3:
+	Pixel X: 885.0 Pixel Y: 1086.0
+Finding transformation 1 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0086-e91.fits
+Finding transformation 2 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0087-e91.fits
+Finding transformation 3 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0088-e91.fits
+Finding transformation 4 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0089-e91.fits
+Finding transformation 5 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0090-e91.fits
+Finding transformation 6 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0091-e91.fits
+Finding transformation 7 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0092-e91.fits
+Finding transformation 8 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0093-e91.fits
+Finding transformation 9 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0094-e91.fits
+Finding transformation 10 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0095-e91.fits
+Finding transformation 11 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0096-e91.fits
+Finding transformation 12 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0097-e91.fits
+Finding transformation 13 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0098-e91.fits
+Finding transformation 14 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0099-e91.fits
+Finding transformation 15 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0100-e91.fits
+Finding transformation 16 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0101-e91.fits
+Finding transformation 17 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0102-e91.fits
+Finding transformation 18 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0103-e91.fits
+Finding transformation 19 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0104-e91.fits
+Finding transformation 20 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0105-e91.fits
+Finding transformation 21 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0106-e91.fits
+Finding transformation 22 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0107-e91.fits
+Finding transformation 23 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0108-e91.fits
+Finding transformation 24 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0109-e91.fits
+Finding transformation 25 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0110-e91.fits
+Finding transformation 26 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0111-e91.fits
+Finding transformation 27 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0112-e91.fits
+Finding transformation 28 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0113-e91.fits
+Finding transformation 29 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0114-e91.fits
+Finding transformation 30 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0115-e91.fits
+Finding transformation 31 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0116-e91.fits
+Finding transformation 32 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0117-e91.fits
+Finding transformation 33 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0118-e91.fits
+Finding transformation 34 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0119-e91.fits
+Finding transformation 35 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0120-e91.fits
+Finding transformation 36 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0121-e91.fits
+Finding transformation 37 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0122-e91.fits
+Finding transformation 38 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0123-e91.fits
+Finding transformation 39 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0124-e91.fits
+Finding transformation 40 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0125-e91.fits
+Finding transformation 41 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0126-e91.fits
+Finding transformation 42 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0127-e91.fits
+Finding transformation 43 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0128-e91.fits
+Finding transformation 44 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0129-e91.fits
+Finding transformation 45 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0130-e91.fits
+Finding transformation 46 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0131-e91.fits
+Finding transformation 47 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0132-e91.fits
+Finding transformation 48 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0133-e91.fits
+Finding transformation 49 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0134-e91.fits
+Finding transformation 50 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0135-e91.fits
+Finding transformation 51 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0136-e91.fits
+Finding transformation 52 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0137-e91.fits
+Finding transformation 53 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0138-e91.fits
+Finding transformation 54 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0139-e91.fits
+Finding transformation 55 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0140-e91.fits
+Finding transformation 56 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0141-e91.fits
+Finding transformation 57 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0142-e91.fits
+Finding transformation 58 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0143-e91.fits
+Finding transformation 59 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0144-e91.fits
+Finding transformation 60 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0145-e91.fits
+Finding transformation 61 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0146-e91.fits
+Finding transformation 62 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0147-e91.fits
+Finding transformation 63 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0148-e91.fits
+Finding transformation 64 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0149-e91.fits
+Finding transformation 65 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0150-e91.fits
+Finding transformation 66 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0151-e91.fits
+Finding transformation 67 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0152-e91.fits
+Finding transformation 68 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0153-e91.fits
+Finding transformation 69 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0154-e91.fits
+Finding transformation 70 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0155-e91.fits
+Finding transformation 71 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0156-e91.fits
+Finding transformation 72 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0157-e91.fits
+Finding transformation 73 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0158-e91.fits
+Finding transformation 74 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0159-e91.fits
+Finding transformation 75 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0160-e91.fits
+Finding transformation 76 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0161-e91.fits
+Finding transformation 77 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0162-e91.fits
+Finding transformation 78 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0163-e91.fits
+Finding transformation 79 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0164-e91.fits
+Finding transformation 80 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0165-e91.fits
+Finding transformation 81 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0166-e91.fits
+Finding transformation 82 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0167-e91.fits
+Finding transformation 83 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0168-e91.fits
+Finding transformation 84 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0169-e91.fits
+Finding transformation 85 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0170-e91.fits
+Finding transformation 86 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0171-e91.fits
+Finding transformation 87 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0172-e91.fits
+Finding transformation 88 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0173-e91.fits
+Finding transformation 89 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0174-e91.fits
+Finding transformation 90 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0175-e91.fits
+Finding transformation 91 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0176-e91.fits
+Finding transformation 92 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0177-e91.fits
+Finding transformation 93 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0178-e91.fits
+Finding transformation 94 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0179-e91.fits
+Finding transformation 95 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0180-e91.fits
+Finding transformation 96 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0181-e91.fits
+Finding transformation 97 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0182-e91.fits
+Finding transformation 98 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0183-e91.fits
+Finding transformation 99 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0184-e91.fits
+Finding transformation 100 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0185-e91.fits
+Finding transformation 101 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0186-e91.fits
+Finding transformation 102 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0187-e91.fits
+Finding transformation 103 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0188-e91.fits
+Finding transformation 104 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0189-e91.fits
+Finding transformation 105 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0190-e91.fits
+Finding transformation 106 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0191-e91.fits
+Finding transformation 107 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0192-e91.fits
+Finding transformation 108 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0193-e91.fits
+Finding transformation 109 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0194-e91.fits
+Finding transformation 110 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0195-e91.fits
+Finding transformation 111 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0196-e91.fits
+Finding transformation 112 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0197-e91.fits
+Finding transformation 113 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0198-e91.fits
+Finding transformation 114 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0199-e91.fits
+Finding transformation 115 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0200-e91.fits
+Finding transformation 116 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0201-e91.fits
+Finding transformation 117 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0202-e91.fits
+Finding transformation 118 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0203-e91.fits
+Finding transformation 119 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0204-e91.fits
+Finding transformation 120 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0205-e91.fits
+Finding transformation 121 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0206-e91.fits
+Finding transformation 122 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0207-e91.fits
+Finding transformation 123 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0208-e91.fits
+Finding transformation 124 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0209-e91.fits
+Finding transformation 125 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0210-e91.fits
+Finding transformation 126 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0211-e91.fits
+Finding transformation 127 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0212-e91.fits
+Finding transformation 128 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0213-e91.fits
+Finding transformation 129 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0214-e91.fits
+Finding transformation 130 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0215-e91.fits
+Finding transformation 131 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0216-e91.fits
+Finding transformation 132 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0217-e91.fits
+Finding transformation 133 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0218-e91.fits
+Finding transformation 134 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0219-e91.fits
+Finding transformation 135 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0220-e91.fits
+Finding transformation 136 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0221-e91.fits
+Finding transformation 137 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0222-e91.fits
+Finding transformation 138 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0223-e91.fits
+Finding transformation 139 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0224-e91.fits
+Finding transformation 140 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0225-e91.fits
+Finding transformation 141 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0226-e91.fits
+Finding transformation 142 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0227-e91.fits
+Finding transformation 143 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0228-e91.fits
+Finding transformation 144 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0229-e91.fits
+Finding transformation 145 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0230-e91.fits
+Finding transformation 146 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0231-e91.fits
+Finding transformation 147 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0232-e91.fits
+Finding transformation 148 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0233-e91.fits
+Finding transformation 149 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0234-e91.fits
+Finding transformation 150 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0235-e91.fits
+Finding transformation 151 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0236-e91.fits
+Finding transformation 152 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0237-e91.fits
+Finding transformation 153 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0238-e91.fits
+Finding transformation 154 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0239-e91.fits
+Finding transformation 155 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0240-e91.fits
+Finding transformation 156 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0241-e91.fits
+Finding transformation 157 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0242-e91.fits
+Finding transformation 158 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0243-e91.fits
+Finding transformation 159 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0244-e91.fits
+Finding transformation 160 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0245-e91.fits
+Finding transformation 161 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0246-e91.fits
+Finding transformation 162 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0247-e91.fits
+Finding transformation 163 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0248-e91.fits
+Finding transformation 164 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0249-e91.fits
+Finding transformation 165 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0250-e91.fits
+Finding transformation 166 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0251-e91.fits
+Finding transformation 167 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0252-e91.fits
+Finding transformation 168 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0253-e91.fits
+Finding transformation 169 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0254-e91.fits
+Finding transformation 170 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0255-e91.fits
+Finding transformation 171 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0256-e91.fits
+Finding transformation 172 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0257-e91.fits
+Finding transformation 173 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0258-e91.fits
+Finding transformation 174 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0259-e91.fits
+Finding transformation 175 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0260-e91.fits
+Finding transformation 176 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0261-e91.fits
+Finding transformation 177 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0262-e91.fits
+Finding transformation 178 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0263-e91.fits
+Finding transformation 179 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0264-e91.fits
+Finding transformation 180 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0265-e91.fits
+Finding transformation 181 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0266-e91.fits
+Finding transformation 182 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0267-e91.fits
+Finding transformation 183 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0268-e91.fits
+Finding transformation 184 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0269-e91.fits
+Finding transformation 185 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0270-e91.fits
+Finding transformation 186 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0271-e91.fits
+Finding transformation 187 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0272-e91.fits
+Finding transformation 188 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0273-e91.fits
+Finding transformation 189 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0274-e91.fits
+Finding transformation 190 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0275-e91.fits
+Finding transformation 191 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0276-e91.fits
+Finding transformation 192 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0277-e91.fits
+Finding transformation 193 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0278-e91.fits
+Finding transformation 194 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0279-e91.fits
+Finding transformation 195 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0280-e91.fits
+Finding transformation 196 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0281-e91.fits
+Finding transformation 197 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0282-e91.fits
+Finding transformation 198 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0283-e91.fits
+Finding transformation 199 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0284-e91.fits
+Finding transformation 200 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0285-e91.fits
+Finding transformation 201 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0286-e91.fits
+Finding transformation 202 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0287-e91.fits
+Finding transformation 203 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0288-e91.fits
+Finding transformation 204 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0289-e91.fits
+Finding transformation 205 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0290-e91.fits
+Finding transformation 206 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0291-e91.fits
+Finding transformation 207 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0292-e91.fits
+Finding transformation 208 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0293-e91.fits
+Finding transformation 209 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0294-e91.fits
+Finding transformation 210 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0295-e91.fits
+Finding transformation 211 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0296-e91.fits
+Finding transformation 212 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0297-e91.fits
+Finding transformation 213 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0298-e91.fits
+Finding transformation 214 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0299-e91.fits
+Finding transformation 215 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0300-e91.fits
+Finding transformation 216 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0301-e91.fits
+Finding transformation 217 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0302-e91.fits
+Finding transformation 218 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0303-e91.fits
+Finding transformation 219 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0304-e91.fits
+Finding transformation 220 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0305-e91.fits
+Finding transformation 221 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0306-e91.fits
+Finding transformation 222 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0307-e91.fits
+Finding transformation 223 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0308-e91.fits
+Finding transformation 224 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0309-e91.fits
+Finding transformation 225 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0310-e91.fits
+Finding transformation 226 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0311-e91.fits
+Finding transformation 227 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0312-e91.fits
+Finding transformation 228 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0313-e91.fits
+Finding transformation 229 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0314-e91.fits
+Finding transformation 230 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0315-e91.fits
+Finding transformation 231 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0316-e91.fits
+Finding transformation 232 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0317-e91.fits
+Finding transformation 233 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0318-e91.fits
+Finding transformation 234 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0319-e91.fits
+Finding transformation 235 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0320-e91.fits
+Finding transformation 236 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0321-e91.fits
+Finding transformation 237 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0322-e91.fits
+Finding transformation 238 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0323-e91.fits
+Finding transformation 239 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0324-e91.fits
+Finding transformation 240 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0325-e91.fits
+Finding transformation 241 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0326-e91.fits
+Finding transformation 242 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0327-e91.fits
+Finding transformation 243 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0328-e91.fits
+Finding transformation 244 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0329-e91.fits
+Finding transformation 245 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0330-e91.fits
+Finding transformation 246 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0331-e91.fits
+Finding transformation 247 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0332-e91.fits
+Finding transformation 248 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0333-e91.fits
+Finding transformation 249 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0334-e91.fits
+Finding transformation 250 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0335-e91.fits
+Finding transformation 251 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0336-e91.fits
+Finding transformation 252 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0337-e91.fits
+Finding transformation 253 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0338-e91.fits
+Finding transformation 254 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0339-e91.fits
+Finding transformation 255 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0340-e91.fits
+Finding transformation 256 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0341-e91.fits
+Finding transformation 257 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0342-e91.fits
+Finding transformation 258 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0343-e91.fits
+Finding transformation 259 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0344-e91.fits
+Finding transformation 260 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0345-e91.fits
+Finding transformation 261 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0346-e91.fits
+Finding transformation 262 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0347-e91.fits
+Finding transformation 263 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0348-e91.fits
+Finding transformation 264 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0349-e91.fits
+Finding transformation 265 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0350-e91.fits
+Finding transformation 266 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0351-e91.fits
+Finding transformation 267 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0352-e91.fits
+Finding transformation 268 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0353-e91.fits
+Finding transformation 269 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0354-e91.fits
+Finding transformation 270 of 270 : observation/WASP-65 b/lsc0m476-sq34-20260312-0355-e91.fits

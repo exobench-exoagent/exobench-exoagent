@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>WASP-69 b Transit Observation Report</h1>
+<h2>Observation Summary</h2>
+<p><strong>Target:</strong> WASP-69 (RA 21h 00m 06.20s, Dec -05° 05' 40.0")<br>
+<strong>Exoplanet:</strong> WASP-69 b<br>
+<strong>Telescope:</strong> MicroObservatory 0.4m Telescope (LSC-0m492)<br>
+<strong>Instrument:</strong> CCD Camera (1x1 binning)<br>
+<strong>Observation Date:</strong> 2025 September 24 (BJD_TDB ~2460942)<br>
+<strong>Filter:</strong> Johnson V (502.8–586.8 nm)<br>
+<strong>Exposure Time:</strong> 12.0 seconds<br>
+<strong>Cadence:</strong> ~14–17 seconds (12s exposure + overhead)<br>
+<strong>Images Processed:</strong> 300 FITS files<br>
+<strong>Plate Solution:</strong> Succeeded; WCS reference file saved to tmp/wcs.fits  </p>
+<h2>Data Reduction</h2>
+<p><strong>Calibration:</strong> No flat, dark, or bias frames were available; uncalibrated images were processed directly.</p>
+<p><strong>Plate Solution:</strong> Successfully performed on all 300 images using ASTAP/astrometry.net, producing per-image WCS solutions.</p>
+<p><strong>Aperture Photometry:</strong> Differential aperture photometry performed with:</p>
+<ul>
+<li>Optimal aperture radius: 4.27 pixels</li>
+<li>Optimal annulus: 10.24 pixels</li>
+<li>Best comparison star: AAVSO Field Star #103 at pixel (428, 1308)</li>
+</ul>
+<p><strong>Detrending:</strong> Light curves detrended against airmass using linear correction (coefficients: a1 = 1.0093 ± 0.0041, a2 = -0.008 ± 0.023).</p>
+<p><strong>Transit Fitting:</strong> Full Bayesian transit model fit using ultranest sampler with priors: Period 2.539575 ± 0.000005 d, Rp/R* 0.082 ± 0.004, a/R* 4.62 ± 0.1, inclination 88.0 ± 0.5°. Limb darkening coefficients from LDTk for Johnson V filter.</p>
+<h2>Transit Results</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time (Tc)</td>
+<td>2460942.02</td>
+<td>BJD_TDB ±0.24</td>
+</tr>
+<tr>
+<td>Orbital Period</td>
+<td>2.539575</td>
+<td>days ±0.000005</td>
+</tr>
+<tr>
+<td>Radius Ratio (Rp/R*)</td>
+<td>0.079</td>
+<td>±0.03</td>
+</tr>
+<tr>
+<td>Transit Depth</td>
+<td>0.62</td>
+<td>% ±0.47</td>
+</tr>
+<tr>
+<td>Orbital Inclination</td>
+<td>87.66</td>
+<td>° ±2.04</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.0002</td>
+<td>days ±0.0028</td>
+</tr>
+<tr>
+<td>Residual Scatter</td>
+<td>0.4</td>
+<td>% (RMS)</td>
+</tr>
+</tbody>
+</table>
+<p>The measured Rp/R* = 0.079 ± 0.03 is consistent with the literature value of ~0.082.</p>
+<h2>Data Quality</h2>
+<p><strong>Fit Quality:</strong> Posterior sampling converged well (logZ = -153.2 ± 0.075, ESS = 1271.6, KL divergence = 0.47 nat).</p>
+<p><strong>Residual Behavior:</strong> Scatter in detrended light curve was 0.4%, indicating good photometric precision for this instrument.</p>
+<p><strong>Warnings:</strong></p>
+<ul>
+<li>Transit duration (0.0002 days ≈ 0.3 min) is much shorter than expected ~2–3 hours, suggesting limited phase coverage of the transit event.</li>
+<li>Large uncertainty on transit depth (0.62 ± 0.47%) reflects incomplete transit sampling.</li>
+<li>Limb-darkening FWHM matching had warnings; LDTk downloaded cached files.</li>
+</ul>
+<h2>Output Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Final Light Curve (PNG)</td>
+<td><a class="artifact-link" href="/205ea0542e79/files/artifact_001.png" target="_blank" rel="noopener"><code>output/FinalLightCurve_WASP-69 b_WASP-69 b.png</code><span aria-hidden="true">↗</span></a></td>
+</tr>
+<tr>
+<td>Final Light Curve (PDF)</td>
+<td><a class="artifact-link" href="/205ea0542e79/files/artifact_002.pdf" target="_blank" rel="noopener"><code>output/FinalLightCurve_WASP-69 b_WASP-69 b.pdf</code><span aria-hidden="true">↗</span></a></td>
+</tr>
+<tr>
+<td>Final Light Curve (CSV)</td>
+<td><a class="artifact-link" href="/205ea0542e79/files/artifact_003.csv" target="_blank" rel="noopener"><code>output/tmp/FinalLightCurve_WASP-69 b_WASP-69 b.csv</code><span aria-hidden="true">↗</span></a></td>
+</tr>
+<tr>
+<td>Normalized Flux (TXT)</td>
+<td><a class="artifact-link" href="/205ea0542e79/files/artifact_004.txt" target="_blank" rel="noopener"><code>output/tmp/NormalizedFlux_WASP-69 b_WASP-69 b.txt</code><span aria-hidden="true">↗</span></a></td>
+</tr>
+<tr>
+<td>AAVSO Submission (TXT)</td>
+<td><a class="artifact-link" href="/205ea0542e79/files/artifact_005.txt" target="_blank" rel="noopener"><code>output/AAVSO_WASP-69 b_WASP-69 b.txt</code><span aria-hidden="true">↗</span></a></td>
+</tr>
+<tr>
+<td>Final Parameters (JSON)</td>
+<td><a class="artifact-link" href="/205ea0542e79/files/artifact_006.json" target="_blank" rel="noopener"><code>output/tmp/FinalParams_WASP-69 b_WASP-69 b.json</code><span aria-hidden="true">↗</span></a></td>
+</tr>
+<tr>
+<td>Plate Solution (FITS)</td>
+<td><code>output/tmp/wcs.fits</code></td>
+</tr>
+<tr>
+<td><a class="artifact-link" href="/205ea0542e79/files/artifact_007.json" target="_blank" rel="noopener"><code>inits.json</code><span aria-hidden="true">↗</span></a></td>
+<td><a class="artifact-link" href="/205ea0542e79/files/artifact_007.json" target="_blank" rel="noopener"><code>output/inits.json</code><span aria-hidden="true">↗</span></a></td>
+</tr>
+</tbody>
+</table></section></main>
+</body>
+</html>

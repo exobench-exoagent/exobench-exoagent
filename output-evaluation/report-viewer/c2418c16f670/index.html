@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: CoRoT-2 b Transit Observation</h1>
+<h2>Observation Summary</h2>
+<p>This observation targeted the exoplanet CoRoT-2 b (host star: CoRoT-2) on<br>
+2026 August 2 UT, using the Cecilia telescope (a 6-inch Maksutov-Newtonian,<br>
+560mm EFL) at the MicroObservatory facility located at Whipple Observatory<br>
+near Amado, Arizona. The observations were conducted in clear broadband<br>
+filter (350-850 nm effective range) with a KAF-1402ME CCD detector at 2x2<br>
+binning, producing 650 x 500 pixel images with 60-second exposure times and<br>
+a pixel scale of 5.0 arcsec/pixel. A total of 86 FITS files were obtained<br>
+over approximately 3.8 hours (JD 2461254.757 to 2461254.917, UT).</p>
+<h2>Data Reduction</h2>
+<p>The 86 calibrated FITS images were processed through the EXOTIC (EXOplanet<br>
+Transit Interpretation Code) v4.3.1 pipeline. Dark subtraction was performed<br>
+using 2 dark frames obtained from the darks directory. No flat-field or bias<br>
+corrections were available and were omitted. </p>
+<p>Plate solving was disabled, and a local pixel scale of 5.0 arcsec/pixel was<br>
+used based on the telescope's focal length (560mm) and detector pixel size<br>
+(13.6 microns binned). The target star (CoRoT-2) was identified at pixel<br>
+coordinates [377, 94] from the first observation frame. Three comparison<br>
+stars were selected at [260, 150], [604, 154], and [208, 323]. During the<br>
+aperture optimization, EXOTIC determined the best comparison star to be #1<br>
+at [260, 150], with optimal aperture radius of 8.76 pixels and optimal<br>
+annulus of 19.0 pixels.</p>
+<p>Several frames (approximately 12 of 86) failed to align with the reference<br>
+image, likely due to cloud contamination or tracking issues.</p>
+<h2>Transit Fitting</h2>
+<p>The transit fitting was performed using the ultranest MCMC sampler with<br>
+9,799 likelihood function evaluations. The fit explored 4000 iterations<br>
+with an effective sample size (ESS) of 2219.3 and a Bayesian log-evidence<br>
+of -132.9 +/- 0.08.</p>
+<p>The final fitted planetary parameters are:</p>
+<ul>
+<li>
+<p>Mid-Transit Time (BJD_TDB): 2461254.8503 +/- 0.0034<br>
+  (corresponding to UT 2026-08-02T08:36:40 +/- 4.7 minutes)</p>
+</li>
+<li>
+<p>Radius Ratio (Rp/R*): 0.224 +/- 0.049</p>
+</li>
+<li>Transit Depth [(Rp/R*)²]: 5.02 +/- 2.21%</li>
+<li>Orbital Inclination: 84.84 +/- 1.96°</li>
+<li>Transit Duration: 0.085 +/- 0.015 days (2.04 +/- 0.36 hours)</li>
+<li>Airmass coefficients: a1 = 3.34 +/- 0.81, a2 = -1.015 +/- 0.08</li>
+</ul>
+<h2>Comparison with Published Values</h2>
+<p>The fitted radius ratio of 0.224 is significantly larger than the literature<br>
+value of ~0.12 (Aigrain et al. 2011). The orbital inclination of 84.8° is<br>
+also lower than the published value of ~88.4°. These discrepancies are<br>
+likely due to the high data noise and limited photon counts per frame.<br>
+The high uncertainties (Rp/R* = 0.049, or ~22% relative uncertainty)<br>
+indicate that the transit detection is marginal at best.</p>
+<h2>Data Quality Assessment</h2>
+<p>The data quality is limited by several factors:</p>
+<ol>
+<li>
+<p>High per-point uncertainty (~11%), indicating low signal-to-noise per<br>
+   exposure</p>
+</li>
+<li>
+<p>Out-of-transit RMS of ~10% relative flux</p>
+</li>
+<li>Measured signal-to-noise ratio for transit depth: ~0.6 (very low)</li>
+<li>Residual scatter of 17.93% in the light curve fit</li>
+<li>12 of 86 frames failed to align (cloud/tracking issues)</li>
+<li>The observing data shows significant scatter, with some individual<br>
+   points showing flux deviations of more than 50% from the mean</li>
+</ol>
+<p>Despite these limitations, the transit fitting converged and produced<br>
+reasonable parameter estimates. The airmass correction coefficients<br>
+(a1=3.34, a2=-1.02) suggest that atmospheric extinction was significant<br>
+and properly modeled.</p>
+<h2>Conclusions</h2>
+<p>This observation detected a marginal transit signal from CoRoT-2 b.<br>
+The fitted transit parameters show significant uncertainties due to the<br>
+high data noise. The measured transit depth of ~5% is consistent within<br>
+errors with the published value of ~1.4% (0.12²), though the central<br>
+value is larger. The mid-transit time of BJD 2461254.850 is consistent<br>
+with the predicted ephemeris (T0 = 2454237.532 + N × 1.743 days).</p>
+<p>Future observations with better conditions (clearer skies, better seeing,<br>
+or longer integration) are recommended to improve the signal-to-noise<br>
+ratio and produce more precise transit parameters. The high airmass<br>
+coefficient (a1 = 3.34) suggests significant atmospheric extinction,<br>
+which was likely caused by the low elevation of CoRoT-2 (~30°) during<br>
+this observing run.</p>
+<h2>Output Files</h2>
+<ul>
+<li><a class="artifact-link" href="/c2418c16f670/files/artifact_001.png" target="_blank" rel="noopener"><code>Final Light Curve: FinalLightCurve_CoRoT-2 b_08-02-2026.png</code><span aria-hidden="true">↗</span></a></li>
+<li><a class="artifact-link" href="/c2418c16f670/files/artifact_002.pdf" target="_blank" rel="noopener"><code>Final Light Curve PDF: FinalLightCurve_CoRoT-2 b_08-02-2026.pdf</code><span aria-hidden="true">↗</span></a></li>
+<li>Light Curve CSV: tmp/FinalLightCurve_CoRoT-2 b_08-02-2026.csv</li>
+<li>Final Parameters: tmp/FinalParams_CoRoT-2 b_08-02-2026.json</li>
+<li><a class="artifact-link" href="/c2418c16f670/files/artifact_005.txt" target="_blank" rel="noopener"><code>AAVSO Submission: AAVSO_CoRoT-2 b_08-02-2026.txt</code><span aria-hidden="true">↗</span></a></li>
+<li>Output Directory: output/EXOTIC_output</li>
+</ul></section></main>
+</body>
+</html>

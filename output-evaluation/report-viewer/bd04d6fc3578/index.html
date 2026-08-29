@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>WASP-44 b Transit Photometry Report</h1>
+<h2>Observation Summary</h2>
+<p><strong>Target:</strong> WASP-44 b, a hot Jupiter transiting the G-type star WASP-44<br>
+<strong>Telescope:</strong> Cecilia (6-inch Maksutov-Newtonian, f/3.6, 560mm EFL)<br>
+<strong>Instrument:</strong> MicroObservatory automated telescope network (CfA/Smithsonian)<br>
+<strong>Observatory:</strong> Whipple Observatory, Amado, Arizona (31.68°N, 110.88°W, 1268m)<br>
+<strong>Observation Date:</strong> 2026-07-15<br>
+<strong>Filter:</strong> Clear (MObs CV passband: 350-850 nm)<br>
+<strong>Exposure Time:</strong> 60 seconds per frame<br>
+<strong>Detector:</strong> CCD (KAF-1402ME, 2x2 binning)<br>
+<strong>Pixel Scale:</strong> 5.0 arcsec/pixel<br>
+<strong>Image Size:</strong> 650 × 500 pixels<br>
+<strong>Frame Count:</strong> 37 science images (27 successfully aligned) + 4 dark frames<br>
+<strong>Cadence:</strong> ~180 seconds between exposures</p>
+<h2>Data Reduction</h2>
+<h3>Calibration</h3>
+<ul>
+<li>
+<p><strong>Dark frames:</strong> 4 frames (60s each) used for dark subtraction. Dark frames matched in<br>
+  exposure time and temperature to science frames.</p>
+</li>
+<li>
+<p><strong>Flat-field:</strong> Not available. No flat field correction applied.</p>
+</li>
+<li><strong>Bias:</strong> Not available. No bias correction applied.</li>
+</ul>
+<h3>Aperture Photometry</h3>
+<ul>
+<li><strong>Optimal aperture radius:</strong> 2.46 pixels</li>
+<li><strong>Optimal annulus:</strong> 5.11 pixels</li>
+<li><strong>Comparison stars:</strong> 3 candidates analyzed; Star #3 at [464.0, 390.0] selected as best</li>
+</ul>
+<h3>Detrending</h3>
+<ul>
+<li><strong>Method:</strong> Airmass correction using biweight detrending (LDTk)</li>
+<li><strong>Coefficients:</strong> a1 = 0.48 ± 0.21, a2 = 0.5227 ± 0.0024</li>
+<li><strong>Plate solving:</strong> Disabled (local 5.0 arcsec/pixel scale used)</li>
+<li><strong>Limb-darkening:</strong> LDTk model atmospheres with quadratic coefficients computed<br>
+  automatically from stellar parameters</li>
+</ul>
+<h3>Data Quality Notes</h3>
+<ul>
+<li>9 of 36 frames failed image alignment (taken during telescope slewing)</li>
+<li>27 frames successfully registered and photometry extracted</li>
+<li>14 data points cover partial transit (early ingress phase)</li>
+<li>Residual scatter: 44.46% (elevated due to limited coverage and atmospheric variability)</li>
+</ul>
+<h2>Transit Results</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Measured Value</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time (Tc)</td>
+<td>2461237.001894</td>
+<td>±4.8×10⁻⁵ BJD_TDB</td>
+</tr>
+<tr>
+<td>Orbital Period</td>
+<td>2.42381131</td>
+<td>±1.3×10⁻⁷ days</td>
+</tr>
+<tr>
+<td>Transit Depth</td>
+<td>2.44%</td>
+<td>±0.00035%</td>
+</tr>
+<tr>
+<td>Rp/R*</td>
+<td>0.156125</td>
+<td>±1.1×10⁻⁵</td>
+</tr>
+<tr>
+<td>Inclination</td>
+<td>89.996°</td>
+<td>±0.039°</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.042063 days</td>
+<td>±5.3×10⁻⁵ days (~60.6 min)</td>
+</tr>
+<tr>
+<td>Residual Scatter</td>
+<td>44.46%</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3>Comparison with Published Values</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Published</th>
+<th>Measured</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Period</td>
+<td>~2.42 days</td>
+<td>2.42381131 days</td>
+<td>Consistent</td>
+</tr>
+<tr>
+<td>Rp/R*</td>
+<td>~0.105-0.125</td>
+<td>0.156 ± 1.1×10⁻⁵</td>
+<td>Elevated, likely due to systematic effects</td>
+</tr>
+<tr>
+<td>Inclination</td>
+<td>~86°</td>
+<td>89.996 ± 0.039°</td>
+<td>Higher than published</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>~3 hours</td>
+<td>~61 minutes</td>
+<td>Shorter, reflecting limited phase coverage</td>
+</tr>
+</tbody>
+</table>
+<p>The measured Rp/R* of 0.156 is elevated compared to the published value of ~0.125. This<br>
+discrepancy is likely attributable to the high residual scatter (44.46%), limited transit<br>
+coverage (only early ingress observed), and potential inadequacies in the comparison star<br>
+selection. The narrow phase coverage (orbital phases -0.029 to -0.005) means the full<br>
+transit profile was not sampled, which can bias the derived parameters.</p>
+<h3>Signal-to-Noise and Fit Quality</h3>
+<p>The transit model was fit using nested sampling (Ultranest) with the following convergence:</p>
+<ul>
+<li>dlogZ = 0.18 (converged, threshold: 0.5)</li>
+<li>logZ error budget: single=0.26, bootstrap=0.18, total=0.18 (required &lt;0.50)</li>
+</ul>
+<p>The tight uncertainties on the fitted parameters (Tc: ±4.8×10⁻⁵, Rp/R*: ±1.1×10⁻⁵)<br>
+reflect the precision of the posterior distribution, though the accuracy is limited by<br>
+the systematic noise indicated by the 44.46% residual scatter.</p>
+<h2>Data Quality Assessment</h2>
+<p><strong>Strengths:</strong></p>
+<ul>
+<li>Clean dark frame subtraction</li>
+<li>Well-constrained posterior distributions from MCMC/nested sampling</li>
+<li>Successful alignment of 27/36 frames</li>
+<li>Optimal comparison star identification</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>High residual scatter (44.46%) indicates significant uncorrected systematics</li>
+<li>Limited transit coverage (only early ingress, ~90 minutes)</li>
+<li>Only 14 data points during/around transit</li>
+<li>No flat-field or bias calibration</li>
+<li>25% data loss due to failed alignment</li>
+</ul>
+<p><strong>Recommendations:</strong></p>
+<ul>
+<li>
+<p>Additional observations covering more of the transit profile would significantly<br>
+  improve parameter accuracy</p>
+</li>
+<li>
+<p>Flat-field calibration would reduce systematic noise</p>
+</li>
+<li>Longer integration times or binning would improve SNR</li>
+<li>Observations at multiple orbital phases would enable better detrending</li>
+</ul>
+<h2>Output Files</h2>
+<p>All outputs are in the workspace directory:<br>
+<code>output/EXOTIC_output</code></p>
+<ul>
+<li><strong><a class="artifact-link" href="/bd04d6fc3578/files/artifact_001.png" target="_blank" rel="noopener"><code>FinalLightCurve_WASP-44 b_07-15-2026.png</code><span aria-hidden="true">↗</span></a></strong> - Transit light curve (PNG)</li>
+<li><strong><a class="artifact-link" href="/bd04d6fc3578/files/artifact_002.pdf" target="_blank" rel="noopener"><code>FinalLightCurve_WASP-44 b_07-15-2026.pdf</code><span aria-hidden="true">↗</span></a></strong> - Transit light curve (PDF)</li>
+<li><strong><a class="artifact-link" href="/bd04d6fc3578/files/artifact_003.csv" target="_blank" rel="noopener"><code>FinalLightCurve_WASP-44 b_07-15-2026.csv</code><span aria-hidden="true">↗</span></a></strong> - Light curve data</li>
+<li><strong><a class="artifact-link" href="/bd04d6fc3578/files/artifact_004.txt" target="_blank" rel="noopener"><code>AAVSO_WASP-44 b_07-15-2026.txt</code><span aria-hidden="true">↗</span></a></strong> - AAVSO submission file</li>
+<li><strong><a class="artifact-link" href="/bd04d6fc3578/files/artifact_005.json" target="_blank" rel="noopener"><code>FinalParams_WASP-44 b_07-15-2026.json</code><span aria-hidden="true">↗</span></a></strong> - Fitted parameters</li>
+<li><strong>FOV_WASP-44 b_07-15-2026_*.png</strong> - Field of view images (4 stretches)</li>
+<li><strong><a class="artifact-link" href="/bd04d6fc3578/files/artifact_006.png" target="_blank" rel="noopener"><code>Triangle_WASP-44 b_07-15-2026.png</code><span aria-hidden="true">↗</span></a></strong> - Parameter posterior distributions</li>
+<li><strong>Observing_Statistics_*.png</strong> - Target and comparison star diagnostics</li>
+</ul>
+<hr>
+<p><em>EXOTIC v4.3.1 | Exoplanet Transit Interpretation Code</em><br>
+<em>NASA Exoplanet Science Institute | Caltech/JPL</em><br>
+<em>This work is supported by NASA under award number NNX16AC65A to STScI.</em><br>
+<em>Processed: 2026-08-10</em></p></section></main>
+</body>
+</html>

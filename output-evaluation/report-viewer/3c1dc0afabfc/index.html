@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>KELT-7 b Transit Photometry Report</h1>
+<h2>Observation Summary</h2>
+<p><strong>Target:</strong> KELT-7 (HD 233967, HIP 12165) | <strong>Exoplanet:</strong> KELT-7 b<br>
+<strong>Telescope:</strong> LCOGT 0.4m-06 (MicroObservatory), Haleakala Observatory, Maui, HI<br>
+<strong>Coordinates:</strong> RA 05h 13m 10.92s, Dec +33° 19' 05.4" (ICRS)<br>
+<strong>Observation Date:</strong> January 6, 2017 (MJD 57760.29)<br>
+<strong>Time Range:</strong> 07:00:18 - 08:02:48 UT (~62 minutes)<br>
+<strong>Filter:</strong> SDSS-ip (SDSS-IP-124) | <strong>Exposure:</strong> 3.086 s<br>
+<strong>Camera:</strong> CCD, 2x2 binning | <strong>Pixel Scale:</strong> 1.16 arcsec/pix<br>
+<strong>Frames:</strong> 130 | <strong>Airmass:</strong> 1.06-1.09  </p>
+<h2>Data Reduction</h2>
+<p>No calibration frames available; LCOGT L1 pipeline applied bias/flat before delivery. Differential aperture photometry performed with 3 comparison stars. Optimal aperture: 4.07 pixels, annulus: 10.78 pixels. Best comparison star: #3 at [860, 685].</p>
+<h2>Transit Fitting Results (EXOTIC v4.3.1 + UltraNest)</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Fitted Value</th>
+<th>Uncertainty</th>
+<th>Prior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time Tc (BJD_TDB)</td>
+<td>2457757.228</td>
+<td>±0.018</td>
+<td>2457762.0924</td>
+</tr>
+<tr>
+<td>Radius Ratio Rp/R*</td>
+<td>0.093</td>
+<td>±0.04</td>
+<td>0.109 ± 0.005</td>
+</tr>
+<tr>
+<td>Transit Depth (Rp/R*)²</td>
+<td>0.87%</td>
+<td>±0.75%</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Orbital Inclination</td>
+<td>87.82°</td>
+<td>±1.54°</td>
+<td>89.6° ± 0.5°</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.00039 d</td>
+<td>±0.0041 d</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Airmass Coeff 1 (a1)</td>
+<td>0.921</td>
+<td>±0.063</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Airmass Coeff 2 (a2)</td>
+<td>0.08</td>
+<td>±0.36</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Bayesian log Z = -60.28 ± 0.05 | ESS = 1237.4 | KL divergence = 0.45 ± 0.08 nat</p>
+<h2>Data Quality</h2>
+<p><strong>Residual Scatter:</strong> 6.81% (high). The observation was <strong>NOT during a transit</strong>. Ephemeris predicts nearest transits at Jan 3 and Jan 8, 2017. The Jan 6 observation falls ~3.6 days after one transit and ~1.3 days before the next. Flux variations (0.86-1.19 normalized) reflect stellar variability/residual systematics, not a transit signal.</p>
+<p><strong>IMPORTANT:</strong> The fitted transit parameters (Tc, depth, inclination) are <strong>not physically meaningful</strong> — they represent EXOTIC's best-fit model constrained by priors, not measurements of an actual transit.</p>
+<h2>Output Files</h2>
+<ul>
+<li><code>output/FinalLightCurve_KELT-7 b_01-06-2017.png/pdf</code> — Final light curve plot</li>
+<li><a class="artifact-link" href="/3c1dc0afabfc/files/artifact_001.txt" target="_blank" rel="noopener"><code>AAVSO_KELT-7 b_01-06-2017.txt</code><span aria-hidden="true">↗</span></a> — AAVSO-formatted photometry  </li>
+<li><a class="artifact-link" href="/3c1dc0afabfc/files/artifact_002.txt" target="_blank" rel="noopener"><code>NormalizedFlux_KELT-7 b_01-06-2017.txt</code><span aria-hidden="true">↗</span></a> — Normalized flux timeseries</li>
+<li><a class="artifact-link" href="/3c1dc0afabfc/files/artifact_003.json" target="_blank" rel="noopener"><code>FinalParams_KELT-7 b_01-06-2017.json</code><span aria-hidden="true">↗</span></a> — Fitted parameters</li>
+<li><a class="artifact-link" href="/3c1dc0afabfc/files/artifact_004.csv" target="_blank" rel="noopener"><code>FinalLightCurve_KELT-7 b_01-06-2017.csv</code><span aria-hidden="true">↗</span></a> — CSV light curve</li>
+</ul>
+<h2>Assumptions</h2>
+<ol>
+<li>Out-of-transit observation cannot independently constrain transit parameters</li>
+<li>LCOGT L1 pipeline applied bias/flat; no additional calibration frames provided</li>
+<li>SDSS-ip filter: 750-850 nm for limb darkening</li>
+<li>Stellar parameters from literature (KELT-7: F-type, Teff≈6550K)</li>
+<li>Three comparison stars identified from FITS image; EXOTIC selected star #3</li>
+</ol></section></main>
+</body>
+</html>

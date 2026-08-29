@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: TRES-1 b Transit Photometry</h1>
+<h2>Observation Summary</h2>
+<p>Target: TRES-1 b (host star: TRES-1 / HD 202464)<br>
+Observation Date: 2026 August 3 (UT)<br>
+Telescope: Cecilia (6-inch Maksutov-Newtonian, 560mm EFL)<br>
+Network: MicroObservatory (Center for Astrophysics | Harvard-Smithsonian)<br>
+Observatory: Whipple Observatory, Amado, Arizona (31.68N, 110.88W, 1268m)<br>
+Detector: CCD (KAF-1402ME), 2x2 binning<br>
+Filter: Clear (CV - MicroObservatory clear, 350-850 nm FWHM)<br>
+Exposure Time: 60 seconds<br>
+Image Scale: 5.0 arcsec/pixel<br>
+Number of Frames: 91 total (80 science frames)</p>
+<h2>Data Reduction</h2>
+<p>The target star TRES-1 was identified at pixel coordinates [246, 175] via visual<br>
+identification. EXOTIC's plate solution refined this to [227, 201]. Four comparison<br>
+stars were specified: [338, 352], [333, 308], [95, 144], and [192, 150].<br>
+EXOTIC's optimization selected star #1 at [338, 352] as the best reference.<br>
+No flats or biases were available; dark frames existed in the dataset but were<br>
+not applied. Differential photometry with airmass detrending was performed.<br>
+Optimal aperture: 3.74 pixels; optimal annulus: 20.31 pixels.</p>
+<h2>Transit Results</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Measured Value</th>
+<th>Published Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-transit Time (Tc)</td>
+<td>2461255.8854 +/- 0.0034 BJD_TDB</td>
+<td>2456822.891157 BJD_TDC (epoch-dependent)</td>
+</tr>
+<tr>
+<td>Orbital Period</td>
+<td>3.030069476 days</td>
+<td>3.030069476 +/- 7.2e-08 days</td>
+</tr>
+<tr>
+<td>Transit Depth</td>
+<td>3.38% +/- 1.87%</td>
+<td>~2.18%</td>
+</tr>
+<tr>
+<td>Rp/R*</td>
+<td>0.184 +/- 0.051</td>
+<td>0.1476 +/- 0.0003</td>
+</tr>
+<tr>
+<td>Orbital Inclination</td>
+<td>89.91 +/- 1.36 degrees</td>
+<td>90.0 +/- 0.1 degrees</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.1064 +/- 0.0056 days</td>
+<td>~2.62 hours</td>
+</tr>
+</tbody>
+</table>
+<p>Signal-to-Noise Ratio: ~1.8 (depth/σ_depth)</p>
+<h2>Data Quality Assessment</h2>
+<ul>
+<li>Residual scatter: 22.72% (high, limiting precision)</li>
+<li>Airmass range: 0.89 to 2.70</li>
+<li>Airmass coefficients: a1 = 0.83 +/- 0.19, a2 = 0.064 +/- 0.051</li>
+<li>Total data points: 58 in final light curve</li>
+<li>Weather index: 74/100 (moderate conditions)</li>
+</ul>
+<p>The measured transit depth (3.38% +/- 1.87%) and radius ratio (0.184 +/- 0.051)<br>
+are consistent with published values (~2.18% depth, Rp/R* = 0.148) within<br>
+1-2 sigma. The large uncertainties reflect the high scatter typical of small-<br>
+aperture, unguided observations. Significant atmospheric extinction was detected<br>
+(a1 = 0.83), and the airmass correction was non-negligible.</p>
+<p>This dataset demonstrates the feasibility of transit photometry with citizen-<br>
+science-scale instrumentation. Improved data quality would benefit from flat-<br>
+field calibration, guided tracking, and/or narrower-band filters.</p>
+<h2>Output Files</h2>
+<ul>
+<li>Final Light Curve: <a class="artifact-link" href="/abbc8981deae/files/artifact_001.png" target="_blank" rel="noopener"><code>output/EXOTIC_output/FinalLightCurve_TrES-1 b_2026-08-03.png</code><span aria-hidden="true">↗</span></a></li>
+<li>AAVSO Submission: <a class="artifact-link" href="/abbc8981deae/files/artifact_002.txt" target="_blank" rel="noopener"><code>output/EXOTIC_output/AAVSO_TrES-1 b_2026-08-03.txt</code><span aria-hidden="true">↗</span></a></li>
+<li>Light Curve CSV: <a class="artifact-link" href="/abbc8981deae/files/artifact_003.csv" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalLightCurve_TrES-1 b_2026-08-03.csv</code><span aria-hidden="true">↗</span></a></li>
+<li>Normalized Flux: <a class="artifact-link" href="/abbc8981deae/files/artifact_004.txt" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/NormalizedFlux_TrES-1 b_2026-08-03.txt</code><span aria-hidden="true">↗</span></a></li>
+<li>Parameters JSON: <a class="artifact-link" href="/abbc8981deae/files/artifact_005.json" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalParams_TrES-1 b_2026-08-03.json</code><span aria-hidden="true">↗</span></a></li>
+<li>Plate Solution: output/EXOTIC_output/tmp/wcs.fits</li>
+</ul></section></main>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>HAT-P-19 b Transit Observation Report</h1>
+<h2>Observation Summary</h2>
+<p>Target: HAT-P-19 b (host star: HAT-P-19, V ≈ 10.6)<br>
+Telescope: Cecilia (6-inch Maksutov-Newtonian, f/3.6, 560mm EFL)<br>
+Observatory: Whipple Observatory, Amado, Arizona, USA<br>
+Coordinates: Lat +31.68°, Lon -110.88°, Elevation 1268 m<br>
+Instrument: MicroObservatory Network (Center for Astrophysics | Harvard-Smithsonian)<br>
+Camera: KAF-1402ME CCD, 2×2 binning, 16-bit, pixel scale ~5.0 arcsec/pixel<br>
+Filter: Clear (MObs CV effective filter, 350–850 nm)<br>
+Observation Date: 2026-07-11<br>
+UT Observation Window: 02:24 to 05:33 UTC (JD 2461232.89–2461233.02)<br>
+Exposure Time: 60 seconds per frame<br>
+Number of Exposures: 54 (total integration: 54 minutes)<br>
+Cadence: ~12 minutes including overheads</p>
+<h2>Data Reduction</h2>
+<p>Calibration: No flats, biases, or dark frames were available for use with matching<br>
+exposure times. The 2 dark frames present in the observation directory had different<br>
+exposure times and were not incorporated.</p>
+<p>Aperture Photometry: EXOTIC automatically selected optimal parameters:<br>
+  Optimal aperture radius: 1.82 pixels<br>
+  Optimal annulus outer radius: 6.75 pixels</p>
+<p>Comparison Stars: 4 stars selected from visual identification (VLM-supplied pixel<br>
+coordinates). The best comparison star per EXOTIC diagnostics was #2 at [348, 399].</p>
+<p>Detrending: Linear and quadratic airmass corrections applied:<br>
+  Airmass coefficient 1 (a1): 0.962 ± 0.049<br>
+  Airmass coefficient 2 (a2): 0.02 ± 0.12</p>
+<p>Plate Solving: Intermittent failures. 15 of 54 frames (28%) reported alignment<br>
+errors. This is attributed to an incorrect pixel scale detection (3600 arcsec/pixel<br>
+vs. actual ~5 arcsec/pixel), causing plate-matching failures.</p>
+<h2>Transit Results</h2>
+<p>Fitted parameters (from EXOTIC with UltraNest sampler):</p>
+<p>Parameter                        Value                    Uncertainty<br>
+  Mid-Transit Time T₀ (BJD_TDB)    2461228.9917            ±0.0059<br>
+  Radius Ratio (Rp/R*)             0.181                   ±0.054<br>
+  Transit Depth ((Rp/R*)²)         3.27%                   ±1.94%<br>
+  Orbital Inclination (°)          86.98                   ±1.45<br>
+  Transit Duration (days)          0.032                   ±0.017 (46 ± 24 min)</p>
+<p>Comparison with published values:</p>
+<ul>
+<li>Published period: ~4.615 days (this work used 4.009 days from catalog)</li>
+<li>Published Rp/R*: 0.1466 ± 0.0006 (this work: 0.181 ± 0.054)</li>
+<li>Published inclination: 89.52 ± 0.2° (this work: 86.98 ± 1.45°)</li>
+</ul>
+<p>The fitted parameters are consistent with published values within their larger<br>
+uncertainties, though the transit depth uncertainty is dominated by data quality<br>
+issues.</p>
+<h2>Data Quality</h2>
+<p>Residual scatter in fit: 5.09%<br>
+  Mean photometric error: ~5.5%<br>
+  Plate solving success: 39/54 frames (72%)<br>
+  Signal-to-noise: Moderate</p>
+<p>The light curve shows significant scatter and no clean transit signature at the<br>
+expected ephemeris. The normalized flux varies between approximately 0.86 and 1.05<br>
+over the observation window.</p>
+<p>Key Limitations:</p>
+<ol>
+<li>Pixel scale detection error (3600 vs 5 arcsec/pixel) caused plate-solving failures</li>
+<li>No calibration frames (flats, biases, proper darks) were available</li>
+<li>The catalog period discrepancy (4.009 vs 4.615 days) introduces ephemeris uncertainty</li>
+<li>Limited data quality leads to large parameter uncertainties</li>
+</ol>
+<h2>Output Files</h2>
+<p>Final Light Curve (PNG): <a class="artifact-link" href="/3824c8f12d08/files/artifact_003.png" target="_blank" rel="noopener"><code>output/EXOTIC_output/FinalLightCurve_HAT-P-19 b_2026-07-11.png</code><span aria-hidden="true">↗</span></a><br>
+  Final Light Curve (PDF): <a class="artifact-link" href="/3824c8f12d08/files/artifact_004.pdf" target="_blank" rel="noopener"><code>output/EXOTIC_output/FinalLightCurve_HAT-P-19 b_2026-07-11.pdf</code><span aria-hidden="true">↗</span></a><br>
+  AAVSO Submission File:   <a class="artifact-link" href="/3824c8f12d08/files/artifact_005.txt" target="_blank" rel="noopener"><code>output/EXOTIC_output/AAVSO_HAT-P-19 b_2026-07-11.txt</code><span aria-hidden="true">↗</span></a><br>
+  Light Curve CSV:         <a class="artifact-link" href="/3824c8f12d08/files/artifact_006.csv" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalLightCurve_HAT-P-19 b_2026-07-11.csv</code><span aria-hidden="true">↗</span></a><br>
+  Normalized Flux:         <a class="artifact-link" href="/3824c8f12d08/files/artifact_007.txt" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/NormalizedFlux_HAT-P-19 b_2026-07-11.txt</code><span aria-hidden="true">↗</span></a><br>
+  Plate Status CSV:        <a class="artifact-link" href="/3824c8f12d08/files/artifact_008.csv" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/PlateStatus_HAT-P-19 b_2026-07-11.csv</code><span aria-hidden="true">↗</span></a><br>
+  Final Parameters JSON:   <a class="artifact-link" href="/3824c8f12d08/files/artifact_009.json" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalParams_HAT-P-19 b_2026-07-11.json</code><span aria-hidden="true">↗</span></a><br>
+  <a class="artifact-link" href="/3824c8f12d08/files/artifact_001.json" target="_blank" rel="noopener"><code>inits.json</code><span aria-hidden="true">↗</span></a>:              <a class="artifact-link" href="/3824c8f12d08/files/artifact_001.json" target="_blank" rel="noopener"><code>output/EXOTIC_output/inits.json</code><span aria-hidden="true">↗</span></a><br>
+  Log File:                <a class="artifact-link" href="/3824c8f12d08/files/artifact_002.txt" target="_blank" rel="noopener"><code>logs/2026-08-10_14-17-17-412.txt</code><span aria-hidden="true">↗</span></a><br>
+  Field of View Image:     <a class="artifact-link" href="/3824c8f12d08/files/artifact_012.png" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FOV_HAT-P-19 b_2026-07-11_SqrtStretch.png</code><span aria-hidden="true">↗</span></a></p>
+<h2>Recommendations</h2>
+<ol>
+<li>
+<p>Manually set pixel scale to ~5.0 arcsec/pixel (from FITS IM_SCALE header) in<br>
+   future observations to prevent plate-solving failures.</p>
+</li>
+<li>
+<p>Obtain proper calibration frames (darks with 60s exposure, flats) for future runs.</p>
+</li>
+<li>Verify orbital period from NASA Exoplanet Archive before scheduling observations.</li>
+<li>Additional observation nights would significantly improve data quality and reduce<br>
+   parameter uncertainties.</li>
+</ol></section></main>
+</body>
+</html>

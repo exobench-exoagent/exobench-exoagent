@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h2>Scientific Report: CoRoT-2 b</h2>
+<p>The 86-frame FITS dataset for CoRoT-2 b was processed with EXOTIC on the 2026-08-01 observing date. The observations were obtained with the Cecilia telescope at Whipple Observatory using a CCD camera with 2×2 binning and a Clear filter. FITS headers indicate an exposure interval of approximately 60–61 seconds, providing an approximately one-minute cadence. The observatory coordinates were reported as latitude +31.68° and longitude −110.88°, with an elevation of 1268 m.</p>
+<p>EXOTIC performed plate solving, image alignment, aperture photometry, comparison-star testing, detrending, and transit-model fitting. The target coordinate was corrected using the successful astrometric solution from the initially supplied [142, 287] to [247, 211]. Several frames were reported as failing alignment, including a substantial group late in the sequence. EXOTIC also reported “Best Comparison Star: None,” indicating that the comparison-star ensemble did not provide a stable photometric reference for this dataset.</p>
+<p>The fitted mid-transit time was <strong>2461254.8427 ± 0.0037 BJD_TDB</strong>, and the fitted duration was <strong>0.057 ± 0.024 days</strong>. However, the fit returned a radius ratio of <strong>0.000 ± 0.055</strong>, corresponding to a formally negligible depth of <strong>(2.9 × 10⁻⁷ ± 5.9 × 10⁻⁴)%</strong>. This is inconsistent with the published CoRoT-2 b radius-ratio prior of approximately 0.1795 and indicates that the reduction did not detect a physically meaningful transit. The residual scatter was very large, <strong>17.67%</strong>, and EXOTIC did not report a signal-to-noise ratio, reduced χ², or BIC.</p>
+<p>Therefore, although EXOTIC completed successfully and generated output products, this reduction should not be interpreted as a reliable transit detection or planetary-parameter measurement. The fitted period remains a catalog prior rather than a new measurement. The likely limiting factors are unstable comparison-star photometry, frame-alignment failures, and/or an unsuitable comparison-star selection. The final light curve and diagnostic files should be treated as quality-control products and not as evidence confirming or refuting the known CoRoT-2 b transit.</p>
+<p>Primary outputs:</p>
+<ul>
+<li>Final light curve: <a class="artifact-link" href="/8551ebcf2b2b/files/artifact_001.png" target="_blank" rel="noopener"><code>output/FinalLightCurve_CoRoT-2 b_2026-08-01.png</code><span aria-hidden="true">↗</span></a></li>
+<li>Model/posterior diagnostic: <a class="artifact-link" href="/8551ebcf2b2b/files/artifact_002.png" target="_blank" rel="noopener"><code>output/tmp/Triangle_CoRoT-2 b_2026-08-01.png</code><span aria-hidden="true">↗</span></a></li>
+<li>FOV diagnostic: <a class="artifact-link" href="/8551ebcf2b2b/files/artifact_003.png" target="_blank" rel="noopener"><code>output/tmp/FOV_CoRoT-2 b_2026-08-01_LinearStretch.png</code><span aria-hidden="true">↗</span></a></li>
+<li>Fitted parameters: <a class="artifact-link" href="/8551ebcf2b2b/files/artifact_004.json" target="_blank" rel="noopener"><code>output/tmp/FinalParams_CoRoT-2 b_2026-08-01.json</code><span aria-hidden="true">↗</span></a></li>
+<li>Light-curve data: <a class="artifact-link" href="/8551ebcf2b2b/files/artifact_005.csv" target="_blank" rel="noopener"><code>output/tmp/FinalLightCurve_CoRoT-2 b_2026-08-01.csv</code><span aria-hidden="true">↗</span></a></li>
+<li>EXOTIC configuration: <a class="artifact-link" href="/8551ebcf2b2b/files/artifact_006.json" target="_blank" rel="noopener"><code>output/inits.json</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>

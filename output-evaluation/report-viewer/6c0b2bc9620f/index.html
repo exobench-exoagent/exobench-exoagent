@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Qatar-10 b Transit Observation Report</h1>
+<h2>Observation Summary</h2>
+<p><strong>Target:</strong> Qatar-10 (RA: 18h57m46.55s, Dec: +69°34'15.1")<br>
+<strong>Exoplanet:</strong> Qatar-10 b<br>
+<strong>Telescope:</strong> MicroObservatory (0.455m)<br>
+<strong>Camera Type:</strong> CCD<br>
+<strong>Observation Date:</strong> 2024-07-14<br>
+<strong>Filter:</strong> CV (Clear/Unfiltered, 350-850 nm)<br>
+<strong>Exposure Time:</strong> 77.0 seconds<br>
+<strong>Number of Exposures:</strong> 140<br>
+<strong>Cadence:</strong> ~1-2 minute intervals</p>
+<h2>Data Reduction</h2>
+<p>Calibration frames (biases, darks, flats) were not available for this dataset. EXOTIC performed plate solving using the ASTROMETRY.NET service, successfully identifying 121 standard filter files for limb darkening table lookups via LDTk. Aperture photometry was performed with optimal aperture radius of 5.29 pixels and annulus of 8.2 pixels. The detrending was performed using airmass correction with two coefficients (a1 = 0.073 ± 0.027, a2 = 1.72 ± 0.70). Five comparison stars were selected from the AAVSO chart, though EXOTIC reported no single best comparison star.</p>
+<h2>Transit Results</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time (Tc)</td>
+<td>2460505.86 BJD_TDB</td>
+<td>±0.52</td>
+</tr>
+<tr>
+<td>Orbital Period</td>
+<td>3.619429 days</td>
+<td>±0.00001</td>
+</tr>
+<tr>
+<td>Radius Ratio (Rp/R*)</td>
+<td>0.018</td>
+<td>±0.037</td>
+</tr>
+<tr>
+<td>Transit Depth</td>
+<td>0.031%</td>
+<td>±0.13%</td>
+</tr>
+<tr>
+<td>Orbital Inclination</td>
+<td>88.03°</td>
+<td>±1.78°</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.029 days (≈42 min)</td>
+<td>±0.056 days</td>
+</tr>
+<tr>
+<td>Signal-to-Noise Ratio</td>
+<td>2.66</td>
+<td>-</td>
+</tr>
+<tr>
+<td>RMS (normalized flux)</td>
+<td>1.133</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2>Data Quality</h2>
+<p><strong>Fit Quality:</strong> The transit fit exhibits very large uncertainties. The radius ratio Rp/R* = 0.018 ± 0.037 is consistent with zero, indicating no statistically significant transit detection. The transit depth measurement (0.031 ± 0.13%) is also consistent with zero flux variation.</p>
+<p><strong>Residual Behavior:</strong> The residual scatter is 39.49%, which is very high for transit photometry. This suggests significant systematic noise in the light curve, likely due to:</p>
+<ul>
+<li>The observation being made with an unfiltered (clear) camera, resulting in a broad bandpass and potentially variable atmospheric transmission</li>
+<li>Lack of suitable comparison stars that share the same seeing conditions</li>
+<li>The target star being at or near the corner of the field of view (coordinates [2399, 2399] on a 2400×2400 detector)</li>
+</ul>
+<p><strong>Uncertainties:</strong> The large uncertainties on all parameters (especially the transit depth and duration) indicate this observation does not provide a robust measurement of the transit. The mid-transit time uncertainty of 0.52 BJD (~12 hours) is much larger than the expected transit duration.</p>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve:</strong> <a class="artifact-link" href="/6c0b2bc9620f/files/artifact_001.png" target="_blank" rel="noopener"><code>FinalLightCurve_Qatar-10 b_Qatar-10 b.png</code><span aria-hidden="true">↗</span></a> and <code>.pdf</code></li>
+<li><strong>AAVSO Format Data:</strong> <a class="artifact-link" href="/6c0b2bc9620f/files/artifact_002.txt" target="_blank" rel="noopener"><code>AAVSO_Qatar-10 b_Qatar-10 b.txt</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Final Parameters:</strong> <a class="artifact-link" href="/6c0b2bc9620f/files/artifact_003.json" target="_blank" rel="noopener"><code>tmp/FinalParams_Qatar-10 b_Qatar-10 b.json</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Light Curve CSV:</strong> <a class="artifact-link" href="/6c0b2bc9620f/files/artifact_004.csv" target="_blank" rel="noopener"><code>tmp/FinalLightCurve_Qatar-10 b_Qatar-10 b.csv</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>WCS File:</strong> <code>tmp/wcs.fits</code></li>
+<li><strong>Output Directory:</strong> <code>output/EXOTIC_output</code></li>
+</ul>
+<p><strong>Conclusion:</strong> This observation of Qatar-10 b did not yield a statistically significant transit detection. The high residual scatter (39.49%) and poor photometric stability suggest that follow-up observations with better conditions, a more stable comparison star, or differential photometry with multiple comparison stars would be needed to confirm the transit signal. The published parameters for Qatar-10 b (Bakos et al. 2015: period 3.619429 days, Rp/R* ~0.1) are not well-reproduced by this dataset.</p></section></main>
+</body>
+</html>

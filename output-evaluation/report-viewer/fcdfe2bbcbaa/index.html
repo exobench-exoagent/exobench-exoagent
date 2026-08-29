@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: Transit Observation of KELT-9 b</h1>
+<h2>Observation Summary</h2>
+<p>The transit of the ultra-hot Jupiter KELT-9 b was observed using the MicroObservatory telescope. The dataset consists of 300 FITS images acquired on 2023-09-24. Observations were performed using a CCD camera with a Sloan i (SI) filter, with an exposure time of 40 seconds and a binned pixel scale of 2x2. The nominal pixel scale of the system is 0.778 arcsec/pixel.</p>
+<h2>Data Reduction</h2>
+<p>The data were processed using the EXOTIC (EXOplanet Transit Interpretation Code) pipeline. Initial visual identification provided coordinates for the target and four comparison stars. Due to a segmentation fault encountered during the plate-solving phase of the initial run, plate solving was disabled in the final successful reduction, relying instead on the known instrument pixel scale. </p>
+<p>Aperture photometry was performed using an optimal aperture of 28.36 pixels and an annulus of 89.81 pixels. Limb-darkening parameters were calculated by EXOTIC for the Sloan i filter. The resulting light curve was detrended and fitted using a Markov Chain Monte Carlo (MCMC) approach via the UltraNest sampler.</p>
+<h2>Transit Results</h2>
+<p>The fitting process yielded the following parameters:</p>
+<ul>
+<li><strong>Mid-Transit Time</strong>: 2460211.9633 $\pm$ 0.0034 BJD_TDB</li>
+<li><strong>Radius Ratio ($R_p/R_*$)</strong>: 0.029 $\pm$ 0.03</li>
+<li><strong>Transit Depth</strong>: 0.087 $\pm$ 0.18 %</li>
+<li><strong>Orbital Inclination</strong>: 81.89 $\pm$ 2.39$^\circ$</li>
+<li><strong>Transit Duration</strong>: 0.026 $\pm$ 0.061 days</li>
+<li><strong>Residual Scatter</strong>: 0.28 %</li>
+</ul>
+<h2>Data Quality and Discussion</h2>
+<p>The reduction successfully converged with a residual scatter of 0.28%. However, the fitted radius ratio (0.029) is considerably smaller than the published values for KELT-9 b, and the uncertainty in the transit depth is relatively high. EXOTIC reported "Best Comparison Star: None", suggesting that none of the selected comparison stars provided a perfectly stable reference, which likely contributed to the increased uncertainty and the deviation of the radius ratio from catalog values.</p>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve</strong>: <a class="artifact-link" href="/fcdfe2bbcbaa/files/artifact_001.png" target="_blank" rel="noopener"><code>output/EXOTIC_output/FinalLightCurve_KELT-9 b_2023-09-24.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Final Parameters</strong>: <a class="artifact-link" href="/fcdfe2bbcbaa/files/artifact_002.json" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalParams_KELT-9 b_2023-09-24.json</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Normalized Flux</strong>: <a class="artifact-link" href="/fcdfe2bbcbaa/files/artifact_003.txt" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/NormalizedFlux_KELT-9 b_2023-09-24.txt</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>

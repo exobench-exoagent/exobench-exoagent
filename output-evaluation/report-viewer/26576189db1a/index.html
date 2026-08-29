@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>WASP-43 b Transit Photometry Report</h1>
+<h2>Observation Summary</h2>
+<ul>
+<li><strong>Target:</strong> WASP-43 (RA: 154.9084°, Dec: -9.8063°)</li>
+<li><strong>Planet:</strong> WASP-43 b</li>
+<li><strong>Telescope:</strong> MicroObservatory .4 Meter (0m4-76)</li>
+<li><strong>Instrument:</strong> SQ34 CCD Camera</li>
+<li><strong>Observation Date:</strong> 2026 March 12 (UT)</li>
+<li><strong>Filter:</strong> rp (mapped to Sloan r', 553.1–693.1 nm)</li>
+<li><strong>Exposure Time:</strong> 60 seconds</li>
+<li><strong>Number of Exposures:</strong> 173</li>
+<li><strong>Observing Duration:</strong> ~3.1 hours</li>
+<li><strong>Observing Notes:</strong> No calibration frames (darks, flats, biases) were available with this dataset. Plate solution was requested and executed automatically.</li>
+</ul>
+<h2>Data Reduction</h2>
+<p>The reduction was performed using EXOTIC v4.3.1 (EXOplanet Transit Interpretation Code). The pipeline executed the following steps:</p>
+<ol>
+<li><strong>Plate Solving:</strong> Automatic ASTAP-based plate solving was performed on all 179 FITS files to determine celestial coordinates.</li>
+<li><strong>Photometry:</strong> Aperture photometry was performed on the target star and four comparison stars. The optimal aperture radius was 6.71 pixels with an optimal annulus of 7.97 pixels.</li>
+<li><strong>Differential Photometry:</strong> The target flux was normalized against the comparison star combination.</li>
+<li><strong>Detrending:</strong> Airmass detrending was applied using a quadratic airmass correction function with coefficients a1 = 1.111 ± 0.012 and a2 = -0.0846 ± 0.005.</li>
+<li><strong>Limb Darkening:</strong> Non-linear limb darkening coefficients were calculated using LDTk based on stellar parameters (Teff ≈ 4800 K, log g ≈ 4.33, [Fe/H] ≈ -0.02).</li>
+<li><strong>Transit Fitting:</strong> A Bayesian transit model was fit using UltrANest (MCMC sampler) with priors from the NASA Exoplanet Archive.</li>
+</ol>
+<h2>Transit Results</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time (T₀)</td>
+<td>2461111.7971 BJD_TDB</td>
+<td>± 0.0042</td>
+</tr>
+<tr>
+<td>Orbital Period</td>
+<td>0.0263225 days</td>
+<td>± 0.0000002</td>
+</tr>
+<tr>
+<td>Radius Ratio (Rp/R*)</td>
+<td>0.032</td>
+<td>± 0.014</td>
+</tr>
+<tr>
+<td>Transit Depth</td>
+<td>0.10%</td>
+<td>± 0.089%</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.0376 days (54.1 min)</td>
+<td>± 0.0064 days</td>
+</tr>
+<tr>
+<td>Orbital Inclination</td>
+<td>87.78°</td>
+<td>± 1.79°</td>
+</tr>
+<tr>
+<td>Signal-to-Noise Ratio</td>
+<td>1194</td>
+<td>—</td>
+</tr>
+<tr>
+<td>RMS of Light Curve</td>
+<td>1.68%</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2>Data Quality</h2>
+<p><strong>Fit Quality:</strong> The MCMC analysis (23,802 likelihood evaluations, 1,567 effective samples) converged successfully. The evidence uncertainty (dlogZ = 0.09) satisfied the &lt; 0.50 threshold.</p>
+<p><strong>Residuals:</strong> The residual scatter in the light curve fit is 1.04%. The overall RMS of the normalized flux is 1.68%, which is higher than expected for a typical high-quality transit observation. This may be due to:</p>
+<ul>
+<li>Higher-than-expected photon noise given the target magnitude (~11.9 mag) and 60-second exposures</li>
+<li>Atmospheric variability not fully corrected by the airmass detrending</li>
+<li>No flat-field calibration available</li>
+</ul>
+<p><strong>Caveats:</strong></p>
+<ul>
+<li>No calibration frames were used, which may introduce systematic errors</li>
+<li>The fitted transit depth (0.1 ± 0.089%) is consistent with zero within ~1σ, suggesting the data quality may not be sufficient to conclusively detect the transit</li>
+<li>The literature Rp/R* ratio for WASP-43 b is ~0.1086 (Hellier et al. 2012), which is significantly larger than our fitted value of 0.032 ± 0.014</li>
+<li>The large uncertainty on Rp/R* suggests the data may not contain a well-sampled transit, or the photometric precision is insufficient</li>
+</ul>
+<p><strong>Warnings:</strong> EXOTIC reported that "Best Comparison Star: None" was selected, indicating that the comparison star combination did not significantly improve the photometry over the raw target flux.</p>
+<h2>Output Files</h2>
+<p>The following files were generated in the output directory:</p>
+<ul>
+<li><strong>Final Light Curve Plot:</strong> <a class="artifact-link" href="/26576189db1a/files/artifact_001.png" target="_blank" rel="noopener"><code>FinalLightCurve_WASP-43 b_03-12-2026.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Final Light Curve PDF:</strong> <a class="artifact-link" href="/26576189db1a/files/artifact_002.pdf" target="_blank" rel="noopener"><code>FinalLightCurve_WASP-43 b_03-12-2026.pdf</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>AAVSO Format Data:</strong> <a class="artifact-link" href="/26576189db1a/files/artifact_003.txt" target="_blank" rel="noopener"><code>AAVSO_WASP-43 b_03-12-2026.txt</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Final Parameters JSON:</strong> <a class="artifact-link" href="/26576189db1a/files/artifact_004.json" target="_blank" rel="noopener"><code>tmp/FinalParams_WASP-43 b_03-12-2026.json</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Light Curve CSV:</strong> <a class="artifact-link" href="/26576189db1a/files/artifact_005.csv" target="_blank" rel="noopener"><code>tmp/FinalLightCurve_WASP-43 b_03-12-2026.csv</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Normalized Flux:</strong> <a class="artifact-link" href="/26576189db1a/files/artifact_006.txt" target="_blank" rel="noopener"><code>tmp/NormalizedFlux_WASP-43 b_03-12-2026.txt</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Parallelogram Plot:</strong> <a class="artifact-link" href="/26576189db1a/files/artifact_007.png" target="_blank" rel="noopener"><code>tmp/Triangle_WASP-43 b_03-12-2026.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Field of View Images:</strong> Multiple FOV images in <code>tmp</code> directory</li>
+</ul>
+<p><strong>Output Directory:</strong> <code>output</code></p></section></main>
+</body>
+</html>

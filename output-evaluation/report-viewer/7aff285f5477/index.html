@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: Exoplanet Transit Observation of KELT-9 b</h1>
+<h2>Observation Summary</h2>
+<ul>
+<li><strong>Target</strong>: KELT-9 b</li>
+<li><strong>Telescope</strong>: MicroObservatory</li>
+<li><strong>Instrument</strong>: CCD</li>
+<li><strong>Observation Date</strong>: 2023-09-24</li>
+<li><strong>Filter</strong>: MObs CV (Clear)</li>
+<li><strong>Exposure/Cadence</strong>: Standard pipeline defaults</li>
+</ul>
+<h2>Data Reduction</h2>
+<p>The observation dataset consisting of 300 FITS images was processed using the EXOTIC (EXOplanet Transit Interpretation Code) pipeline. The target star, KELT-9, was identified through plate solving, which corrected the initial center-of-frame coordinate guess to [257, 187]. Four comparison stars were selected based on brightness and proximity to the target.</p>
+<p>Aperture photometry was performed using an optimal aperture of 12.52 pixels and an annulus of 31.3 pixels. Limb-darkening parameters were calculated autonomously by EXOTIC for the MObs CV filter. Detrending was applied using a second-order airmass polynomial fit to remove systematic trends.</p>
+<h2>Transit Results</h2>
+<p>The transit was fitted using a Markov Chain Monte Carlo (MCMC) approach. The extracted parameters are:</p>
+<ul>
+<li><strong>Mid-transit time</strong>: 2460211.9551 $\pm$ 0.0034 BJD_TDB</li>
+<li><strong>Orbital period</strong>: 1.48111874 days (Fixed)</li>
+<li><strong>Transit depth</strong>: 0.17 $\pm$ 0.24 %</li>
+<li><strong>Transit duration</strong>: 0.014 $\pm$ 0.047 days</li>
+<li><strong>Orbital Inclination</strong>: 84.24 $\pm$ 2.37 degrees</li>
+</ul>
+<h2>Data Quality</h2>
+<p>The fit quality is relatively poor, as indicated by a residual scatter of 33.55%. The uncertainty in the transit depth (0.24%) exceeds the measured depth (0.17%), suggesting that the signal-to-noise ratio was insufficient to definitively detect the transit in this specific dataset. The high residual scatter may be attributed to atmospheric conditions or instrument noise.</p>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve</strong>: <a class="artifact-link" href="/7aff285f5477/files/artifact_001.png" target="_blank" rel="noopener"><code>output/FinalLightCurve_KELT-9 b_09-24-2023.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Extracted Parameters</strong>: Detailed in the <a class="artifact-link" href="/7aff285f5477/files/artifact_002.json" target="_blank" rel="noopener"><code>FinalParams_KELT-9 b_09-24-2023.json</code><span aria-hidden="true">↗</span></a> file.</li>
+<li><strong>WCS Solution</strong>: <code>output/tmp/wcs.fits</code></li>
+</ul></section></main>
+</body>
+</html>

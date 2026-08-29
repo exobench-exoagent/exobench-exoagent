@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>HAT-P-36 b Transit Observation Report</h1>
+<h2>Observation Summary</h2>
+<p>The HAT-P-36 system was observed on 2026-03-18 using the Exoplanet Watch 0.4-meter telescope with a CCD camera in an unfiltered clear/CV-equivalent bandpass. The dataset contained 242 science FITS images. FITS timestamps indicate a cadence of approximately 62 seconds between measurements. The exposure time was not explicitly recoverable from the available FITS metadata. The target was identified at approximately RA 188.266205°, Dec +44.915367°.</p>
+<h2>Data Reduction</h2>
+<p>EXOTIC processed the read-only science-image directory without calibration frames; no dark, bias, or flat files were present, and the corresponding calibration fields were left empty. Aperture photometry was performed on the target and four selected comparison-star positions, with an optimized aperture radius of 6.74 pixels and sky annulus radius of 8.99 pixels. The light curve was normalized and fitted using a transit model with airmass detrending. Limb-darkening parameters were calculated by EXOTIC using the clear/CV wavelength range of approximately 350–850 nm.</p>
+<h2>Transit Results</h2>
+<p>The final EXOTIC fit gives:</p>
+<ul>
+<li><strong>Mid-transit time:</strong> BJD\(_\mathrm{TDB}\) 2461118.8007 ± 0.0053  </li>
+<li><strong>Orbital period:</strong> 1.327346813 ± 0.000000097 days  </li>
+<li><strong>Transit depth:</strong> 2.48 ± 0.28%  </li>
+<li><strong>Transit duration:</strong> 0.0993 ± 0.0021 days, or approximately 2.38 ± 0.05 hours  </li>
+<li><strong>Radius ratio:</strong> \(R_\mathrm{p}/R_\star = 0.1574 \pm 0.0088\)  </li>
+<li><strong>Residual scatter/RMS:</strong> 4.16%  </li>
+<li><strong>Derived depth-to-residual-scatter ratio:</strong> approximately 0.60  </li>
+</ul>
+<p>The fitted orbital inclination was 88.74 ± 2.19 degrees. EXOTIC did not report a BIC or reduced chi-squared value.</p>
+<h2>Data Quality</h2>
+<p>The reduction completed successfully and produced a final model light curve. The residual scatter is relatively large compared with the measured transit depth, so the detection should be treated as low significance and unsuitable for precision refinement of the system ephemeris. EXOTIC reported no single best comparison star, indicating that the comparison-star ensemble did not provide a clearly superior reference. A plate-solution warning was encountered during recovery, after which the target coordinates were refined to the plate-solution position. No calibration frames were available, and the clear bandpass required broad wavelength assumptions for limb darkening.</p>
+<h2>Output Files</h2>
+<p>The principal outputs are the final light curve image at <a class="artifact-link" href="/49e84a8864cf/files/artifact_001.png" target="_blank" rel="noopener"><code>output/FinalLightCurve_HAT-P-36 b_03-18-2026.png</code><span aria-hidden="true">↗</span></a>, its PDF counterpart, the fitted-parameter file <a class="artifact-link" href="/49e84a8864cf/files/artifact_002.json" target="_blank" rel="noopener"><code>output/tmp/FinalParams_HAT-P-36 b_03-18-2026.json</code><span aria-hidden="true">↗</span></a>, the light-curve CSV <a class="artifact-link" href="/49e84a8864cf/files/artifact_003.csv" target="_blank" rel="noopener"><code>output/tmp/FinalLightCurve_HAT-P-36 b_03-18-2026.csv</code><span aria-hidden="true">↗</span></a>, normalized-flux data, field-of-view plots, centroid diagnostics, plate-status information, and the completed <a class="artifact-link" href="/49e84a8864cf/files/artifact_004.json" target="_blank" rel="noopener"><code>output/inits.json</code><span aria-hidden="true">↗</span></a>.</p></section></main>
+</body>
+</html>

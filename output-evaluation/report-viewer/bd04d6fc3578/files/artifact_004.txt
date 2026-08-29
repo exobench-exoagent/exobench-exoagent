@@ -1,0 +1,38 @@
+#TYPE=EXOPLANET
+#OBSCODE=
+#SECONDARY_OBSCODES=MOBS
+#SOFTWARE=EXOTIC v4.3.1
+#DELIM=,
+#DATE_TYPE=BJD_TDB
+#OBSTYPE=CCD
+#STAR_NAME=WASP-44
+#EXOPLANET_NAME=WASP-44 b
+#BINNING=2x2
+#EXPOSURE_TIME=60.0
+#COMP_STAR-XC={"ra": null, "dec": null, "x": "464.0", "y": "390.0"}
+#NOTES=WASP-44 b transit observation using MicroObservatory telescope 'Cecilia' at Whipple Observatory (31.68N, 110.88W, 1268m). 37 science frames with 60s exposure each. Dark frames used for calibration. T0 calculated for observation epoch 2026-07-15.
+#DETREND_PARAMETERS=AIRMASS, AIRMASS CORRECTION FUNCTION
+#MEASUREMENT_TYPE=Rnflux
+#FILTER=CV
+#FILTER-XC={"name": "CV", "desc": "MObs CV", "fwhm": [{"value": "350.0", "units": "nm"}, {"value": "850.0", "units": "nm"}]}
+#PRIORS=Period=2.42381131 +/- 1.3e-07,Rp/R*=0.1249 +/- 0.0024,a/R*=8.1 +/- 0.59,inc=86.0 +/- 0.99,ecc=0.068,u0=1.915 +/- 0.015,u1=-3.388 +/- 0.063,u2=3.874 +/- 0.082,u3=-1.4 +/- 0.035
+#PRIORS-XC={"Period": {"value": "2.42381131", "uncertainty": "1.3e-07", "units": "days"}, "Rp/R*": {"value": "0.1249", "uncertainty": "0.0024"}, "a/R*": {"value": "8.1", "uncertainty": "0.59"}, "inc": {"value": "86.0", "uncertainty": "0.99", "units": "degrees"}, "ecc": {"value": "0.068", "uncertainty": null}, "u0": {"value": "1.915", "uncertainty": "0.015"}, "u1": {"value": "-3.388", "uncertainty": "0.063"}, "u2": {"value": "3.874", "uncertainty": "0.082"}, "u3": {"value": "-1.4", "uncertainty": "0.035"}}
+#RESULTS=Tc=2461237.001894 +/- 4.8e-05,Rp/R*=0.156125 +/- 1.1e-05,inc=89.996 +/- 0.039,Am1=0.48 +/- 0.21,Am2=0.5227 +/- 0.0024
+#RESULTS-XC={"Tc": {"value": "2461237.001894", "uncertainty": "4.8e-05", "units": "BJD_TDB"}, "Rp/R*": {"value": "0.156125", "uncertainty": "1.1e-05"}, "inc": {"value": "89.996", "uncertainty": "0.039"}, "Am1": {"value": "0.48", "uncertainty": "0.21"}, "Am2": {"value": "0.5227", "uncertainty": "0.0024"}, "Duration": {"value": "0.042", "uncertainty": "5.3e-05", "units": "days"}}
+# EXOTIC is developed by Exoplanet Watch (exoplanets.nasa.gov/exoplanet-watch/), a citizen science project managed by NASA's Jet Propulsion Laboratory on behalf of NASA's Universe of Learning. This work is supported by NASA under award number NNX16AC65A to the Space Telescope Science Institute.
+# Use of this data is governed by the AAVSO Data Usage Guidelines: aavso.org/data-usage-guidelines
+#DATE,DIFF,ERR,DETREND_1,DETREND_2
+2461236.93117439,1.0814483,0.0009129,1.5894954,1.0911734
+2461236.94114054,1.0033436,0.0009129,1.5334798,1.0596905
+2461236.94321667,1.0715009,0.0009129,1.5232135,1.0540198
+2461236.94947,2.2048867,0.0009129,1.4947083,1.0384331
+2461236.95572322,0.7055129,0.0009129,1.4699146,1.0250633
+2461236.9577996,0.6495432,0.0009129,1.4624515,1.0210727
+2461236.95990054,0.9966564,0.0009129,1.4552575,1.0172407
+2461236.9619769,0.3974474,0.0009129,1.4484829,1.0136453
+2461236.96405408,1.4811703,0.0009129,1.4420606,1.0102485
+2461236.96614256,0.629101,0.000913,1.4359534,1.007029
+2461236.96822051,1.203823,0.000913,1.4302023,1.0040066
+2461236.97031028,0.8907551,0.000913,1.424771,1.0011606
+2461236.97655369,1.360696,0.000913,1.4103787,0.9936579
+2461236.98880326,0.4623802,0.000913,1.3900933,0.9831786

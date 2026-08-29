@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><p>EXOTIC successfully reduced a 270-frame FITS time series of the WASP-65 b field obtained on 2026-03-12 with the Exoplanet Watch 0.4-meter telescope. The detector was identified as a CCD, with 60-second exposures and approximately 60–63 seconds between consecutive frames. Observations were reduced as Sloan r-band data. The science images were treated as uncalibrated because no Flats, Darks, or Bias frames were supplied.</p>
+<p>Target and comparison-star coordinates were established using the FITS field, WCS information, and an AAVSO finder chart. Differential aperture photometry was performed using three comparison candidates. EXOTIC selected the comparison at [1367, 1575] as optimal. The final reduction used a 3.97-pixel aperture and a 9.74-pixel sky annulus. Airmass detrending was applied with fitted coefficients of 0.9964 ± 0.0037 and 0.0024 ± 0.0055.</p>
+<p>The fitted mid-transit time is <strong>BJD_TDB 2461112.60135 ± 0.00075</strong>. Using the adopted orbital period of <strong>2.3114205 ± 0.00000017 days</strong>, the fitted radius ratio is <strong>Rp/R* = 0.1165 ± 0.004</strong>, corresponding to a transit depth of <strong>1.36 ± 0.093%</strong>. The fitted inclination is <strong>87.66 ± 0.63°</strong>, and the transit duration is <strong>0.1118 ± 0.0023 days</strong> (approximately 2.68 hours). The residual scatter of the final light-curve fit is <strong>0.38%</strong>. EXOTIC did not report a formal signal-to-noise ratio, reduced chi-squared, or BIC; therefore these quantities are not quoted. A simple depth-to-residual-scatter comparison corresponds to roughly 3.6 residual-scatter units, but this is not an EXOTIC formal detection significance.</p>
+<p>The EXOTIC nested-sampling fit completed successfully, with the run reporting acceptable posterior exploration and a negative radius-ratio/semi-major-axis degeneracy. Results should be interpreted in light of the absence of calibration frames and the moderate residual scatter.</p>
+<p>Primary outputs are located in:</p>
+<ul>
+<li>Final light curve: <a class="artifact-link" href="/1c8675a02457/files/artifact_001.png" target="_blank" rel="noopener"><code>output/FinalLightCurve_WASP-65 b_03-12-2026.png</code><span aria-hidden="true">↗</span></a></li>
+<li>Final light-curve PDF: <a class="artifact-link" href="/1c8675a02457/files/artifact_002.pdf" target="_blank" rel="noopener"><code>output/FinalLightCurve_WASP-65 b_03-12-2026.pdf</code><span aria-hidden="true">↗</span></a></li>
+<li>Fitted parameters: <a class="artifact-link" href="/1c8675a02457/files/artifact_003.json" target="_blank" rel="noopener"><code>output/tmp/FinalParams_WASP-65 b_03-12-2026.json</code><span aria-hidden="true">↗</span></a></li>
+<li>Reduced photometry: <a class="artifact-link" href="/1c8675a02457/files/artifact_004.csv" target="_blank" rel="noopener"><code>output/tmp/FinalLightCurve_WASP-65 b_03-12-2026.csv</code><span aria-hidden="true">↗</span></a></li>
+<li>AAVSO report: <a class="artifact-link" href="/1c8675a02457/files/artifact_005.txt" target="_blank" rel="noopener"><code>output/AAVSO_WASP-65 b_03-12-2026.txt</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>

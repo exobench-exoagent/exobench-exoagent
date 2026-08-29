@@ -1,0 +1,84 @@
+{
+  "planetary_parameters": {
+    "Target Star RA": "20:00:43.709352",
+    "Target Star Dec": "+22:42:35.19324",
+    "Planet Name": "HD 189733 b",
+    "Host Star Name": "HD 189733",
+    "Orbital Period (days)": 2.218574944,
+    "Orbital Period Uncertainty": 3e-08,
+    "Published Mid-Transit Time (BJD-UTC)": 2456194.067619,
+    "Mid-Transit Time Uncertainty": 3.4e-05,
+    "Ratio of Planet to Stellar Radius (Rp/Rs)": 0.15033296378372907,
+    "Ratio of Planet to Stellar Radius (Rp/Rs) Uncertainty": 0.003821226231395418,
+    "Ratio of Distance to Stellar Radius (a/Rs)": 8.92,
+    "Ratio of Distance to Stellar Radius (a/Rs) Uncertainty": 0.03,
+    "Orbital Inclination (deg)": 85.78,
+    "Orbital Inclination (deg) Uncertainty": 0.03,
+    "Orbital Eccentricity (0 if null)": 0.028,
+    "Argument of Periastron (deg)": 136.42,
+    "Star Effective Temperature (K)": 5040.0,
+    "Star Effective Temperature (+) Uncertainty": 50.0,
+    "Star Effective Temperature (-) Uncertainty": -50.0,
+    "Star Metallicity ([FE/H])": -0.03,
+    "Star Metallicity (+) Uncertainty": 0.08,
+    "Star Metallicity (-) Uncertainty": -0.08,
+    "Star Surface Gravity (log(g))": 4.587,
+    "Star Surface Gravity (+) Uncertainty": 0.014,
+    "Star Surface Gravity (-) Uncertainty": -0.015,
+    "Star Distance (pc)": 19.7638,
+    "Star Proper Motion RA (mas/yr)": -3.29445,
+    "Star Proper Motion DEC (mas/yr)": -250.225
+  },
+  "user_info": {
+    "Directory with FITS files": "observation/HD_189733_b_20260805_elp_0m4a_001",
+    "Directory to Save Plots": "runs/20260807-181002-492-04ae899b/output",
+    "Directory of Flats": null,
+    "Directory of Darks": null,
+    "Directory of Biases": null,
+    "AAVSO Observer Code (N/A if none)": "N/A",
+    "Secondary Observer Codes (N/A if none)": "N/A",
+    "Observation date": "08/04/2026",
+    "Obs. Latitude": "-30.4700",
+    "Obs. Longitude": "-70.7650",
+    "Obs. Elevation (meters)": 1525,
+    "Camera Type (CCD or DSLR)": "CCD",
+    "Pixel Binning": "1x1",
+    "Filter Name (aavso.org/filters)": "Open",
+    "Observing Notes": "Generated from EXOTIC Standard notebook flow; telescope=Exoplanet Watch .4 Meter; camera type=CCD; first image=elp0m400-sq41-20260804-0198-e91.fits; VLM supplied target and comparison-star coordinates. Assumed El Sauce Observatory coordinates from ELP 0.4-m site identifier; plate solving disabled because FITS headers lacked WCS; adopted 1.0 arcsec/pixel as a provisional local scale.",
+    "Plate Solution? (y/n)": "n",
+    "Add Comparison Stars from AAVSO? (y/n)": "n",
+    "Target Star X & Y Pixel": [
+      1212.0,
+      1194.0
+    ],
+    "Comparison Star(s) X & Y Pixel": [
+      [
+        965.0,
+        1870.0
+      ],
+      [
+        1915.0,
+        1170.0
+      ],
+      [
+        1228.0,
+        538.0
+      ],
+      [
+        1813.0,
+        1212.0
+      ],
+      [
+        708.0,
+        1802.0
+      ]
+    ],
+    "Demosaic Format": null,
+    "Demosaic Output": null
+  },
+  "optional_info": {
+    "Pixel Scale (Ex: 5.21 arcsecs/pixel)": 1.0,
+    "Filter Minimum Wavelength (nm)": null,
+    "Filter Maximum Wavelength (nm)": null
+  }
+}

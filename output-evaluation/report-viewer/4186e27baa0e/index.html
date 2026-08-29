@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: Exoplanet Transit Observation of KELT-16 b</h1>
+<h2>Observation Summary</h2>
+<p>The exoplanet transit of KELT-16 b was observed using the MicroObservatory telescope. The dataset consists of 255 FITS images acquired on 2026-07-08 (UTC). The observations were conducted using a CCD instrument (sq46) with a V-band filter and an exposure time of 61.0 seconds per frame.</p>
+<h2>Data Reduction and Processing</h2>
+<p>The data were processed using the EXOTIC (EXOplanet Transit Interpretation Code) pipeline. Initial processing involved correcting the <a class="artifact-link" href="/4186e27baa0e/files/artifact_001.json" target="_blank" rel="noopener"><code>inits.json</code><span aria-hidden="true">↗</span></a> configuration using FITS header metadata, specifically updating the observation date, observatory coordinates (Lat: 30.6799670, Long: -104.0150170), and the nominal pixel scale (0.74 arcsec/pixel). </p>
+<p>Target star identification was initially performed via VLM analysis, but coordinates were subsequently corrected to [1198, 1206] following EXOTIC's internal plate solve verification. Limb-darkening parameters were calculated specifically for the V-band filter to ensure model accuracy. Aperture photometry was performed with an optimal aperture of 5.3 pixels and an optimal annulus of 10.07 pixels.</p>
+<h2>Transit Results</h2>
+<p>The transit fitting was performed using a Bayesian approach. The final derived parameters are as follows:</p>
+<ul>
+<li><strong>Mid-Transit Time</strong>: $2461229.8185 \pm 0.0013$ BJD_TDB</li>
+<li><strong>Planet-to-Star Radius Ratio ($R_p/R_*$)</strong>: $0.1454 \pm 0.00095$</li>
+<li><strong>Transit Depth</strong>: $2.11 \pm 0.028 \%$</li>
+<li><strong>Orbital Inclination</strong>: $87.73^\circ \pm 1.81^\circ$</li>
+<li><strong>Transit Duration</strong>: $0.1108 \pm 0.0011$ days</li>
+</ul>
+<h2>Data Quality and Diagnostics</h2>
+<p>The fit demonstrates high quality, with a residual scatter of $0.97\%$. The plate solution was successfully validated, and the light curve shows a clear transit signal consistent with the expected ephemeris for KELT-16 b.</p>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve</strong>: <a class="artifact-link" href="/4186e27baa0e/files/artifact_002.png" target="_blank" rel="noopener"><code>output/EXOTIC_output/FinalLightCurve_KELT-16 b_2026-07-08.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Fitted Parameters</strong>: <a class="artifact-link" href="/4186e27baa0e/files/artifact_003.json" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalParams_KELT-16 b_2026-07-08.json</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>

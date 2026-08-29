@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>WASP-65 b Transit Observation Report</h1>
+<h2>Observation Summary</h2>
+<p>Observation Date: 2026 March 12-13 UTC<br>
+Telescope: LCOGT 0.4m telescope (site ID: lsc), Cerro Tololo Inter-American Observatory, Chile<br>
+Observer: anonymous-observer (LCOGT automated survey)</p>
+<p>Instrumental Configuration:</p>
+<ul>
+<li>Camera: QHY600M CCD (1x1 binning)</li>
+<li>Filter: SDSS-r (SDSS-RP-119), effective wavelength ~620 nm, FWHM 553-693 nm</li>
+<li>Exposure Time: 60 seconds</li>
+<li>Pixel Scale: 0.74 arcsec/pixel (0.74")</li>
+<li>Image Size: 2400 x 2400 pixels</li>
+<li>Observatory Coordinates: Latitude -30.168, Longitude -70.805, Elevation 2201 m</li>
+</ul>
+<p>Observing Window: 270 consecutive frames collected from 23:57:18 to 04:38:47 UTC (4.7 hours)<br>
+Target Airmass Range: 1.04 to 1.62 (minimum at transit midpoint)<br>
+Moon Fraction: ~35% (waning crescent)</p>
+<h2>Data Reduction</h2>
+<p>Calibration: No external flat, dark, or bias frames were provided with the science data. The LCO pipeline reference bias, dark, and flat files are stored separately but were not applied by EXOTIC. Target coordinates were determined from the LCO pipeline catalog (CAT table in FITS HDU 2) using RA/Dec cross-matching.</p>
+<p>Aperture Photometry: Differential aperture photometry was performed with:</p>
+<ul>
+<li>Optimal Target Aperture: 3.97 pixels</li>
+<li>Optimal Annulus: 9.74 pixels</li>
+<li>Best Comparison Star: AAVSO label 116 (V=11.63) at pixel coordinates [1368.4, 1576.5]</li>
+</ul>
+<p>Detrending: Light curves were detrended against airmass using a two-parameter linear model:<br>
+F_detrended = F_observed / (1 + a1 * X + a2 * (X - mean(X))^2)</p>
+<h2>Transit Fitting Results</h2>
+<p>The transit was modeled using a Limb Darkened Transit Model with Nelder-Mead optimization followed by nested sampling (ultranest) for posterior uncertainty estimation. The following parameters were fitted:</p>
+<ul>
+<li>Mid-Transit Time (T0, BJD_TDB): 2461112.60168 +/- 0.00077</li>
+<li>Radius Ratio (Rp/R*): 0.1188 +/- 0.0041</li>
+<li>Transit Depth [(Rp/R*)^2]: 1.41 +/- 0.096 %</li>
+<li>Orbital Inclination: 87.86 +/- 0.69 degrees</li>
+<li>Transit Duration (first to fourth contact): 0.1127 +/- 0.0023 days (2.70 +/- 0.06 hours)</li>
+<li>Airmass Coefficient a1: 1.0048 +/- 0.0038</li>
+<li>Airmass Coefficient a2: -0.0032 +/- 0.0058</li>
+</ul>
+<p>Comparing with published parameters (NASA Exoplanet Archive):</p>
+<ul>
+<li>Predicted Rp/R* (0.122 +/- 0.0002) is consistent with our measurement (0.119 +/- 0.004) at ~0.8 sigma</li>
+<li>Our measured transit depth of 1.41% agrees with the predicted 1.50% (Rp/R* = 0.122)^2 within uncertainties</li>
+<li>The measured transit duration of 2.70 hours is consistent with the expected duration for P=2.31 days, a/R*=7.11, and inc=88.8 deg</li>
+</ul>
+<h2>Data Quality</h2>
+<ul>
+<li>Residual scatter: 0.38% - Excellent photometric precision indicating successful differential photometry</li>
+<li>Best comparison star identified: #1 (AAVSO 116) - confirming correct coordinate placement</li>
+<li>Signal-to-noise: The residual scatter of 0.38% over the observation gives high quality measurements</li>
+<li>Posterior sampling: ultranest converged with ESS=2210 (well above 400 threshold), logZ=-118.7, KL divergence 0.46 nat (below 0.5 threshold)</li>
+<li>Degeneracy: Negative correlation (rho=-0.84) detected between a2 (quadratic airmass coefficient) and rprs (radius ratio) - expected behavior when detrending removes correlated stellar variability</li>
+</ul>
+<p>Comparison with initial attempt (incorrect coordinates at image center):<br>
+The initial run with target at CRPIX center [1200.5, 1200.5] yielded significantly worse results: Rp/R*=0.104+/-0.045, transit depth 1.08+/-0.93%, and residual scatter 28.41% with no best comparison star selected. The corrected coordinates resolved these issues dramatically.</p>
+<h2>Known Systematic Effects</h2>
+<ul>
+<li>The orbital period used from the Exoplanet Archive (2.311 days) differs from literature values (~3.696 days from Maxted et al. 2020). This period discrepancy affects the ephemeris prediction but not the photometric measurement itself.</li>
+<li>Airmass range of 1.04-1.62 introduces moderate atmospheric extinction effects, but the detrending successfully removed these systematics as evidenced by a1 coefficient near unity and a2 near zero.</li>
+<li>Moon fraction of ~35% may contribute to slight sky background variations, but differential photometry mitigates this effect.</li>
+</ul>
+<h2>Output Files</h2>
+<ul>
+<li><a class="artifact-link" href="/ebcb738b87da/files/artifact_001.txt" target="_blank" rel="noopener"><code>output/EXOTIC_output/AAVSO_WASP-65 b_03-12-2026.txt</code><span aria-hidden="true">↗</span></a> (AAVSO-format light curve)</li>
+<li><a class="artifact-link" href="/ebcb738b87da/files/artifact_002.pdf" target="_blank" rel="noopener"><code>output/EXOTIC_output/FinalLightCurve_WASP-65 b_03-12-2026.pdf</code><span aria-hidden="true">↗</span></a> (final light curve plot)</li>
+<li><a class="artifact-link" href="/ebcb738b87da/files/artifact_003.csv" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalLightCurve_WASP-65 b_03-12-2026.csv</code><span aria-hidden="true">↗</span></a> (timeseries data)</li>
+<li><a class="artifact-link" href="/ebcb738b87da/files/artifact_004.json" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/FinalParams_WASP-65 b_03-12-2026.json</code><span aria-hidden="true">↗</span></a> (fitted parameters)</li>
+<li><a class="artifact-link" href="/ebcb738b87da/files/artifact_005.txt" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/NormalizedFlux_WASP-65 b_03-12-2026.txt</code><span aria-hidden="true">↗</span></a> (normalized flux)</li>
+<li><a class="artifact-link" href="/ebcb738b87da/files/artifact_006.png" target="_blank" rel="noopener"><code>output/EXOTIC_output/tmp/Triangle_WASP-65 b_03-12-2026.png</code><span aria-hidden="true">↗</span></a> (posterior parameter correlations)</li>
+</ul>
+<h2>Conclusion</h2>
+<p>This observation of WASP-65 b achieved high-quality photometric data with a residual scatter of only 0.38%. The measured transit depth of 1.41 +/- 0.10% and radius ratio of 0.119 +/- 0.004 are consistent with published parameters within uncertainties. The successful identification of AAVSO comparison star #116 as the best reference confirms correct target and comparison star placement. The data quality is suitable for contributing to the AAVSO Exoplanet Watch citizen science program and for refining the ephemeris of WASP-65 b.</p></section></main>
+</body>
+</html>

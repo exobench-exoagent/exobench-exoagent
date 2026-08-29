@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>KELT-7b Transit Observation Report</h1>
+<h2>Observation Summary</h2>
+<ul>
+<li><strong>Target Star</strong>: KELT-7 (RA: 05h13m10.93s, Dec: +33°19'05.4")</li>
+<li><strong>Exoplanet</strong>: KELT-7b</li>
+<li><strong>Telescope</strong>: MicroObservatory Network 0.4m (LCOGT node at Haleakala Observatory, HI)</li>
+<li><strong>Instrument</strong>: LCOGT kb27 CCD camera, 2x2 binned (1523×1020 pixels, 1.16 arcsec/pixel)</li>
+<li><strong>Observation Date</strong>: January 6, 2017 (BJD_TDB ~2457760.80)</li>
+<li><strong>Filter</strong>: SDSS-ip (SDSS i'-band, ~748–873 nm)</li>
+<li><strong>Exposure Time</strong>: ~3.086 seconds (binned)</li>
+<li><strong>Number of Frames</strong>: 130 (124 with valid photometry)</li>
+<li><strong>Observation Duration</strong>: ~62.5 minutes</li>
+<li><strong>Airmass Range</strong>: 1.09 to 1.03</li>
+</ul>
+<h2>Data Reduction</h2>
+<p>The observation was processed using EXOTIC v4.3.1. Pipeline steps included:</p>
+<ol>
+<li><strong>Plate Solving</strong>: astrometry.net provided the WCS solution confirming field center (RA: 05:13:10.93, Dec: +33°19'05.4").</li>
+<li><strong>Photometry</strong>: Differential aperture photometry with optimal aperture radius of 7.19 pixels.</li>
+<li><strong>Comparison Stars</strong>: Three stars selected; EXOTIC identified star #3 at (1305, 137) as the best normalizer.</li>
+<li><strong>Detrending</strong>: Airmass polynomial detrending (first and second order; a1=0.901±0.091, a2=0.12±0.8).</li>
+<li><strong>Limb Darkening</strong>: Quadratic coefficients computed via Ultranest MCMC sampler.</li>
+</ol>
+<h2>Transit Results</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time Tc (BJD_TDB)</td>
+<td>2457758.16546</td>
+<td>±0.00096</td>
+</tr>
+<tr>
+<td>Orbital Period (days)</td>
+<td>2.7347656</td>
+<td>±2×10⁻⁷</td>
+</tr>
+<tr>
+<td>Transit Depth</td>
+<td>1.43%</td>
+<td>±0.84%</td>
+</tr>
+<tr>
+<td>Rp/R*</td>
+<td>0.12</td>
+<td>±0.035</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.022 days</td>
+<td>±0.0086</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>31.7 minutes</td>
+<td>±12.4</td>
+</tr>
+<tr>
+<td>Inclination</td>
+<td>86.19°</td>
+<td>±2.86°</td>
+</tr>
+<tr>
+<td>SNR</td>
+<td>~9.2</td>
+<td></td>
+</tr>
+<tr>
+<td>Residual Scatter</td>
+<td>10.32%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Data Quality</h2>
+<ul>
+<li><strong>Bayes Factor</strong>: log Z = -56.9 ± 0.033; ESS = 1219.9 (required &gt;400).</li>
+<li><strong>Residuals</strong>: 10.32% scatter is elevated; flux RMS = 0.103; per-point errors ≈ 0.112.</li>
+<li><strong>Data Coverage</strong>: 124 measurements over ~62.5 min; partial transit window.</li>
+<li><strong>Moon</strong>: 66% illuminated at 67° altitude, 46.6° separation.</li>
+<li><strong>Note</strong>: Large uncertainties (±0.84% depth, ±12.4 min duration) reflect limited data quality. Published TESS values (Rp/R*≈0.096, depth≈0.9%) differ from our measurement, consistent with the poor SNR.</li>
+</ul>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Light Curve</strong>: <a class="artifact-link" href="/1082662a0e1b/files/artifact_001.png" target="_blank" rel="noopener"><code>FinalLightCurve_KELT-7 b_01-06-2017.png</code><span aria-hidden="true">↗</span></a> / <code>.pdf</code></li>
+<li><strong>AAVSO Data</strong>: <a class="artifact-link" href="/1082662a0e1b/files/artifact_002.txt" target="_blank" rel="noopener"><code>AAVSO_KELT-7 b_01-06-2017.txt</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Parameters</strong>: <a class="artifact-link" href="/1082662a0e1b/files/artifact_003.json" target="_blank" rel="noopener"><code>tmp/FinalParams_KELT-7 b_01-06-2017.json</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Flux Data</strong>: <a class="artifact-link" href="/1082662a0e1b/files/artifact_004.txt" target="_blank" rel="noopener"><code>tmp/NormalizedFlux_KELT-7 b_01-06-2017.txt</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>CSV</strong>: <a class="artifact-link" href="/1082662a0e1b/files/artifact_005.csv" target="_blank" rel="noopener"><code>tmp/FinalLightCurve_KELT-7 b_01-06-2017.csv</code><span aria-hidden="true">↗</span></a></li>
+<li><strong><a class="artifact-link" href="/1082662a0e1b/files/artifact_011.json" target="_blank" rel="noopener"><code>inits.json</code><span aria-hidden="true">↗</span></a></strong>: Complete EXOTIC input configuration</li>
+</ul>
+<p>All outputs: <code>output</code></p></section></main>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: Exoplanet Transit Observation of WASP-69 b</h1>
+<h2>Observation Summary</h2>
+<ul>
+<li><strong>Target</strong>: WASP-69 b</li>
+<li><strong>Telescope</strong>: MicroObservatory</li>
+<li><strong>Instrument</strong>: CCD</li>
+<li><strong>Observation Date</strong>: 2025-09-25</li>
+<li><strong>Filter</strong>: Johnson V</li>
+<li><strong>Exposure Time</strong>: 12.0 seconds</li>
+<li><strong>Cadence</strong>: Approximately 12-15 seconds</li>
+</ul>
+<h2>Data Reduction</h2>
+<p>The data were reduced using the EXOTIC pipeline. Calibration was performed using bias, dark, and flat-field frames identified in the FITS headers. Aperture photometry was implemented with an optimal aperture of 6.91 pixels and an optimal annulus of 12.09 pixels. To account for systematic variations, a first- and second-order airmass detrending was applied, with calculated coefficients $a_1 = 2.4 \pm 0.46$ and $a_2 = -0.77 \pm 1.03$.</p>
+<h2>Transit Results</h2>
+<p>The transit fitting process yielded the following parameters:</p>
+<ul>
+<li><strong>Mid-transit Time</strong>: $2460939.8731 \pm 0.0061$ BJD_TDB</li>
+<li><strong>Orbital Period</strong>: $3.86813881 \pm 0.00000013$ days (Fixed from catalog)</li>
+<li><strong>Transit Depth</strong>: $0.0078 \pm 0.083\%$</li>
+<li><strong>Transit Duration</strong>: Not significantly constrained \($0.0 \pm 0.0$ days\)</li>
+<li><strong>Orbital Inclination</strong>: $86.58^\circ \pm 2.37^\circ$</li>
+</ul>
+<h2>Data Quality</h2>
+<p>The observation exhibited a residual scatter (RMS) of 19.61%, which is relatively high. Consequently, while the mid-transit time was well-localized, the transit depth and duration were not significantly detected above the noise floor. The fit results for $R_p/R_*$ \($0.009 \pm 0.047$\) are consistent with zero, suggesting that the transit signal was masked by the high noise levels in this dataset.</p>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve</strong>: <a class="artifact-link" href="/0032e18d510c/files/artifact_001.png" target="_blank" rel="noopener"><code>FinalLightCurve_WASP-69 b_09-25-2025.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Model Fit</strong>: Included in the final light curve plot.</li>
+<li><strong>Detailed Parameters</strong>: Extracted from <a class="artifact-link" href="/0032e18d510c/files/artifact_002.json" target="_blank" rel="noopener"><code>FinalParams_WASP-69 b_09-25-2025.json</code><span aria-hidden="true">↗</span></a>.</li>
+<li><strong>Plate Solution</strong>: <code>tmp/wcs.fits</code></li>
+</ul></section></main>
+</body>
+</html>

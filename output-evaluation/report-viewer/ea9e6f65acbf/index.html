@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>KELT-20 b Transit Photometry - Final Scientific Report</h1>
+<h2>Observation Summary</h2>
+<p><strong>Target:</strong> KELT-20 b (Hot Jupiter orbiting KELT-20)<br>
+<strong>Observation Date:</strong> 2023-08-17 (MJD 2460174.68-2460174.73)<br>
+<strong>Instrument:</strong> LCOGT 0.4m telescope (MicroObservatory Network)<br>
+<strong>Location:</strong> McDonald Observatory, Texas, USA (30.68°N, 104.02°W, 2030m)<br>
+<strong>Filter:</strong> ZS (PanSTARRS z-short, 826-920 nm)<br>
+<strong>Camera:</strong> QHY600M CCD (1x1 binning)<br>
+<strong>Exposure Time:</strong> 9.999 seconds<br>
+<strong>Number of Frames:</strong> 300<br>
+<strong>Cadence:</strong> ~10 seconds  </p>
+<h2>Data Reduction</h2>
+<p><strong>Calibration:</strong> LCOGT pipeline-processed FITS files (already contain bias, dark, and flat corrections).</p>
+<p><strong>Plate Solving:</strong> Successfully solved via ASTROM.NET. Target found at pixel [2399, 419] (near image edge).</p>
+<p><strong>Aperture Photometry:</strong> Optimal aperture: 3.0 pixels, annulus: 3.5 pixels. Detrending by airmass and airmass correction function.</p>
+<p><strong>Comparison Stars:</strong> 5 stars selected but EXOTIC reported "Best Comparison Star: None", indicating compromised differential photometry.</p>
+<p><strong>Residual Scatter:</strong> 1.44% after detrending.</p>
+<h2>Transit Results</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Fitted Value</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time (Tc)</td>
+<td>2460174.49</td>
+<td>± 0.24 BJD_TDB</td>
+</tr>
+<tr>
+<td>Radius Ratio (Rp/R*)</td>
+<td>0.095</td>
+<td>± 0.045</td>
+</tr>
+<tr>
+<td>Transit Depth</td>
+<td>0.91%</td>
+<td>± 0.86%</td>
+</tr>
+<tr>
+<td>Inclination</td>
+<td>85.07°</td>
+<td>± 1.57°</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.0033 days</td>
+<td>± 0.01 days</td>
+</tr>
+</tbody>
+</table>
+<h2>Data Quality</h2>
+<p><strong>Strengths:</strong> High cadence (~10s), good weather (2.8% lunar phase), clean sky.</p>
+<p><strong>Weaknesses:</strong> No suitable comparison star found; target near image edge; large uncertainties (~47% on Rp/R*); single-transit coverage.</p>
+<h2>Output Files</h2>
+<ul>
+<li>Light curve PNG/PDF: <a class="artifact-link" href="/ea9e6f65acbf/files/artifact_001.png" target="_blank" rel="noopener"><code>output/EXOTIC_output/FinalLightCurve_KELT-20 b_08-17-2023.png</code><span aria-hidden="true">↗</span></a></li>
+<li>AAVSO photometry: <a class="artifact-link" href="/ea9e6f65acbf/files/artifact_002.txt" target="_blank" rel="noopener"><code>output/EXOTIC_output/AAVSO_KELT-20 b_08-17-2023.txt</code><span aria-hidden="true">↗</span></a> (319 points)</li>
+<li><a class="artifact-link" href="/ea9e6f65acbf/files/artifact_003.json" target="_blank" rel="noopener"><code>inits.json</code><span aria-hidden="true">↗</span></a>: <a class="artifact-link" href="/ea9e6f65acbf/files/artifact_003.json" target="_blank" rel="noopener"><code>output/EXOTIC_output/inits.json</code><span aria-hidden="true">↗</span></a></li>
+</ul>
+<h2>Conclusion</h2>
+<p>KELT-20 b transit was observed with compromised differential photometry due to unexpected target position near the image edge. Measured Rp/R* = 0.095 ± 0.045 is consistent with literature (0.124) within 1σ despite large uncertainties. Future observations should ensure proper target centering and comparison star selection.</p></section></main>
+</body>
+</html>

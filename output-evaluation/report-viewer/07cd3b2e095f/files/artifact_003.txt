@@ -1,0 +1,26 @@
+#TYPE=EXOPLANET
+#OBSCODE=
+#SECONDARY_OBSCODES=MOBS
+#SOFTWARE=EXOTIC v4.3.1
+#DELIM=,
+#DATE_TYPE=BJD_TDB
+#OBSTYPE=CCD
+#STAR_NAME=CoRoT-2
+#EXOPLANET_NAME=CoRoT-2 b
+#BINNING=2x2
+#EXPOSURE_TIME=60.0
+#COMP_STAR-XC={"ra": "291.635684959", "dec": "1.67089542091", "x": "345.0", "y": "9.0"}
+#NOTES=Generated manually by agent; coordinates corrected based on EXOTIC plate solution.
+#DETREND_PARAMETERS=AIRMASS, AIRMASS CORRECTION FUNCTION
+#MEASUREMENT_TYPE=Rnflux
+#FILTER=CV
+#FILTER-XC={"name": "CV", "desc": "MObs CV", "fwhm": [{"value": "350.0", "units": "nm"}, {"value": "850.0", "units": "nm"}]}
+#PRIORS=Period=1.742998455 +/- 4e-08,Rp/R*=0.1795 +/- 0.0011,a/R*=6.7 +/- 0.03,inc=87.84 +/- 0.1,ecc=0.0,u0=2.006 +/- 0.017,u1=-3.643 +/- 0.069,u2=4.166 +/- 0.091,u3=-1.529 +/- 0.039
+#PRIORS-XC={"Period": {"value": "1.742998455", "uncertainty": "4e-08", "units": "days"}, "Rp/R*": {"value": "0.1795", "uncertainty": "0.0011"}, "a/R*": {"value": "6.7", "uncertainty": "0.03"}, "inc": {"value": "87.84", "uncertainty": "0.1", "units": "degrees"}, "ecc": {"value": "0.0", "uncertainty": null}, "u0": {"value": "2.006", "uncertainty": "0.017"}, "u1": {"value": "-3.643", "uncertainty": "0.069"}, "u2": {"value": "4.166", "uncertainty": "0.091"}, "u3": {"value": "-1.529", "uncertainty": "0.039"}}
+#RESULTS=Tc=2461254.8418 +/- 0.0036,Rp/R*=0.062 +/- 0.064,inc=88.69 +/- 2.02,Am1=1.312 +/- 0.0014,Am2=-0.16 +/- 0.11
+#RESULTS-XC={"Tc": {"value": "2461254.8418", "uncertainty": "0.0036", "units": "BJD_TDB"}, "Rp/R*": {"value": "0.062", "uncertainty": "0.064"}, "inc": {"value": "88.69", "uncertainty": "2.02"}, "Am1": {"value": "1.312", "uncertainty": "0.0014"}, "Am2": {"value": "-0.16", "uncertainty": "0.11"}, "Duration": {"value": "0.086", "uncertainty": "0.0066", "units": "days"}}
+# EXOTIC is developed by Exoplanet Watch (exoplanets.nasa.gov/exoplanet-watch/), a citizen science project managed by NASA's Jet Propulsion Laboratory on behalf of NASA's Universe of Learning. This work is supported by NASA under award number NNX16AC65A to the Space Telescope Science Institute.
+# Use of this data is governed by the AAVSO Data Usage Guidelines: aavso.org/data-usage-guidelines
+#DATE,DIFF,ERR,DETREND_1,DETREND_2
+2461254.75539011,1.0948726,0.1002525,1.1586315,1.0913899
+2461254.93155243,0.9051274,0.1014586,2.3565916,0.902242

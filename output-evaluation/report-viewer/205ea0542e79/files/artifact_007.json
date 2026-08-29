@@ -1,0 +1,73 @@
+{
+  "planetary_parameters": {
+    "Target Star RA": 315.025833,
+    "Target Star Dec": -5.094444,
+    "Planet Name": "WASP-69 b",
+    "Host Star Name": "WASP-69",
+    "Orbital Period (days)": 2.539575,
+    "Orbital Period Uncertainty": 5e-06,
+    "Published Mid-Transit Time (BJD-UTC)": 2455164.8417,
+    "Mid-Transit Time Uncertainty": 0.0003,
+    "Ratio of Planet to Stellar Radius (Rp/Rs)": 0.082,
+    "Ratio of Planet to Stellar Radius (Rp/Rs) Uncertainty": 0.004,
+    "Ratio of Distance to Stellar Radius (a/Rs)": 4.62,
+    "Ratio of Distance to Stellar Radius (a/Rs) Uncertainty": 0.1,
+    "Orbital Inclination (deg)": 88.0,
+    "Orbital Inclination (deg) Uncertainty": 0.5,
+    "Orbital Eccentricity (0 if null)": 0.0,
+    "Star Effective Temperature (K)": 5384,
+    "Star Effective Temperature (+) Uncertainty": 100,
+    "Star Effective Temperature (-) Uncertainty": 100,
+    "Star Surface Gravity (log(g))": 4.34,
+    "Star Surface Gravity (+) Uncertainty": 0.1,
+    "Star Surface Gravity (-) Uncertainty": 0.1,
+    "Argument of Periastron (deg)": 90.0,
+    "Star Distance (pc)": 648,
+    "Star Proper Motion RA (mas/yr)": -1.84,
+    "Star Proper Motion DEC (mas/yr)": -35.48
+  },
+  "user_info": {
+    "Directory with FITS files": "observation/WASP-69 b",
+    "Directory to Save Plots": "runs/WASP-69_b_[REDACTED]/output",
+    "Directory of Flats": null,
+    "Directory of Darks": null,
+    "Directory of Biases": null,
+    "AAVSO Observer Code (N/A if none)": "N/A",
+    "Secondary Observer Codes (N/A if none)": "N/A",
+    "Observation date": null,
+    "Obs. Latitude": null,
+    "Obs. Longitude": null,
+    "Obs. Elevation (meters)": null,
+    "Camera Type (CCD or DSLR)": "CCD",
+    "Pixel Binning": "1x1",
+    "Filter Name (aavso.org/filters)": "Open",
+    "Observing Notes": "Generated from EXOTIC Standard notebook flow; telescope=MicroObservatory; camera type=CCD; first image=lsc0m492-sq35-20250924-0402-e91.fits; VLM supplied target and comparison-star coordinates.",
+    "Plate Solution? (y/n)": "y",
+    "Add Comparison Stars from AAVSO? (y/n)": "n",
+    "Target Star X & Y Pixel": [
+      1204.0,
+      1223.0
+    ],
+    "Comparison Star(s) X & Y Pixel": [
+      [
+        428.0,
+        1308.0
+      ],
+      [
+        1347.0,
+        1042.0
+      ],
+      [
+        1719.0,
+        1194.0
+      ]
+    ],
+    "Demosaic Format": null,
+    "Demosaic Output": null
+  },
+  "optional_info": {
+    "Pixel Scale (Ex: 5.21 arcsecs/pixel)": 3600.0,
+    "Filter Minimum Wavelength (nm)": null,
+    "Filter Maximum Wavelength (nm)": null
+  }
+}

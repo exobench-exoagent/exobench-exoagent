@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>CoRoT-2 b Transit Observation Report</h1>
+<h2>Observation Summary</h2>
+<p><strong>Target:</strong> CoRoT-2 (RA=291.776°, Dec=+1.382°)<br>
+<strong>Exoplanet:</strong> CoRoT-2 b<br>
+<strong>Telescope:</strong> Cecilia (MicroObservatory network)<br>
+<strong>Instrument:</strong> Maksutov-Newtonian 6-inch f/3.6, 560mm EFL; KAF-1402ME CCD detector<br>
+<strong>Observatory:</strong> Whipple Observatory, Amado, AZ (31.68°N, 110.88°W, 1268m elevation)<br>
+<strong>Observer Code:</strong> anonymous-observer (MicroObservatory guest)<br>
+<strong>Observation Date:</strong> 2026-08-01 to 2026-08-02 (UT)<br>
+<strong>Filter:</strong> Clear (CV bandpass ~350-850nm)<br>
+<strong>Exposure Time:</strong> 60.0 seconds<br>
+<strong>Pixel Scale:</strong> 5.0 arcsec/pixel (unbinned), 10.0 arcsec/pixel with 2x2 binning<br>
+<strong>Cadence:</strong> ~6 minutes (60s exposure + readout)<br>
+<strong>FITS Files:</strong> 86 science frames + 2 dark frames</p>
+<h2>Data Reduction</h2>
+<p><strong>Calibration:</strong> No bias or flat calibration frames were available. Two dark frames (60s exposure) were present but not used in the reduction pipeline. The EXOTIC pipeline proceeded with bias-subtracted data using default dark correction.</p>
+<p><strong>Aperture Photometry:</strong> EXOTIC performed aperture photometry on all 86 FITS images using an optimal aperture of 4.75 pixels and an optimal annulus of 18.07 pixels for background estimation. Four comparison stars were selected at pixel coordinates (603, 486), (517, 117), (35, 384), and (208, 323).</p>
+<p><strong>Plate Solving:</strong> The astrometry.net pipeline successfully solved the WCS for the field, identifying the target at pixel coordinates (247, 211) in the first frame.</p>
+<p><strong>Detrending:</strong> Light curve was detrended using airmass as a single parameter with the default EXOTIC correction function. The airmass coefficients were a1=6.82±2.04 and a2=-1.51±0.23.</p>
+<h2>Transit Results</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time (BJD_TDB)</td>
+<td>2461254.8378</td>
+<td>±0.0036</td>
+</tr>
+<tr>
+<td>Orbital Period (days)</td>
+<td>1.742998455</td>
+<td>±4.05×10⁻⁸</td>
+</tr>
+<tr>
+<td>Transit Depth</td>
+<td>9×10⁻⁵ %</td>
+<td>±0.012 %</td>
+</tr>
+<tr>
+<td>Rp/R*</td>
+<td>0.001</td>
+<td>±0.061</td>
+</tr>
+<tr>
+<td>Transit Duration</td>
+<td>0.0812 days</td>
+<td>±0.0078</td>
+</tr>
+<tr>
+<td>Orbital Inclination</td>
+<td>87.79°</td>
+<td>±2.08°</td>
+</tr>
+<tr>
+<td>Best Comparison Star</td>
+<td>#1 at (603, 486)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> The transit depth and Rp/R* values are consistent with zero within their large uncertainties, indicating that no significant transit signal was detected in this observation. The published transit depth for CoRoT-2 b is approximately 3.2% (Rp/R* ≈ 0.18), which is substantially larger than our measured value.</p>
+<h2>Data Quality</h2>
+<p><strong>Fit Quality:</strong> The transit fitting (MCMC with UltraNest sampler) returned a logZ of -20.64±0.05. The posterior distributions show very broad constraints on Rp/R* and transit depth, with uncertainties (~0.06 for Rp/R*) that dwarf the measured values. The reduced χ² of ~1.8 indicates the model does not adequately fit the data.</p>
+<p><strong>Residual Behavior:</strong> The residual scatter in the light curve fit is 21.27%, which is high for transit photometry. The light curve shows significant flux variations (ranging from ~0.4 to ~1.6 in normalized units) that are not consistent with a clean transit signal.</p>
+<p><strong>Tracking Issues:</strong> The telescope exhibited significant tracking drift during the observation. The target star moved from approximately pixel (377, 94) in the first frame to different positions in subsequent frames, eventually drifting out of the optimal photometric aperture. This tracking error is the primary contributor to the poor data quality.</p>
+<p><strong>Comparison Star Stability:</strong> The comparison stars were selected based on visual identification and appeared stable across frames. However, the large flux variations in the target light curve suggest either tracking-related aperture flux losses or significant atmospheric/aerosol extinction variations.</p>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve:</strong> <a class="artifact-link" href="/5dc9e4b5b75c/files/artifact_001.png" target="_blank" rel="noopener"><code>output/FinalLightCurve_CoRoT-2 b_08-02-2026.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Field of View (Linear Stretch):</strong> <a class="artifact-link" href="/5dc9e4b5b75c/files/artifact_002.png" target="_blank" rel="noopener"><code>output/tmp/FOV_CoRoT-2 b_08-02-2026_LinearStretch.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>FOV Log Stretch:</strong> <a class="artifact-link" href="/5dc9e4b5b75c/files/artifact_003.png" target="_blank" rel="noopener"><code>output/tmp/FOV_CoRoT-2 b_08-02-2026_LogStretch.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Triangle Plot (MCMC Posteriors):</strong> <a class="artifact-link" href="/5dc9e4b5b75c/files/artifact_004.png" target="_blank" rel="noopener"><code>output/tmp/Triangle_CoRoT-2 b_08-02-2026.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>AAVSO Submission File:</strong> <a class="artifact-link" href="/5dc9e4b5b75c/files/artifact_005.txt" target="_blank" rel="noopener"><code>output/AAVSO_CoRoT-2 b_08-02-2026.txt</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Final Parameters JSON:</strong> <a class="artifact-link" href="/5dc9e4b5b75c/files/artifact_006.json" target="_blank" rel="noopener"><code>output/tmp/FinalParams_CoRoT-2 b_08-02-2026.json</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Final Light Curve CSV:</strong> <a class="artifact-link" href="/5dc9e4b5b75c/files/artifact_007.csv" target="_blank" rel="noopener"><code>output/tmp/FinalLightCurve_CoRoT-2 b_08-02-2026.csv</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Normalized Flux Data:</strong> <a class="artifact-link" href="/5dc9e4b5b75c/files/artifact_008.txt" target="_blank" rel="noopener"><code>output/tmp/NormalizedFlux_CoRoT-2 b_08-02-2026.txt</code><span aria-hidden="true">↗</span></a></li>
+</ul>
+<h2>Conclusions</h2>
+<p>This observation of CoRoT-2 b did not successfully detect the transit signal. The primary limitation was significant telescope tracking drift, which caused the target star to move out of the photometric aperture during the observation. The resulting light curve shows large flux variations unrelated to any transit event. The measured transit parameters (depth=9×10⁻⁵±0.012%, Rp/R*=0.001±0.061) are consistent with no transit and represent a non-detection.</p>
+<p>Future observations should employ improved tracking calibration or use automated plate-solving-guided tracking to maintain the target within a stable photometric aperture throughout the observation.</p></section></main>
+</body>
+</html>

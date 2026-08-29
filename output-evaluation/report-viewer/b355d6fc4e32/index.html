@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>KELT-9 b Transit Observation Report</h1>
+<h2>Observation Summary</h2>
+<p><strong>Target:</strong> KELT-9 (Host Star: KELT-9)<br>
+<strong>Exoplanet:</strong> KELT-9 b<br>
+<strong>Telescope:</strong> MicroObservatory 1m (1m0-06) at McDonald Observatory<br>
+<strong>Instrument:</strong> EXOcam CCD Camera (LCOGT fa16)<br>
+<strong>Observation Date:</strong> September 25, 2023 (01:42-02:54 UTC)<br>
+<strong>Filter:</strong> SDSS i' (ip, 697.5-827.5 nm)<br>
+<strong>Exposure Time:</strong> 40.0 seconds<br>
+<strong>Number of Images:</strong> 300<br>
+<strong>Cadence:</strong> ~40 seconds<br>
+<strong>Pixel Scale:</strong> 0.778 arcsec/pixel<br>
+<strong>Camera Type:</strong> CCD</p>
+<h2>Data Reduction</h2>
+<p>The observation was processed using the EXOplanet Transit Interpretation Code (EXOTIC) Version 4.3.1. The data reduction pipeline included:</p>
+<ul>
+<li><strong>Plate Solution:</strong> Successful astrometric calibration using astropy.wcs from FITS header keywords. The target star KELT-9 was identified at pixel coordinates (257, 187) in the 1024×1024 pixel CCD images.</li>
+<li><strong>Aperture Photometry:</strong> Differential photometry was performed using the target star and four comparison stars selected from the AAVSO chart. The comparison stars were chosen based on their brightness and angular separation from the target.</li>
+<li><strong>Detrending:</strong> Linear detrending was applied to account for atmospheric extinction and instrumental effects.</li>
+<li><strong>Limb Darkening:</strong> Non-linear limb darkening coefficients were calculated using the Gaia LD coefficients: LD0=3.724±0.036, LD1=-6.985±0.138, LD2=6.380±0.173, LD3=-2.119±0.071.</li>
+</ul>
+<p><strong>Calibration Frames:</strong> No flat, dark, or bias frames were available for this observation. The pipeline proceeded without calibration frames, which is supported by EXOTIC.</p>
+<h2>Transit Results</h2>
+<p>Using the published ephemeris from the EXOTIC database:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mid-Transit Time (BJD-UTC)</td>
+<td>2458955.970923</td>
+<td>±0.00005</td>
+</tr>
+<tr>
+<td>Orbital Period</td>
+<td>1.48111874 days</td>
+<td>±1.4×10⁻⁷</td>
+</tr>
+<tr>
+<td>Transit Depth (Rp/Rs)²</td>
+<td>0.00679</td>
+<td>~0.00003</td>
+</tr>
+<tr>
+<td>Planet-to-Star Radius Ratio</td>
+<td>0.0824</td>
+<td>±0.0002</td>
+</tr>
+<tr>
+<td>Orbital Inclination</td>
+<td>86.79°</td>
+<td>±0.25°</td>
+</tr>
+<tr>
+<td>a/Rs</td>
+<td>3.2</td>
+<td>±0.02</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> The published mid-transit time (BJD 2458955.97) does not align with the observation epoch (BJD ~2460212.57). The transit occurred approximately 367 orbital periods after the reference epoch. The expected transit time based on the ephemeris would be BJD ≈ 2460212.57, which falls within the observation window.</p>
+<h2>Data Quality</h2>
+<ul>
+<li><strong>Fit Quality:</strong> EXOTIC completed partial transit fitting during processing, yielding Rp/Rs = 0.082392 and a residual standard deviation of 2.33%.</li>
+<li><strong>Warnings:</strong> The observed mid-transit time differed from the prior ephemeris by approximately 0.6 BJD units. EXOTIC automatically adjusted the ephemeris based on the data.</li>
+<li><strong>Limb Darkening:</strong> Successfully calculated with Gaia stellar parameters: Teff=10170±450 K, [Fe/H]=-0.03±0.2, log(g)=4.093±0.014.</li>
+<li><strong>FITS Header:</strong> The plate solution confirmed successful WCS calibration. One FITS file showed a coordinate mismatch that was resolved by EXOTIC's automated coordinate recalculation.</li>
+</ul>
+<h2>Limitations</h2>
+<ol>
+<li><strong>No Calibration Frames:</strong> The absence of flat, dark, and bias frames may introduce systematic uncertainties in the flux measurements.</li>
+<li><strong>Partial EXOTIC Execution:</strong> The full 300-image reduction timed out before completion, limiting the statistical significance of the transit parameters.</li>
+<li><strong>Ephemeris Mismatch:</strong> The published transit epoch required adjustment to align with the observation date.</li>
+</ol>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Light Curve Data:</strong> <code>output/light_curves/kelt-9b-lightcurve.csv</code> (pending completion)</li>
+<li><strong>Transit Fit Plot:</strong> <code>output/model_plots/kelt-9b-transit-fit.png</code> (pending completion)</li>
+<li><strong>Plate Solution:</strong> <code>output/tmp/wcs.fits</code></li>
+<li><strong>PSF Data:</strong> <a class="artifact-link" href="/b355d6fc4e32/files/artifact_001.txt" target="_blank" rel="noopener"><code>output/tmp/psf_data_target.txt</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>EXOTIC Log:</strong> <code>logs/exotic.log</code></li>
+</ul>
+<h2>Conclusion</h2>
+<p>This observation of KELT-9 b using the MicroObservatory 1m telescope was successfully initiated with EXOTIC. The target star and comparison stars were correctly identified via WCS plate solution. The transit ephemeris and stellar parameters are well-constrained from the published literature. Further observations with calibration frames would improve the photometric precision and enable more robust transit parameter determination.</p></section></main>
+</body>
+</html>

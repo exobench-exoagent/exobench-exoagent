@@ -1,0 +1,26 @@
+#TYPE=EXOPLANET
+#OBSCODE=
+#SECONDARY_OBSCODES=MOBS
+#SOFTWARE=EXOTIC v4.3.1
+#DELIM=,
+#DATE_TYPE=BJD_TDB
+#OBSTYPE=CCD
+#STAR_NAME=Qatar-1
+#EXOPLANET_NAME=Qatar-1 b
+#BINNING=2x2
+#EXPOSURE_TIME=60.0
+#COMP_STAR-XC={"ra": null, "dec": null, "x": "404.0", "y": "138.0"}
+#NOTES=MicroObservatory Cecilia telescope (Whipple Observatory); CCD camera; 60s exposure; Clear filter; 2x2 binned; 5.0 arcsec/pixel; dark calibration frames included.
+#DETREND_PARAMETERS=AIRMASS, AIRMASS CORRECTION FUNCTION
+#MEASUREMENT_TYPE=Rnflux
+#FILTER=CV
+#FILTER-XC={"name": "CV", "desc": "MObs CV", "fwhm": [{"value": "350.0", "units": "nm"}, {"value": "850.0", "units": "nm"}]}
+#PRIORS=Period=1.420024443 +/- 4.9e-08,Rp/R*=0.1540454 +/- 6.8e-06,a/R*=6.25 +/- 0.07,inc=84.08 +/- 0.15,ecc=0.012,u0=1.706 +/- 0.012,u1=-2.919 +/- 0.051,u2=3.384 +/- 0.066,u3=-1.171 +/- 0.028
+#PRIORS-XC={"Period": {"value": "1.420024443", "uncertainty": "4.9e-08", "units": "days"}, "Rp/R*": {"value": "0.1540454", "uncertainty": "6.8e-06"}, "a/R*": {"value": "6.25", "uncertainty": "0.07"}, "inc": {"value": "84.08", "uncertainty": "0.15", "units": "degrees"}, "ecc": {"value": "0.012", "uncertainty": null}, "u0": {"value": "1.706", "uncertainty": "0.012"}, "u1": {"value": "-2.919", "uncertainty": "0.051"}, "u2": {"value": "3.384", "uncertainty": "0.066"}, "u3": {"value": "-1.171", "uncertainty": "0.028"}}
+#RESULTS=Tc=2461256.734 +/- 0.0034,Rp/R*=0.062 +/- 0.054,inc=82.79 +/- 2.87,Am1=1.220027 +/- 6.2e-05,Am2=-0.15 +/- 1.58
+#RESULTS-XC={"Tc": {"value": "2461256.734", "uncertainty": "0.0034", "units": "BJD_TDB"}, "Rp/R*": {"value": "0.062", "uncertainty": "0.054"}, "inc": {"value": "82.79", "uncertainty": "2.87"}, "Am1": {"value": "1.220027", "uncertainty": "6.2e-05"}, "Am2": {"value": "-0.15", "uncertainty": "1.58"}, "Duration": {"value": "0.0082", "uncertainty": "0.0078", "units": "days"}}
+# EXOTIC is developed by Exoplanet Watch (exoplanets.nasa.gov/exoplanet-watch/), a citizen science project managed by NASA's Jet Propulsion Laboratory on behalf of NASA's Universe of Learning. This work is supported by NASA under award number NNX16AC65A to the Space Telescope Science Institute.
+# Use of this data is governed by the AAVSO Data Usage Guidelines: aavso.org/data-usage-guidelines
+#DATE,DIFF,ERR,DETREND_1,DETREND_2
+2461256.7520676,0.9978236,0.0193957,1.2103656,1.012535
+2461256.78540346,1.0021764,0.0193948,1.2000791,1.0141404

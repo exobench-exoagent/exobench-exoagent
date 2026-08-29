@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><p>EXOTIC successfully processed the 300-frame CCD FITS dataset of <strong>HD 189733 b</strong> obtained on <strong>2026 August 4</strong> with the Exoplanet Watch 0.4-m telescope. The observations used a clear/CV bandpass and 2-second exposures at an approximately 10-second cadence, yielding roughly 50 minutes of time-series coverage. No calibration frames were available, so Flats, Darks, and Biases were intentionally omitted.</p>
+<p>Target and comparison-star photometry was performed using the visually identified pixel coordinates listed above. EXOTIC selected <code>[965, 1870]</code> as the best comparison star. The reduction used differential aperture photometry with airmass detrending. The optimal aperture radius was 2.87 pixels and the optimal annulus radius was 25.81 pixels. Because the FITS headers lacked WCS information, plate solving was disabled and a provisional 1.0 arcsec/pixel scale was used.</p>
+<p>The fitted mid-transit time was <strong>BJD_TDB 2461256.8587 ± 0.0021</strong>. The catalog ephemeris period, used as a prior, was <strong>2.218574944 ± 0.000000030 days</strong>. EXOTIC returned a radius ratio of <strong>0.102 ± 0.055</strong>, corresponding to a fitted transit depth of <strong>1.03 ± 1.12%</strong>, and a duration of <strong>0.0008 ± 0.0052 days</strong>. The fitted inclination was <strong>89.69 ± 2.67°</strong>.</p>
+<p>The data quality is poor for a definitive transit measurement. The residual scatter was <strong>4.72%</strong>, substantially larger than the expected HD 189733 b transit depth, and the fitted depth has an uncertainty comparable to or larger than the measurement itself. The nominal depth-to-error ratio is approximately 0.9, so this observation should be classified as a low-significance or non-detection rather than a reliable independent transit confirmation. EXOTIC did not provide a formal SNR, reduced chi-squared, or BIC.</p>
+<p>Final products are saved under:</p>
+<ul>
+<li>Light curve PNG: <a class="artifact-link" href="/7248e521f911/files/artifact_001.png" target="_blank" rel="noopener"><code>output/FinalLightCurve_HD 189733 b_08-04-2026.png</code><span aria-hidden="true">↗</span></a></li>
+<li>Light curve PDF: <a class="artifact-link" href="/7248e521f911/files/artifact_002.pdf" target="_blank" rel="noopener"><code>output/FinalLightCurve_HD 189733 b_08-04-2026.pdf</code><span aria-hidden="true">↗</span></a></li>
+<li>Final parameters: <a class="artifact-link" href="/7248e521f911/files/artifact_003.json" target="_blank" rel="noopener"><code>output/tmp/FinalParams_HD 189733 b_08-04-2026.json</code><span aria-hidden="true">↗</span></a></li>
+<li>Final time series: <a class="artifact-link" href="/7248e521f911/files/artifact_004.csv" target="_blank" rel="noopener"><code>output/tmp/FinalLightCurve_HD 189733 b_08-04-2026.csv</code><span aria-hidden="true">↗</span></a></li>
+<li>EXOTIC configuration: <a class="artifact-link" href="/7248e521f911/files/artifact_005.json" target="_blank" rel="noopener"><code>output/inits.json</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>

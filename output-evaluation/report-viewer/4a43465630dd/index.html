@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExoAgent</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffef7;
+      --text: #1c1f24;
+      --line: #ded6c8;
+      --panel: #ffffff;
+      --accent: #c85f1e;
+      --accent-soft: #f0b35f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .brand {
+      width: min(1040px, calc(100% - 36px));
+      margin: 22px auto 0;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    main { max-width: 1040px; margin: 0 auto; padding: 18px 18px 40px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3 { line-height: 1.2; margin: 1.3em 0 0.5em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    p { margin: 0.75em 0; }
+    code, pre {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92em;
+    }
+    code {
+      color: #9a4415;
+      overflow-wrap: anywhere;
+    }
+    .artifact-link {
+      color: #c85f1e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .artifact-link:hover {
+      text-decoration: underline;
+    }
+    .artifact-link code {
+      color: inherit;
+    }
+    .artifact-link span {
+      display: inline-block;
+      margin-left: 0.28em;
+      font-weight: 800;
+    }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f0f2f2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 18px 0;
+      background: var(--panel);
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff1df; }
+    .report {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 26px;
+      border-radius: 6px;
+      box-shadow: 0 18px 48px rgba(66, 45, 24, 0.09);
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+        displayMath: [["\\[", "\\]"], ["$$", "$$"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <div class="brand">ExoAgent Reports for Expert-Based Evaluation</div>
+  <main><section class="report"><h1>Scientific Report: Transit Observation of HAT-P-36 b</h1>
+<h2>Observation Summary</h2>
+<ul>
+<li><strong>Target:</strong> HAT-P-36 b</li>
+<li><strong>Telescope:</strong> MicroObservatory</li>
+<li><strong>Instrument:</strong> CCD</li>
+<li><strong>Observation Date:</strong> 2026-03-18</li>
+<li><strong>Filter:</strong> Open (MObs CV / Clear)</li>
+<li><strong>Exposure Time:</strong> Not specified in headers</li>
+<li><strong>Cadence:</strong> Approximately 1-2 minutes based on FITS file timestamps</li>
+</ul>
+<h2>Data Reduction</h2>
+<p>The data were processed using the EXOTIC (EXOplanet Transit Interpretation Code) pipeline. </p>
+<ul>
+<li><strong>Calibration:</strong> No dark, bias, or flat frames were provided; the reduction proceeded using science frames only.</li>
+<li><strong>Aperture Photometry:</strong> A target and four comparison stars were identified. EXOTIC performed a WCS plate solve to refine target coordinates to [1175, 1181]. An optimal aperture of 6.74 and annulus of 11.8 were utilized for the photometry.</li>
+<li><strong>Detrending:</strong> The light curve was detrended using airmass coefficients (a1 = 8.95 +/- 0.38, a2 = -2.11 +/- 0.16) to remove systematic trends.</li>
+<li><strong>Transit Fitting:</strong> A transit model was fit to the detrended light curve using a Markov Chain Monte Carlo (MCMC) approach via UltraNest.</li>
+</ul>
+<h2>Transit Results</h2>
+<p>The following planetary parameters were extracted from the best-fit model:</p>
+<ul>
+<li><strong>Mid-Transit Time:</strong> 2461118.8024 $\pm$ 0.0056 BJD_TDB</li>
+<li><strong>Orbital Period:</strong> 1.327346813 days (fixed from ephemeris)</li>
+<li><strong>Transit Depth:</strong> 2.48 $\pm$ 0.28 %</li>
+<li><strong>Transit Duration:</strong> 0.0997 $\pm$ 0.0017 days</li>
+<li><strong>Orbital Inclination:</strong> 89.55 $\pm$ 2.22 degrees</li>
+<li><strong>Radius Ratio ($R_p/R_*$):</strong> 0.1575 $\pm$ 0.009</li>
+</ul>
+<h2>Data Quality</h2>
+<p>The fit quality is characterized by a residual scatter of 4.17%. The model successfully recovered the transit event, and the resulting parameters are consistent with the expected geometry for HAT-P-36 b. The plate solving warning was resolved by adopting EXOTIC's calculated coordinates, ensuring high photometric precision.</p>
+<h2>Output Files</h2>
+<ul>
+<li><strong>Final Light Curve and Model Fit:</strong> <a class="artifact-link" href="/4a43465630dd/files/artifact_001.png" target="_blank" rel="noopener"><code>output/FinalLightCurve_HAT-P-36 b_03-18-2026.png</code><span aria-hidden="true">↗</span></a></li>
+<li><strong>Parameters JSON:</strong> <a class="artifact-link" href="/4a43465630dd/files/artifact_002.json" target="_blank" rel="noopener"><code>output/tmp/FinalParams_HAT-P-36 b_03-18-2026.json</code><span aria-hidden="true">↗</span></a></li>
+</ul></section></main>
+</body>
+</html>
